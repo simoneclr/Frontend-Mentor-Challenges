@@ -42,10 +42,11 @@ body {
 /* Card container */
 .qr-card {
   background-color: var(--color-white);
-  width: 80%;
-  max-width: 400px;
+  width: 320px;
   padding: 1rem;
   border-radius: 20px;
+  box-shadow: 0 10px 20px hsl(220, 15%, 80%);
+
   /* All text inside the card should be centered */
   text-align: center;
 }
