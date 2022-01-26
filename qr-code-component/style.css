@@ -29,6 +29,28 @@ body {
   align-items: center;
 }
 
+/* Card container */
+.qr-card {
+  background-color: var(--color-white);
+  width: 80%;
+  max-width: 400px;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+/* Card image */
+.qr-card-img {
+  /* Gets rid of awkward white space below the image */
+  line-height: 0;
+  /* Give rounded corners and hide excess image*/
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.qr-card-img > img {
+  width: 100%;
+}
+
 /* Attribution Style */
 .attribution {
   font-size: 11px; 
