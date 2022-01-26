@@ -68,6 +68,13 @@ body {
   color: var(--color-dark-blue);
   font-weight: var(--weight-heading);
   font-size: 20px;
+  line-height: 1.3em;
+  margin: 2rem 1rem 1rem 1rem;
+}
+
+.qr-card-text {
+  line-height: 1.5em;
+  margin: 1rem 1rem;
 }
 
 /* Attribution Style */
