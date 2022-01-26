@@ -6,18 +6,35 @@
   --color-dark-blue: hsl(218, 44%, 22%);
 }
 
+@font-face {
+  font-family: "Outfit";
+  src: url("https://fonts.google.com/specimen/Outfit");
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  background-color: var(--color-light-gray);
+  height: 100vh;
   margin: 0;
   padding: 0;
+  /* Allows to add footer in fixed position */
+  position: relative;
+  /* Use flexbox to center Card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Attribution Style */
 .attribution {
-  font-size: 11px; text-align: center;
+  font-size: 11px; 
+  text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .attribution a {
