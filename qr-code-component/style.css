@@ -67,6 +67,7 @@ body {
 .qr-card-title {
   color: var(--color-dark-blue);
   font-weight: var(--weight-heading);
+  font-size: 20px;
 }
 
 /* Attribution Style */
