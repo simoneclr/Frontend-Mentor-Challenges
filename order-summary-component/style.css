@@ -39,7 +39,7 @@ body {
 	width: 320px;
 }
 
-.card-hero-img {
+.img-container {
 	/* Gets rid of awkward whitespace below image */
 	line-height: 0;
 }
@@ -49,7 +49,26 @@ body {
 }
 
 .card-body {
+	text-align: center;
 	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Style for the plan sub-component */
+.plan-component {
+	background-color: var(--color-very-pale-blue);
+	width: 100%;
+	padding: 1rem;
+	margin: .5rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-body > a {
+	margin: .5rem;
 }
 
 .attribution {
