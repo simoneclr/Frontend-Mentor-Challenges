@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
 :root {
   /* Colors */
   --color-white: hsl(0, 0%, 100%);
@@ -10,24 +12,21 @@
   --weight-heading: 700;
 }
 
-@font-face {
-  font-family: "Outfit";
-  src: url("https://fonts.google.com/specimen/Outfit");
-}
-
 * {
   box-sizing: border-box;
 }
 
 html {  
-  font-family: "Outfit", Arial, Helvetica, sans-serif;
   font-size: 15px;
-  font-weight: var(--weight-paragraph);
-  color: var(--color-grayish-blue);
 }
 
 body {  
   background-color: var(--color-light-gray);
+
+  font-family: 'Outfit', sans-serif;
+  font-weight: var(--weight-paragraph);
+  color: var(--color-grayish-blue);
+
   height: 100vh;
   margin: 0;
   padding: 0;
