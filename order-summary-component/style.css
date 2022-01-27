@@ -48,6 +48,10 @@ body {
 	width: 100%;
 }
 
+.card-body {
+	padding: 1rem;
+}
+
 .attribution {
 	position: absolute;
 	bottom: 0;
