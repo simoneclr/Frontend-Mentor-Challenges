@@ -67,8 +67,26 @@ body {
 	align-items: center;
 }
 
+.plan-change-button {
+	color: var(--primary-color-bright-blue);
+}
+
 .card-body > a {
 	margin: .5rem;
+}
+
+.confirm-button {
+	text-decoration: none;
+	display: block;
+	color: white;
+	background-color: var(--primary-color-bright-blue);
+	width: 100%;
+	padding: 1rem;
+}
+
+.cancel-button {
+	text-decoration: none;
+	color: var(--color-desaturated-blue);
 }
 
 .attribution {
