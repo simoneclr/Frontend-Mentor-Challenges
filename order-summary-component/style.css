@@ -21,3 +21,35 @@ body {
 	padding: 0;
 	margin: 0;
 }
+
+.surface {
+	background-color: var(--primary-color-pale-blue);
+	height: 100vh;
+	/* Allows to use position absolute for footer */
+	position: relative;
+
+	/* Use flexbox to center card component */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.order-summary-card	{
+	background-color: white;
+	width: 320px;
+}
+
+.card-hero-img {
+	/* Gets rid of awkward whitespace below image */
+	line-height: 0;
+}
+
+.card-hero-img > img {
+	width: 100%;
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+	margin: .5rem 0;
+}
