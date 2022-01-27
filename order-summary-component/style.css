@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+	/* Primary Colors */
+	--primary-color-pale-blue: hsl(225, 100%, 94%);
+	--primary-color-bright-blue: hsl(245, 75%, 52%);
+
+	/* Neutral Colors */
+	--color-very-pale-blue: hsl(225, 100%, 98%);
+	--color-desaturated-blue: hsl(224, 23%, 55%);
+	--color-dark-blue: hsl(223, 47%, 23%);
+
+	/* Font Weights */
+	--weight-heavy: 900;
+	--weight-medium: 700;
+	--weight-light: 500;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Red Hat Display", sans-serif;
+	font-weight: var(--weight-light);
+	padding: 0;
+	margin: 0;
+}
+
+.surface {
+	background-color: var(--primary-color-pale-blue);
+	height: 100vh;
+	/* Allows to use position absolute for footer */
+	position: relative;
+
+	/* Use flexbox to center card component */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.order-summary-card	{
+	background-color: white;
+	width: 320px;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 1rem 2rem -1rem var(--color-desaturated-blue);
+}
+
+.img-container {
+	/* Gets rid of awkward whitespace below image */
+	line-height: 0;
+}
+
+.card-hero-img > img {
+	width: 100%;
+}
+
+.card-body {
+	text-align: center;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-title {
+	font-size: 1.5em;
+	font-weight: var(--weight-heavy);
+	color: var(--color-dark-blue);
+	margin: 1rem;
+}
+
+.card-text {
+	color: var(--color-desaturated-blue);
+	line-height: 1.5em;
+	margin: 0 1rem .5rem 1rem;
+}
+
+/* Style for the plan sub-component */
+.plan-component {
+	background-color: var(--color-very-pale-blue);
+	width: 100%;
+	border-radius: 10px;
+	padding: 1rem;
+	margin: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.plan-name {
+	color: var(--color-dark-blue);
+	font-weight: var(--weight-heavy);
+	line-height: 1.5em;
+	margin: 0;
+}
+
+.plan-price {
+	color: var(--color-desaturated-blue);
+	font-weight: var(--weight-light);
+	line-height: 1.5em;
+	margin: 0;
+}
+
+.plan-change-button {
+	color: var(--primary-color-bright-blue);
+	font-weight: var(--weight-medium);
+}
+
+.confirm-button {
+	text-decoration: none;
+	display: block;
+	color: var(--color-very-pale-blue);
+	font-weight: var(--weight-heavy);
+	background-color: var(--primary-color-bright-blue);
+	border-radius: 10px;
+	width: 100%;
+	padding: 1rem;
+	margin: .5rem 0;
+	box-shadow: 0 1rem 2rem -1rem var(--primary-color-bright-blue);
+}
+
+.cancel-button {
+	text-decoration: none;
+	color: var(--color-desaturated-blue);
+	font-weight: var(--weight-heavy);
+	margin: 1rem 0;
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+	margin: .5rem 0;
+}

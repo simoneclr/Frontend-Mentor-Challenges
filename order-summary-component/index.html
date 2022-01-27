@@ -4,34 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="style.css">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Order Summary
+  <div class="surface">
+    <div class="order-summary-card">
+      <div class="img-container card-hero-img">
+        <img src="images/illustration-hero.svg" alt="A woman dancing while listening to music">
+      </div>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      <div class="card-body">
+        <h3 class="card-title">Order Summary</h3>
 
-  Annual Plan
-  $59.99/year
+        <p class="card-text">
+          You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+        </p>
 
-  Change
+        <div class="plan-component">
+          <div class="img-container plan-icon">
+            <img src="images/icon-music.svg" alt="Musical notes">
+          </div>
 
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+          <div class="plan-info">
+            <h4 class="plan-name">
+              Annual Plan
+            </h4>
+
+            <p class="plan-price">
+              $59.99/year
+            </p>
+          </div>
+
+          <a href="#" class="plan-change-button">Change</a>
+
+        </div>
+
+        <a href="#" class="confirm-button">
+          Proceed to Payment
+        </a>
+
+        <a href="#" class="cancel-button">
+          Cancel Order
+        </a>
+      </div>
+    </div>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/simoneclr">Simone Calciolari</a>.
+    </footer>
   </div>
 </body>
 </html>
