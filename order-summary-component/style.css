@@ -112,6 +112,11 @@ body {
 	font-weight: var(--weight-medium);
 }
 
+.plan-change-button:hover {
+	text-decoration: none;
+	color: var(--color-dark-blue);
+}
+
 .confirm-button {
 	text-decoration: none;
 	display: block;
@@ -125,11 +130,19 @@ body {
 	box-shadow: 0 1rem 2rem -1rem var(--primary-color-bright-blue);
 }
 
+.confirm-button:hover {
+	opacity: .75;
+}
+
 .cancel-button {
 	text-decoration: none;
 	color: var(--color-desaturated-blue);
 	font-weight: var(--weight-heavy);
 	margin: 1rem 0;
+}
+
+.cancel-button:hover {
+	color: var(--color-dark-blue);
 }
 
 .attribution {
