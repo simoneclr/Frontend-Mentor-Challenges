@@ -32,20 +32,28 @@ body {
 }
 
 .surface {
-	background-color: var(--primary-color-pale-blue);
-	height: 100vh;
-	/* Allows to use position absolute for footer */
-	position: relative;
+	background: url("images/pattern-background-desktop.svg") center top repeat-x, var(--primary-color-pale-blue);
+	min-height: 100vh;
 
 	/* Use flexbox to center card component */
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
+}
+
+/* Media query to change background pattern for small screens */
+@media screen and (max-width: 376px) {
+		.surface {
+			background: url("images/pattern-background-mobile.svg") center top repeat-x, var(--primary-color-pale-blue);
+		}
 }
 
 .order-summary-card	{
 	background-color: white;
-	width: 320px;
+	width: 85%;
+	max-width: 400px;
+	margin: 1rem 0;
 	border-radius: 1rem;
 	overflow: hidden;
 	box-shadow: 0 1rem 2rem -1rem var(--color-desaturated-blue);
@@ -62,7 +70,9 @@ body {
 
 .card-body {
 	text-align: center;
+	max-width: 350px;
 	padding: 1rem;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -112,6 +122,11 @@ body {
 	font-weight: var(--weight-medium);
 }
 
+.plan-change-button:hover {
+	text-decoration: none;
+	color: var(--color-dark-blue);
+}
+
 .confirm-button {
 	text-decoration: none;
 	display: block;
@@ -125,6 +140,10 @@ body {
 	box-shadow: 0 1rem 2rem -1rem var(--primary-color-bright-blue);
 }
 
+.confirm-button:hover {
+	opacity: .75;
+}
+
 .cancel-button {
 	text-decoration: none;
 	color: var(--color-desaturated-blue);
@@ -132,8 +151,11 @@ body {
 	margin: 1rem 0;
 }
 
+.cancel-button:hover {
+	color: var(--color-dark-blue);
+}
+
 .attribution {
-	position: absolute;
-	bottom: 0;
-	margin: .5rem 0;
+	margin-bottom: .5rem;
+	text-align: center;
 }
