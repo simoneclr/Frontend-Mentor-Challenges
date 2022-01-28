@@ -32,7 +32,7 @@ body {
 }
 
 .surface {
-	background-color: var(--primary-color-pale-blue);
+	background: url("images/pattern-background-desktop.svg") center top repeat-x, var(--primary-color-pale-blue);
 	min-height: 100vh;
 
 	/* Use flexbox to center card component */
@@ -40,6 +40,13 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+}
+
+/* Media query to change background pattern for small screens */
+@media screen and (max-width: 376px) {
+		.surface {
+			background: url("images/pattern-background-mobile.svg") center top repeat-x, var(--primary-color-pale-blue);
+		}
 }
 
 .order-summary-card	{
