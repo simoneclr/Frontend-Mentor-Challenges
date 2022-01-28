@@ -33,13 +33,12 @@ body {
 
 .surface {
 	background-color: var(--primary-color-pale-blue);
-	height: 100vh;
-	/* Allows to use position absolute for footer */
-	position: relative;
+	min-height: 100vh;
 
 	/* Use flexbox to center card component */
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -47,6 +46,7 @@ body {
 	background-color: white;
 	width: 85%;
 	max-width: 400px;
+	margin: 1rem 0;
 	border-radius: 1rem;
 	overflow: hidden;
 	box-shadow: 0 1rem 2rem -1rem var(--color-desaturated-blue);
@@ -149,7 +149,6 @@ body {
 }
 
 .attribution {
-	position: absolute;
-	bottom: 0;
-	margin: .5rem 0;
+	margin-bottom: .5rem;
+	text-align: center;
 }
