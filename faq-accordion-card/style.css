@@ -66,9 +66,17 @@ body {
 }
 
 /* Pure CSS FAQ Accordion */
+.faq-accordion {
+	height: 275px;
+}
+
 .faq-item {
-	display: grid;
 	width: 100%;
+	padding-bottom: 1rem;
+	margin-top: 1rem;
+	border-bottom: 1px solid var(--text-dark-grayish-blue);
+
+	display: grid;
 	grid-template-columns: auto min-content;
 	justify-content: space-between;
 	align-items: center;
@@ -77,6 +85,7 @@ body {
 .faq-answer {
 	/* Under normal circumstances, the answer is not visible */
 	display: none;
+	margin: 1rem 0 0 0;
 	order: 3;
 	grid-column: 1 / 3;
 }
