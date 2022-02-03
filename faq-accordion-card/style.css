@@ -45,8 +45,7 @@ body {
 }
 
 .faq-card {
-	background-color: var(--divider-light-grayish-blue);
-	padding: 2rem;
+	background-color: white;
 	margin: 1rem 0;
 	border-radius: 1.5rem;
 	
@@ -58,6 +57,7 @@ body {
 
 .card-body {
 	width: 50%;
+	padding: 2rem;
 }
 
 .card-title {
@@ -126,6 +126,36 @@ body {
 .faq-control:checked ~ .faq-answer {
 	display: block;
 }
+
+/* Illustrations */
+.card-illustration-container {
+	width: 50%;
+	align-self: stretch;
+
+	background: url("images/bg-pattern-desktop.svg") no-repeat;
+	background-position: 120% 65%;
+	background-size: 200%;
+	display: flex;
+	align-items: center;
+}
+
+.card-illustration {
+	overflow: hidden;
+}
+
+.illustration-woman {
+	line-height: 0;
+	width: 100%;
+	transform: translateX(-20%);
+}
+
+
+.illustration-box {
+	display: none;
+}
+
+
+
 
 .attribution {
 	text-align: center;
