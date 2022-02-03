@@ -29,7 +29,6 @@
 
 body {
 	font-family: "Kumbh Sans", sans-serif;
-	font-size: 12px;
 	padding: 0;
 	margin: 0;
 }
@@ -48,8 +47,8 @@ body {
 	background-color: white;
 	margin: 1rem 0;
 	border-radius: 1.5rem;
-	
-	width: 960px;
+	width: 90%;
+	max-width: 968px;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -67,7 +66,7 @@ body {
 
 /* Pure CSS FAQ Accordion */
 .faq-accordion {
-	height: 275px;
+	min-height: 325px;
 }
 
 .faq-item {
