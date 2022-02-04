@@ -29,12 +29,16 @@
 
 body {
 	font-family: "Kumbh Sans", sans-serif;
+	font-size: 12px;
+	font-weight: var(--weight-light);
+	color: var(--text-very-dark-grayish-blue);
+
 	padding: 0;
 	margin: 0;
 }
 
 .surface {
-	background: var(--gradient-soft-violet);
+	background: linear-gradient(var(--gradient-soft-violet), var(--gradient-soft-blue));
 	min-height: 100vh;
 
 	display: flex;
@@ -50,18 +54,19 @@ body {
 	width: 90%;
 	max-width: 968px;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	align-items: center;
 }
 
 .card-body {
-	width: 50%;
-	padding: 2rem;
+	width: 40%;
+	padding: 2rem 0;
 }
 
 .card-title {
-	text-align: center;
-	font-size: 2em;
+	color: var(--primary-text-very-dark-desaturated-blue);
+	font-size: 2.5em;
+	font-weight: var(--weight-heavy);
 }
 
 /* Pure CSS FAQ Accordion */
@@ -73,10 +78,11 @@ body {
 	width: 100%;
 	padding-bottom: 1rem;
 	margin-top: 1rem;
-	border-bottom: 1px solid var(--text-dark-grayish-blue);
+	border-bottom: 1px solid var(--divider-light-grayish-blue);
 
 	display: grid;
 	grid-template-columns: auto min-content;
+	column-gap: 1rem;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -102,6 +108,10 @@ body {
 .faq-answer {
 	/* Under normal circumstances, the answer is not visible */
 	display: none;
+
+	color: var(--text-dark-grayish-blue);
+	line-height: 1.5em;
+
 	margin: 1rem 0 0 0;
 	order: 3;
 	grid-column: 1 / 3;
@@ -109,6 +119,12 @@ body {
 
 .faq-question {
 	order: 1;
+	font-size: 1.2em;
+}
+
+/* Style question when hovering */
+.faq-control:hover ~ .faq-question {
+	color: var(--primary-text-soft-red);
 }
 
 /* Flip arrow when a question is selected */
@@ -118,7 +134,7 @@ body {
 
 /* Add proper stying to the currently selected question */
 .faq-control:checked ~ .faq-question {
-	color: red;
+	font-weight: var(--weight-heavy);
 }
 
 /* When the item is clicked, the radio button becomes checked, and thus display the faq answer  */
@@ -128,11 +144,12 @@ body {
 
 /* Illustrations */
 .card-illustration-container {
+	position: relative;
 	width: 50%;
 	align-self: stretch;
 
 	background: url("images/bg-pattern-desktop.svg") no-repeat;
-	background-position: 120% 65%;
+	background-position: 117% 65%;
 	background-size: 200%;
 	display: flex;
 	align-items: center;
@@ -145,18 +162,85 @@ body {
 .illustration-woman {
 	line-height: 0;
 	width: 100%;
-	transform: translateX(-20%);
+	transform: translateX(-15%);
 }
 
-
 .illustration-box {
+	/* Positioned outside normal element flow */
+	position: absolute;
+	width: 40%;
+
+	transform: translate(-49%, 20%);
+}
+
+/* Remove mobile illustrations */
+.mobile {
 	display: none;
 }
 
-
-
-
 .attribution {
+	color: var(--divider-light-grayish-blue);
+	font-size: 14px;
 	text-align: center;
-	margin-bottom: .5rem;
+	margin: .5rem 0;
+}
+
+.attribution a {
+	color: var(--primary-text-soft-red);
+	text-decoration: none;
+}
+
+.attribution a:hover {
+	text-decoration: underline;
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 600px) {
+	/* Remove desktop illustrations */
+	.desktop, .card-illustration {
+		display: none;
+	}
+
+	/* Show mobile illustrations */
+	.mobile {
+		display: block;
+	}
+
+	.faq-card {
+		/* Generous margin to make sure overflowing illuatration is fully visible */
+		margin-top: 200px;
+
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.card-illustration-container {
+		display: block;
+		width: 100%;
+
+		background: url("images/bg-pattern-mobile.svg") no-repeat;
+		background-position: center;
+		background-size: 70%;
+
+		transform: translateY(-20%);
+
+		/* Negative margin bottom to remove unnecessary whitespace */
+		margin-bottom: -30%;
+	}
+
+	.illustration-woman {
+		width: 70%;
+		margin: 0 auto;
+		transform: translateY(-40%);
+	}
+
+	.card-body {
+		width: 100%;
+		padding: 2rem;
+	}
+
+	.card-title {
+		text-align: center;
+	}
 }
