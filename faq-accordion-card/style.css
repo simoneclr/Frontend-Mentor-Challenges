@@ -179,8 +179,19 @@ body {
 }
 
 .attribution {
+	color: var(--divider-light-grayish-blue);
+	font-size: 14px;
 	text-align: center;
-	margin-bottom: .5rem;
+	margin: .5rem 0;
+}
+
+.attribution a {
+	color: var(--primary-text-soft-red);
+	text-decoration: none;
+}
+
+.attribution a:hover {
+	text-decoration: underline;
 }
 
 /* Responsive styles for mobile */
