@@ -38,7 +38,7 @@ body {
 }
 
 .surface {
-	background: var(--gradient-soft-violet);
+	background: linear-gradient(var(--gradient-soft-violet), var(--gradient-soft-blue));
 	min-height: 100vh;
 
 	display: flex;
