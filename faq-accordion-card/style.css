@@ -149,7 +149,6 @@ body {
 	transform: translateX(-15%);
 }
 
-
 .illustration-box {
 	/* Positioned outside normal element flow */
 	position: absolute;
@@ -158,10 +157,58 @@ body {
 	transform: translate(-49%, 20%);
 }
 
-
-
+/* Remove mobile illustrations */
+.mobile {
+	display: none;
+}
 
 .attribution {
 	text-align: center;
 	margin-bottom: .5rem;
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 600px) {
+	/* Remove desktop illustrations */
+	.desktop, .card-illustration {
+		display: none;
+	}
+
+	/* Show mobile illustrations */
+	.mobile {
+		display: block;
+	}
+
+	.faq-card {
+		/* Generous margin to make sure overflowing illuatration is fully visible */
+		margin-top: 200px;
+
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.card-illustration-container {
+		display: block;
+		width: 100%;
+
+		background: url("images/bg-pattern-mobile.svg") no-repeat;
+		background-position: center;
+		background-size: 70%;
+
+		transform: translateY(-20%);
+
+		/* Negative margin bottom to remove unnecessary whitespace */
+		margin-bottom: -30%;
+	}
+
+	.illustration-woman {
+		width: 70%;
+		margin: 0 auto;
+		transform: translateY(-40%);
+	}
+
+	.card-body {
+		width: 100%;
+	}
 }
