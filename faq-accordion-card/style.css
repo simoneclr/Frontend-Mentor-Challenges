@@ -128,11 +128,12 @@ body {
 
 /* Illustrations */
 .card-illustration-container {
+	position: relative;
 	width: 50%;
 	align-self: stretch;
 
 	background: url("images/bg-pattern-desktop.svg") no-repeat;
-	background-position: 120% 65%;
+	background-position: 117% 65%;
 	background-size: 200%;
 	display: flex;
 	align-items: center;
@@ -145,12 +146,16 @@ body {
 .illustration-woman {
 	line-height: 0;
 	width: 100%;
-	transform: translateX(-20%);
+	transform: translateX(-15%);
 }
 
 
 .illustration-box {
-	display: none;
+	/* Positioned outside normal element flow */
+	position: absolute;
+	width: 40%;
+
+	transform: translate(-49%, 20%);
 }
 
 
