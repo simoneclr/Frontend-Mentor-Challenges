@@ -103,12 +103,21 @@ h1 {
 
 footer {
 	width: 100%;
-	padding: 0 5%;
+	padding: 0 10% 1rem 5%;
 	align-self: flex-end;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.attribution > a {
+	text-decoration: none;
+	color: var(--primary-soft-magenta);
+}
+
+.attribution > a:hover {
+	text-decoration: underline;
 }
 
 .socials {
