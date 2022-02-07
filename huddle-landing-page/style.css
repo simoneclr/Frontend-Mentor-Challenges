@@ -159,3 +159,57 @@ footer {
 .social-link:hover > .social-icon {
 	fill: var(--primary-soft-magenta);
 }
+
+/* Responsive behaviour */
+@media screen and (max-width: 1024px) {
+	body {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.header, .illustration-container, .content, footer {
+		width: 80%;
+		padding: 0;
+	}
+
+	.header {
+		padding: 2rem 0;
+	}
+
+	.content {
+		text-align: center;	
+	}
+
+	.title {
+		font-size: 1.6em;
+	}
+
+	.description {
+		font-size: 1em;
+	}
+
+	.cta {
+		padding: .6rem 5rem;
+		margin: 2rem auto;
+	}
+
+	footer {
+		width: 95%;
+		align-self: unset;
+		margin-top: 2rem;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.attribution {
+		order: 2;
+		text-align: center;
+	}
+
+	.socials {
+		order: 1;
+		margin-bottom: 2rem;
+	}
+}
