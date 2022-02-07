@@ -17,12 +17,64 @@
 
 body {
 	font-family: "Open Sans", sans-serif;
+	color: rgba(255, 255, 255, .8);
 	padding: 0;
 	margin: 0;
 	min-height: 100vh;
+
+	background: url("images/bg-desktop.svg") no-repeat center, var(--primary-violet);
+	background-size: contain;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
 }
 
 h1 {
 	font-family: "Poppins", sans-serif;
+}
+
+.header {
+	width: 100%;
+	padding: 3rem 5%;
+}
+
+.logo {
+	height: 3em;
+	line-height: 0;
+}
+
+.illustration-container	{
+	line-height: 0;
+	width: 45%;
+}
+
+.illustration-mockup {
+	width: 100%;
+}
+
+.content {
+	width: 40%;
+	padding-right: 5%;
+}
+
+.title {
+	color: rgba(255, 255, 255, .95);
+	font-weight: var(--weight-heading-heavy);
+	font-size: 2.5em;
+	margin: 2rem 0 1.5rem 0;
+}
+
+.description {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	margin: 0;
+}
+
+footer {
+	width: 100%;
+	padding: 0 5%;
+	align-self: flex-end;
 }
 
