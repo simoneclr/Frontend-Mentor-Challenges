@@ -163,6 +163,8 @@ footer {
 /* Responsive behaviour */
 @media screen and (max-width: 1024px) {
 	body {
+		background: url("images/bg-mobile.svg") no-repeat, var(--primary-violet);
+
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
