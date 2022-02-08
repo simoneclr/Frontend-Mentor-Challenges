@@ -19,12 +19,133 @@
 	--gradient-very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 
+/* GENERAL */
 * {
 	box-sizing: border-box;
 }
 
 body {
+	font-family: "Overpass", sans-serif;
+	color: var(--text-white);
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
 }
+
+section {
+	width: 100%;
+	padding: 0 10%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+a {
+	color: var(--text-white);
+	text-decoration: none;
+}
+
+.btn {
+	text-align: center;
+	display: block;
+	width: 8rem;
+	padding: .5rem;
+	border-radius: 5rem;
+	border: solid 2px var(--text-white);
+}
+
+.btn-cta {
+	color: var(--primary-light-red);
+	background-color: var(--text-white);
+}
+
+/* INTRO SECTION */
+.intro {
+	background: url("images/bg-pattern-intro-desktop.svg") no-repeat right, 
+							linear-gradient(90deg, var(--gradient-very-light-red), var(--gradient-light-red));
+	background-size: 100%;
+	border-radius: 0 0 0 5rem;
+}
+
+/* NAVBAR */
+/* Main layout */
+.navbar {
+	width: 100%;
+	padding: 2rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-left {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.nav-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav-list {
+	padding: 0;
+	list-style: none;
+}
+
+.nav-list > li {
+	display: inline-block;
+}
+
+/* Dropdowns */
+.nav-dropdowns {
+	margin: 0 3rem;
+}
+
+/* + selector used to add margin only to second and third item */
+.dropdown + .dropdown {
+	margin-left: 2rem;
+}
+
+.dropdown-arrow {
+	margin-left: .2rem;
+}
+
+/* Buttons */
+/* + selector used to add margin only to second and third item */
+.nav-button + .nav-button {
+	margin-left: 2rem;
+}
+
+/* Intro Content */
+.intro-content {
+	text-align: center;
+	width: 100%;
+	padding: 3rem 0 6rem 0;
+}
+
+.intro-title {
+	font-size: 3.5em;
+	margin: 1rem 0 ;
+}
+
+.intro-description {
+	font-size: 1.2em;
+}
+
+.intro-buttons {
+	list-style: none;
+	padding: 0;
+}
+
+.intro-buttons > li {
+	display: inline-block;
+	margin: .5rem;
+}
+
+
+
