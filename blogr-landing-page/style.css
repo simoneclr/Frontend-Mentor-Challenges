@@ -241,4 +241,24 @@ a {
 	line-height: 1.5em;
 }
 
+/* SECTION WITH TEXT TO THE RIGHT */
+.section-text-right {
+	padding: 0 10% 0 0;
+	margin: 5rem 0;
 
+	justify-content: flex-start;
+	column-gap: 5%;
+}
+
+.section-text-right > .section-illustration {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.section-text-right > .section-content {
+	padding-top: 13%;
+}
+
+.section-text-right .section-paragraph + .section-subtitle {
+	margin-top: 3rem;
+}
