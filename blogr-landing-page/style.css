@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+	/* Primary Colors */
+	--primary-light-red: hsl(356, 100%, 66%);
+	--primary-very-light-red: hsl(355, 100%, 74%);
+	--primary-very-dark-blue: hsl(208, 49%, 24%);
+
+	/* Neutral Colors */
+	--text-white: hsl(0, 0%, 100%);
+	--text-footer: hsl(240, 2%, 79%);
+	--very-dark-grayish-blue: hsl(207, 13%, 34%);
+	--very-dark-black-blue: hsl(240, 10%, 16%);
+
+	/* Gradient Colors */
+	--gradient-very-light-red: hsl(13, 100%, 72%);
+	--gradient-light-red: hsl(353, 100%, 62%);
+	--gradient-very-dark-gray-blue: hsl(237, 17%, 21%);
+	--gradient-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+/* GENERAL */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Overpass", sans-serif;
+	color: var(--text-white);
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+section {
+	width: 100%;
+	padding: 0 10%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+a {
+	color: var(--text-white);
+	text-decoration: none;
+}
+
+.btn {
+	text-align: center;
+	display: block;
+	width: 8rem;
+	padding: .5rem;
+	border-radius: 5rem;
+	border: solid 2px var(--text-white);
+}
+
+.btn-cta {
+	color: var(--primary-light-red);
+	background-color: var(--text-white);
+}
+
+/* INTRO SECTION */
+.intro {
+	background: url("images/bg-pattern-intro-desktop.svg") no-repeat right, 
+							linear-gradient(90deg, var(--gradient-very-light-red), var(--gradient-light-red));
+	background-size: 100%;
+	border-radius: 0 0 0 5rem;
+}
+
+/* NAVBAR */
+/* Main layout */
+.navbar {
+	width: 100%;
+	padding: 2rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-left {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.nav-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav-list {
+	padding: 0;
+	list-style: none;
+}
+
+.nav-list > li {
+	display: inline-block;
+}
+
+/* Dropdowns */
+.nav-dropdowns {
+	margin: 0 3rem;
+}
+
+/* + selector used to add margin only to second and third item */
+.dropdown + .dropdown {
+	margin-left: 2rem;
+}
+
+.dropdown-arrow {
+	margin-left: .2rem;
+}
+
+/* Buttons */
+/* + selector used to add margin only to second and third item */
+.nav-button + .nav-button {
+	margin-left: 2rem;
+}
+
+/* Intro Content */
+.intro-content {
+	text-align: center;
+	width: 100%;
+	padding: 3rem 0 6rem 0;
+}
+
+.intro-title {
+	font-size: 3.5em;
+	margin: 1rem 0 ;
+}
+
+.intro-description {
+	font-size: 1.2em;
+}
+
+.intro-buttons {
+	list-style: none;
+	padding: 0;
+}
+
+.intro-buttons > li {
+	display: inline-block;
+	margin: .5rem;
+}
+
+/* SECTIONS WITH TEXT TO THE LEFT */
+.section-bg-light {
+	color: var(--primary-very-dark-blue);
+	padding: 1rem 0 1rem 10%;
+}
+
+.section-title {
+	width: 100%;
+	font-size: 2.2em;
+	text-align: center;
+	/* Makes up for lack of padding to the right of the section to make it easier 
+	to center text with respect to the screen */
+	padding-right: 10%;
+	margin: 0;
+
+	/* Problematic for responsive design, might need better solution */
+	transform: translateY(300%); 
+}
+
+.section-content {
+	width: 40%;
+	align-self: flex-start;
+	padding-top: 17%;
+}
+
+.section-subtitle {
+	font-size: 1.6em;
+}
+
+.section-paragraph {
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+.section-illustration {
+	width: 50%;
+	overflow: hidden;
+}
+
+.section-illustration > img {
+	/* Oversize image to cut away the right part to match the design provided */
+	width: 140%;
+}
+
+/* SECTION WITH DARK BACKGROUND */
+/* Wrapper adding gradient backround behind the section's image background */
+.dark-bg-wrapper {
+	width: 100%;
+	margin: 2rem 0;
+	border-radius: 0 5rem 0 5rem;
+	background-image:	linear-gradient(90deg, var(--gradient-very-dark-gray-blue), 
+										var(--gradient-very-dark-desaturated-blue));
+}
+
+.section-bg-dark {
+	color: var(--text-white);
+	background: url("images/bg-pattern-circles.svg") no-repeat;
+	/* The need to set size here would mess with the gradient background, 
+	so it was moved to its own div wrapping the section */
+	background-size: 73%;
+	background-position: -57% 89%;
+	border-radius: 0 5rem 0 5rem;
+}
+
+/* Use the image container to determine the size and position in the layout */
+.section-illustration-dark {
+	line-height: 0; 
+	width: 35%;
+	align-self: center;
+	/* Small Padding to compensate the illustration's vertical whitespace being uneven */
+	padding-top: 3%;
+	/* Margin to beter align the oversized image with the rest of the page content */
+	margin-left: 4%;
+}
+
+/* Increase image scale to push it out of the section boundaries like in the design */
+.section-illustration-dark > img {
+	width: 100%;
+	transform: scale(1.5);
+}
+
+.section-content-dark {
+	width: 50%;
+}
+
+.section-title-dark {
+	font-size: 2.2em;
+}
+
+.section-paragraph-dark {
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+/* SECTION WITH TEXT TO THE RIGHT */
+.section-text-right {
+	padding: 0 10% 0 0;
+	margin: 5rem 0;
+
+	justify-content: flex-start;
+	column-gap: 5%;
+}
+
+.section-text-right > .section-illustration {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.section-text-right > .section-content {
+	padding-top: 13%;
+}
+
+.section-text-right .section-paragraph + .section-subtitle {
+	margin-top: 3rem;
+}
