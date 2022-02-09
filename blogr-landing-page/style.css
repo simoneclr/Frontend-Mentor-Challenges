@@ -147,5 +147,48 @@ a {
 	margin: .5rem;
 }
 
+/* SECTIONS WITH TEXT TO THE LEFT */
+.section-bg-light {
+	color: var(--primary-very-dark-blue);
+	padding: 1rem 0 1rem 10%;
+}
+
+.section-title {
+	width: 100%;
+	font-size: 2.2em;
+	text-align: center;
+	/* Makes up for lack of padding to the right of the section to make it easier 
+	to center text with respect to the screen */
+	padding-right: 10%;
+	margin: 0;
+
+	/* Problematic for responsive design, might need better solution */
+	transform: translateY(300%); 
+}
+
+.section-content {
+	width: 40%;
+	align-self: flex-start;
+	padding-top: 17%;
+}
+
+.section-subtitle {
+	font-size: 1.6em;
+}
+
+.section-paragraph {
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+.section-illustration {
+	width: 50%;
+	overflow: hidden;
+}
+
+.section-illustration > img {
+	/* Oversize image to cut away the right part to match the design provided */
+	width: 140%;
+}
 
 
