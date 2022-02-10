@@ -276,3 +276,93 @@ a {
 .section-img-left .section-paragraph + .section-subtitle {
 	margin-top: 3rem;
 }
+
+/* FOOTER */
+footer {
+	color: var(--text-footer);
+	background-color: var(--gradient-very-dark-gray-blue);
+	padding: 5rem 10% 1rem 10%;
+	margin-top: 10rem;
+	border-radius: 0 5rem 0 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+footer .content	{
+	width: 100%;
+	margin-bottom: 5rem;
+
+	display: grid;
+	gap: 2rem 15%;
+	grid-template-columns: repeat(4, max-content);
+	grid-auto-rows: max-content;
+	align-items: center;
+}
+
+footer .brand {
+	grid-row: 1/2;
+	grid-column: 1/2;
+}
+
+#product-title {
+	grid-row: 1/2;
+	grid-column: 2/3;
+}
+
+#product-list {
+	grid-row: 2/3;
+	grid-column: 2/3;
+}
+
+#company-title {
+	grid-row: 1/2;
+	grid-column: 3/4;
+}
+
+#company-list {
+	grid-row: 2/3;
+	grid-column: 3/4;
+}
+
+#connect-title {
+	grid-row: 1/2;
+	grid-column: 4/5;
+}
+
+#connect-list {
+	grid-row: 2/3;
+	grid-column: 4/5;
+}
+
+.footer-links-category {
+	color: white;
+	font-size: 1.2em;
+	margin: 0;
+}
+
+.footer-links-list {
+	align-self: start;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-links-list li + li {
+	margin-top: 1rem;
+}
+
+.footer-link {
+	color: var(--text-footer);
+}
+
+.attribution {
+	width: 100%;
+	text-align: right;
+}
+
+.attribution a:hover {
+	text-decoration: underline;
+}
