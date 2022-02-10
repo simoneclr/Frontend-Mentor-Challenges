@@ -147,29 +147,11 @@ a {
 	margin: .5rem;
 }
 
-/* SECTIONS WITH TEXT TO THE LEFT */
-.section-bg-light {
-	color: var(--primary-very-dark-blue);
-	padding: 1rem 0 1rem 10%;
-}
-
+/* MAIN SECTIONS */
+/* SHARED STYLES */
 .section-title {
 	width: 100%;
 	font-size: 2.2em;
-	text-align: center;
-	/* Makes up for lack of padding to the right of the section to make it easier 
-	to center text with respect to the screen */
-	padding-right: 10%;
-	margin: 0;
-
-	/* Problematic for responsive design, might need better solution */
-	transform: translateY(300%); 
-}
-
-.section-content {
-	width: 40%;
-	align-self: flex-start;
-	padding-top: 17%;
 }
 
 .section-subtitle {
@@ -181,14 +163,24 @@ a {
 	line-height: 1.5em;
 }
 
-.section-illustration {
+.section-content {
 	width: 50%;
-	overflow: hidden;
+	align-self: flex-start;
+}
+
+.section-illustration {
+	line-height: 0;
+	width: 50%;
 }
 
 .section-illustration > img {
-	/* Oversize image to cut away the right part to match the design provided */
-	width: 140%;
+	width: 100%;
+}
+
+/* SECTIONS WITH LIGHT BACKGROUND */
+.section-bg-light {
+	color: var(--primary-very-dark-blue);
+	padding: 1rem 10%;
 }
 
 /* SECTION WITH DARK BACKGROUND */
@@ -212,8 +204,7 @@ a {
 }
 
 /* Use the image container to determine the size and position in the layout */
-.section-illustration-dark {
-	line-height: 0; 
+.section-bg-dark .section-illustration {
 	width: 35%;
 	align-self: center;
 	/* Small Padding to compensate the illustration's vertical whitespace being uneven */
@@ -223,26 +214,49 @@ a {
 }
 
 /* Increase image scale to push it out of the section boundaries like in the design */
-.section-illustration-dark > img {
+.section-bg-dark .section-illustration > img {
 	width: 100%;
 	transform: scale(1.5);
 }
 
-.section-content-dark {
+.section-bg-dark .section-content {
+	align-self: center;
+}
+
+/* SECTIONS WITH IMAGE TO THE RIGHT */
+.section-img-right {
+	padding-right: 0;
+}
+
+.section-img-right .section-title {
+	text-align: center;
+	/* Makes up for lack of padding to the right of the section to make it easier 
+	to center text with respect to the screen */
+	padding-right: 10%;
+	margin: 0;
+
+	/* Problematic for responsive design, might need better solution */
+	transform: translateY(300%); 
+}
+
+.section-img-right .section-content {
+	width: 40%;
+	align-self: flex-start;
+	padding-top: 17%;
+}
+
+.section-img-right .section-illustration {
 	width: 50%;
+	overflow: hidden;
 }
 
-.section-title-dark {
-	font-size: 2.2em;
+.section-img-right .section-illustration > img {
+	/* Oversize image to cut away the right part to match the design provided */
+	width: 140%;
 }
 
-.section-paragraph-dark {
-	font-size: 1.1em;
-	line-height: 1.5em;
-}
-
-/* SECTION WITH TEXT TO THE RIGHT */
-.section-text-right {
+/* SECTIONS WITH IMAGE TO THE LEFT */
+.section-img-left {
 	padding: 0 10% 0 0;
 	margin: 5rem 0;
 
@@ -250,15 +264,16 @@ a {
 	column-gap: 5%;
 }
 
-.section-text-right > .section-illustration {
+.section-img-left > .section-illustration {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.section-text-right > .section-content {
+.section-img-left > .section-content {
 	padding-top: 13%;
+	width: 45%;
 }
 
-.section-text-right .section-paragraph + .section-subtitle {
+.section-img-left .section-paragraph + .section-subtitle {
 	margin-top: 3rem;
 }
