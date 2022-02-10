@@ -113,6 +113,17 @@ a {
 
 .dropdown-arrow {
 	margin-left: .2rem;
+	transition: .2s transform;
+}
+
+/* Flip arrow when active */
+.dropdown.active > .dropdown-arrow {
+	transform: rotate(180deg);
+}
+
+/* Hide dropdown when not active */
+.dropdown-options {
+	display: none;
 }
 
 /* Buttons */

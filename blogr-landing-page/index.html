@@ -6,6 +6,8 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <script src="functions.js"></script>
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | [Blogr]</title>
@@ -19,16 +21,28 @@
         </div>
   
         <ul class="nav-list nav-dropdowns">
-          <li class="dropdown">
-            Product <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+          <li class="dropdown" id="product-dropdown">
+            <a href="javascript:void(0)" class="dropdown-link">Product</a>
+            
+            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+            
+            <ul class="dropdown-options">
+              <li>Overview</li>
+              <li>Pricing</li>
+              <li>Marketplace</li>
+              <li>Features</li>
+              <li>Integration</li>
+            </ul>
           </li>
           
-          <li class="dropdown">
-            Company <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+          <li class="dropdown" id="company-dropdown">
+            <a href="javascript:void(0)" class="dropdown-link">Company</a>
+            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
           </li>
           
-          <li class="dropdown">
-            Connect <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+          <li class="dropdown" id="connect-dropdown">
+            <a href="javascript:void(0)" class="dropdown-link">Connect</a>
+            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
           </li>
         </ul>
       </div>
@@ -233,11 +247,7 @@
 
   <!-- Product
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+  
 
   Company
 
