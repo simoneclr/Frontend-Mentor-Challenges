@@ -6,6 +6,8 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <script src="functions.js"></script>
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | [Blogr]</title>
@@ -19,16 +21,76 @@
         </div>
   
         <ul class="nav-list nav-dropdowns">
-          <li class="dropdown">
-            Product <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+          <li class="dropdown" id="product-dropdown">
+            <a href="javascript:void(0)" class="dropdown-link">Product</a>
+            
+            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+            
+            <ul class="dropdown-options">
+              <li>
+                <a href="#">Overview</a>
+              </li>
+
+              <li>
+                <a href="#">Pricing</a>
+              </li>
+
+              <li>
+                <a href="#">Marketplace</a>
+              </li>
+
+              <li>
+                <a href="#">Features</a>
+              </li>
+
+              <li>
+                <a href="#">Integrations</a>
+              </li>
+            </ul>
           </li>
           
-          <li class="dropdown">
-            Company <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+          <li class="dropdown" id="company-dropdown">
+            <a href="javascript:void(0)" class="dropdown-link">Company</a>
+
+            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+
+            <ul class="dropdown-options">
+              <li>
+                <a href="#">About</a>
+              </li>
+
+              <li>
+                <a href="#">Team</a>
+              </li>
+
+              <li>
+                <a href="#">Blog</a>
+              </li>
+
+              <li>
+                <a href="#">Careers</a>
+              </li>
+            </ul>
           </li>
           
-          <li class="dropdown">
-            Connect <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+          <li class="dropdown" id="connect-dropdown">
+            <a href="javascript:void(0)" class="dropdown-link">Connect</a>
+
+            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+
+            <ul class="dropdown-options">
+              <li>
+                <a href="#">Contact</a>
+              </li>
+
+              <li>
+                <a href="#">Newsletter</a>
+              </li>
+
+              <li>
+                <a href="#">LinkedIn</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -71,7 +133,7 @@
     </div>
   </section>
 
-  <section class="section-bg-light">
+  <section class="section-bg-light section-img-right">
     
     <h2 class="section-title">Designed for the future</h2>
 
@@ -106,16 +168,16 @@
   Resize and position the image without altering the gradient -->
   <div class="dark-bg-wrapper">
     <section class="section-bg-dark">
-      <div class="section-illustration-dark">
+      <div class="section-illustration">
         <img src="images/illustration-phones.svg" alt="Two mobile phones running the Blogr App">
       </div>
 
-      <div class="section-content-dark">
-        <h2 class="section-title-dark">
+      <div class="section-content">
+        <h2 class="section-title">
           State of the Art Infrastructure
         </h2>
 
-        <p class="section-paragraph-dark">
+        <p class="section-paragraph">
           With reliability and speed in mind, worldwide data centers provide the backbone for 
           ultra-fast connectivity. This ensures your site will load instantly,
           no matter where your readers are, keeping your site competitive.
@@ -124,7 +186,7 @@
     </section>
   </div>
 
-  <section class="section-bg-light section-text-right">
+  <section class="section-bg-light section-img-left">
     <div class="section-illustration">
       <img src="images/illustration-laptop-desktop.svg" alt="A laptop running Blogr">
     </div>
@@ -152,54 +214,83 @@
     </div>
   </section>
 
-  <!-- Product
+  <footer class="footer">
+    <div class="content">
+      <div class="brand">
+        <img src="images/logo.svg" alt="Blogr brand logo">
+      </div>
+      
+      <h4 class="footer-links-category" id="product-title">
+        Product
+      </h4>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+      <ul class="footer-links-list" id="product-list">
+        <li>
+          <a href="#" class="footer-link">Overview</a>
+        </li>
+          
+        <li>
+          <a href="#" class="footer-link">Pricing</a>
+        </li>
+          
+        <li>
+          <a href="#" class="footer-link">Marketplace</a>
+        </li>
+          
+        <li>
+          <a href="#" class="footer-link">Features</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-link">Integrations</a>
+        </li>
+      </ul>
 
-  Company
+      <h4 class="footer-links-category" id="company-title">
+        Company
+      </h4>
 
-  About
-  Team
-  Blog
-  Careers
+      <ul class="footer-links-list" id="company-list">
+        <li>
+          <a href="#" class="footer-link">About</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-link">Team</a>
+        </li>
+          
+        <li>
+          <a href="#" class="footer-link">Blog</a>
+        </li>
+          
+        <li>
+          <a href="#" class="footer-link">Careers</a>
+        </li>
+      </ul>
 
-  Connect
+      <h4 class="footer-links-category" id="connect-title">
+        Connect
+      </h4>
 
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up
+      <ul class="footer-links-list" id="connect-list">
+        <li>
+          <a href="#" class="footer-link">Contact</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-link">Newsletter</a>
+        </li>
+          
+        <li>
+          <a href="#" class="footer-link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
 
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn -->
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/simoneclr">Simone Calciolari</a>.
+    </div>
   </footer>
 </body>
 </html>

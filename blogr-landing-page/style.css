@@ -9,6 +9,7 @@
 	/* Neutral Colors */
 	--text-white: hsl(0, 0%, 100%);
 	--text-footer: hsl(240, 2%, 79%);
+	--text-link-white: rgba(255, 255, 255, .7);
 	--very-dark-grayish-blue: hsl(207, 13%, 34%);
 	--very-dark-black-blue: hsl(240, 10%, 16%);
 
@@ -17,6 +18,14 @@
 	--gradient-light-red: hsl(353, 100%, 62%);
 	--gradient-very-dark-gray-blue: hsl(237, 17%, 21%);
 	--gradient-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+	/* Font Weights */
+	--overpass-weight-light: 300;
+	--overpass-weight-heavy: 600;
+
+	--ubuntu-weight-light: 400;
+	--ubuntu-weight-medium: 500;
+	--ubuntu-weight-heavy: 700;
 }
 
 /* GENERAL */
@@ -26,10 +35,15 @@
 
 body {
 	font-family: "Overpass", sans-serif;
-	color: var(--text-white);
+	font-weight: var(--overpass-weight-light);
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: var(--overpass-weight-heavy);
+	color: var(--primary-very-dark-blue);
 }
 
 section {
@@ -43,22 +57,48 @@ section {
 }
 
 a {
-	color: var(--text-white);
+	color: var(--text-link-white);
 	text-decoration: none;
+	font-family: "Ubuntu", sans-serif;
+	font-weight: var(--ubuntu-weight-medium);
+}
+
+a:hover {
+	text-decoration: underline;
+	color: var(--text-white);
 }
 
 .btn {
+	font-size: 1.1em;
+	color: var(--text-white);
 	text-align: center;
 	display: block;
+	box-sizing: content-box;
 	width: 8rem;
-	padding: .5rem;
+	padding: .6rem 0;
 	border-radius: 5rem;
 	border: solid 2px var(--text-white);
+}
+
+.btn:hover {
+	text-decoration: none;
+	color: var(--primary-very-light-red);
+	background-color: var(--text-white);
+}
+
+.btn:active {
+	opacity: .8;
 }
 
 .btn-cta {
 	color: var(--primary-light-red);
 	background-color: var(--text-white);
+}
+
+.btn-cta:hover {
+	color: var(--text-white);
+	background-color: var(--primary-very-light-red);
+	border-color: var(--primary-very-light-red);
 }
 
 /* INTRO SECTION */
@@ -101,9 +141,17 @@ a {
 	display: inline-block;
 }
 
+.nav-link, .dropdown-link, .nav-button > a {
+	font-size: 1.1em;
+}
+
 /* Dropdowns */
 .nav-dropdowns {
 	margin: 0 3rem;
+}
+
+.dropdown {
+	position: relative;
 }
 
 /* + selector used to add margin only to second and third item */
@@ -113,6 +161,46 @@ a {
 
 .dropdown-arrow {
 	margin-left: .2rem;
+	transition: .2s transform;
+}
+
+/* Flip arrow when active */
+.dropdown.active > .dropdown-arrow {
+	transform: rotate(180deg);
+}
+
+/* Hide dropdown when not active */
+.dropdown-options {
+	display: none;
+	list-style: none;
+	width: 10rem;
+	background-color: white;
+	padding: 1rem;
+	border-radius: .5rem;
+	box-shadow: 0 0 2rem -1rem var(--very-dark-black-blue);
+
+	position: absolute;
+	left: -1rem;
+	top: 2rem;
+}
+
+.dropdown-options li {
+	margin: .5rem 0;
+}
+
+.dropdown-options a {
+	text-decoration: none;
+	color: var(--very-dark-grayish-blue);
+}
+
+.dropdown-options a:hover {
+	color: var(--very-dark-black-blue);
+	font-weight: var(--ubuntu-weight-heavy);
+}
+
+/* Show options when dropdown is active */
+.dropdown.active > .dropdown-options {
+	display: block;
 }
 
 /* Buttons */
@@ -129,12 +217,15 @@ a {
 }
 
 .intro-title {
+	color: var(--text-white);
 	font-size: 3.5em;
 	margin: 1rem 0 ;
 }
 
 .intro-description {
 	font-size: 1.2em;
+	color: rgba(255, 255, 255, .8);
+	margin: 2rem 0;
 }
 
 .intro-buttons {
@@ -147,29 +238,11 @@ a {
 	margin: .5rem;
 }
 
-/* SECTIONS WITH TEXT TO THE LEFT */
-.section-bg-light {
-	color: var(--primary-very-dark-blue);
-	padding: 1rem 0 1rem 10%;
-}
-
+/* MAIN SECTIONS */
+/* SHARED STYLES */
 .section-title {
 	width: 100%;
 	font-size: 2.2em;
-	text-align: center;
-	/* Makes up for lack of padding to the right of the section to make it easier 
-	to center text with respect to the screen */
-	padding-right: 10%;
-	margin: 0;
-
-	/* Problematic for responsive design, might need better solution */
-	transform: translateY(300%); 
-}
-
-.section-content {
-	width: 40%;
-	align-self: flex-start;
-	padding-top: 17%;
 }
 
 .section-subtitle {
@@ -181,12 +254,34 @@ a {
 	line-height: 1.5em;
 }
 
-.section-illustration {
+.section-content {
 	width: 50%;
-	overflow: hidden;
+	align-self: flex-start;
+}
+
+.section-illustration {
+	line-height: 0;
+	width: 50%;
 }
 
 .section-illustration > img {
+	width: 100%;
+}
+
+/* SECTIONS WITH LIGHT BACKGROUND */
+.section-bg-light {
+	padding: 1rem 10%;
+}
+
+.section-bg-light .section-paragraph {
+	color: var(--very-dark-grayish-blue);
+}
+
+.section-bg-light .section-illustration {
+	overflow: hidden;
+}
+
+.section-bg-light .section-illustration > img {
 	/* Oversize image to cut away the right part to match the design provided */
 	width: 140%;
 }
@@ -211,9 +306,16 @@ a {
 	border-radius: 0 5rem 0 5rem;
 }
 
+.section-bg-dark .section-title {
+	color: var(--text-white);
+}
+
+.section-bg-dark .section-paragraph {
+	color: var(--text-footer);
+}
+
 /* Use the image container to determine the size and position in the layout */
-.section-illustration-dark {
-	line-height: 0; 
+.section-bg-dark .section-illustration {
 	width: 35%;
 	align-self: center;
 	/* Small Padding to compensate the illustration's vertical whitespace being uneven */
@@ -223,26 +325,39 @@ a {
 }
 
 /* Increase image scale to push it out of the section boundaries like in the design */
-.section-illustration-dark > img {
+.section-bg-dark .section-illustration > img {
 	width: 100%;
 	transform: scale(1.5);
 }
 
-.section-content-dark {
-	width: 50%;
+.section-bg-dark .section-content {
+	align-self: center;
 }
 
-.section-title-dark {
-	font-size: 2.2em;
+/* SECTIONS WITH IMAGE TO THE RIGHT */
+.section-img-right {
+	padding-right: 0;
 }
 
-.section-paragraph-dark {
-	font-size: 1.1em;
-	line-height: 1.5em;
+.section-img-right .section-title {
+	text-align: center;
+	/* Makes up for lack of padding to the right of the section to make it easier 
+	to center text with respect to the screen */
+	padding-right: 10%;
+	margin: 0;
+
+	/* Problematic for responsive design, might need better solution */
+	transform: translateY(300%); 
 }
 
-/* SECTION WITH TEXT TO THE RIGHT */
-.section-text-right {
+.section-img-right .section-content {
+	width: 40%;
+	align-self: flex-start;
+	padding-top: 17%;
+}
+
+/* SECTIONS WITH IMAGE TO THE LEFT */
+.section-img-left {
 	padding: 0 10% 0 0;
 	margin: 5rem 0;
 
@@ -250,15 +365,115 @@ a {
 	column-gap: 5%;
 }
 
-.section-text-right > .section-illustration {
+.section-img-left > .section-illustration {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.section-text-right > .section-content {
+.section-img-left > .section-content {
 	padding-top: 13%;
+	width: 40%;
 }
 
-.section-text-right .section-paragraph + .section-subtitle {
+.section-img-left .section-paragraph + .section-subtitle {
 	margin-top: 3rem;
+}
+
+/* FOOTER */
+footer {
+	color: var(--text-footer);
+	background-color: var(--gradient-very-dark-gray-blue);
+	padding: 5rem 10% 1rem 10%;
+	margin-top: 10rem;
+	border-radius: 0 5rem 0 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+footer .content	{
+	width: 100%;
+	margin-bottom: 5rem;
+
+	display: grid;
+	gap: 2rem 15%;
+	grid-template-columns: repeat(4, max-content);
+	grid-auto-rows: max-content;
+	align-items: center;
+}
+
+footer .brand {
+	grid-row: 1/2;
+	grid-column: 1/2;
+}
+
+#product-title {
+	grid-row: 1/2;
+	grid-column: 2/3;
+}
+
+#product-list {
+	grid-row: 2/3;
+	grid-column: 2/3;
+}
+
+#company-title {
+	grid-row: 1/2;
+	grid-column: 3/4;
+}
+
+#company-list {
+	grid-row: 2/3;
+	grid-column: 3/4;
+}
+
+#connect-title {
+	grid-row: 1/2;
+	grid-column: 4/5;
+}
+
+#connect-list {
+	grid-row: 2/3;
+	grid-column: 4/5;
+}
+
+.footer-links-category {
+	color: white;
+	font-size: 1.2em;
+	margin: 0;
+}
+
+.footer-links-list {
+	align-self: start;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-links-list li + li {
+	margin-top: 1rem;
+}
+
+.footer-link {
+	color: var(--text-footer);
+	font-weight: var(--ubuntu-weight-light);
+}
+
+.footer-link:hover {
+	color: var(--text-footer);
+}
+
+.attribution {
+	width: 100%;
+	text-align: right;
+}
+
+.attribution a {
+	color: var(--text-white);
+}
+
+.attribution a:hover {
+	text-decoration: underline;
 }
