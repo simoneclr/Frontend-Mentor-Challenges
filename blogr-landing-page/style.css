@@ -106,6 +106,10 @@ a {
 	margin: 0 3rem;
 }
 
+.dropdown {
+	position: relative;
+}
+
 /* + selector used to add margin only to second and third item */
 .dropdown + .dropdown {
 	margin-left: 2rem;
@@ -124,6 +128,35 @@ a {
 /* Hide dropdown when not active */
 .dropdown-options {
 	display: none;
+	list-style: none;
+	width: 10rem;
+	color: black;
+	background-color: white;
+	padding: 1rem;
+	border-radius: .5rem;
+	box-shadow: 0 0 2rem -1rem var(--very-dark-black-blue);
+
+	position: absolute;
+	left: -1rem;
+	top: 2rem;
+}
+
+.dropdown-options li {
+	margin: .5rem 0;
+}
+
+.dropdown-options a {
+	text-decoration: none;
+	color: var(--very-dark-black-blue);
+}
+
+.dropdown-options a:hover {
+	font-weight: 600;
+}
+
+/* Show options when dropdown is active */
+.dropdown.active > .dropdown-options {
+	display: block;
 }
 
 /* Buttons */
