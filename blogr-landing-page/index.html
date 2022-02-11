@@ -13,125 +13,128 @@
   <title>Frontend Mentor | [Blogr]</title>
 </head>
 <body>
-  <section class="intro">
-    <nav class="navbar">
-      <div class="nav-left">
-        <div class="brand">
-          <img src="images/logo.svg" alt="Blogr brand logo" class="logo">
-        </div>
+  <!-- Wrapper div to add gradient background while allowing to adjust image size independently -->
+  <div class="intro-bg-wrapper">
+    <section class="intro">
+      <nav class="navbar">
+        <div class="nav-left">
+          <div class="brand">
+            <img src="images/logo.svg" alt="Blogr brand logo" class="logo">
+          </div>
+    
+          <ul class="nav-list nav-dropdowns">
+            <li class="dropdown" id="product-dropdown">
+              <a href="javascript:void(0)" class="dropdown-link">Product</a>
+              
+              <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+              
+              <ul class="dropdown-options">
+                <li>
+                  <a href="#">Overview</a>
+                </li>
   
-        <ul class="nav-list nav-dropdowns">
-          <li class="dropdown" id="product-dropdown">
-            <a href="javascript:void(0)" class="dropdown-link">Product</a>
+                <li>
+                  <a href="#">Pricing</a>
+                </li>
+  
+                <li>
+                  <a href="#">Marketplace</a>
+                </li>
+  
+                <li>
+                  <a href="#">Features</a>
+                </li>
+  
+                <li>
+                  <a href="#">Integrations</a>
+                </li>
+              </ul>
+            </li>
             
-            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+            <li class="dropdown" id="company-dropdown">
+              <a href="javascript:void(0)" class="dropdown-link">Company</a>
+  
+              <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+  
+              <ul class="dropdown-options">
+                <li>
+                  <a href="#">About</a>
+                </li>
+  
+                <li>
+                  <a href="#">Team</a>
+                </li>
+  
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+  
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+              </ul>
+            </li>
             
-            <ul class="dropdown-options">
-              <li>
-                <a href="#">Overview</a>
-              </li>
-
-              <li>
-                <a href="#">Pricing</a>
-              </li>
-
-              <li>
-                <a href="#">Marketplace</a>
-              </li>
-
-              <li>
-                <a href="#">Features</a>
-              </li>
-
-              <li>
-                <a href="#">Integrations</a>
-              </li>
-            </ul>
+            <li class="dropdown" id="connect-dropdown">
+              <a href="javascript:void(0)" class="dropdown-link">Connect</a>
+  
+              <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
+  
+              <ul class="dropdown-options">
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+  
+                <li>
+                  <a href="#">Newsletter</a>
+                </li>
+  
+                <li>
+                  <a href="#">LinkedIn</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-right">
+          <ul class="nav-list nav-buttons">
+            <li class="nav-button">
+              <a href="#" class="nav-link">Login</a>
+            </li>
+            
+            <li class="nav-button">
+              <a href="#" class="btn btn-cta">Sign Up</a>
+            </li>
+          </ul>
+        </div>      
+      </nav>
+  
+      <div class="intro-content">
+        <h1 class="intro-title">
+          A modern publishing platform
+        </h1>
+  
+        <p class="intro-description">
+          Grow your audience and build your online brand
+        </p>
+  
+        <ul class="intro-buttons">
+          <li>
+            <a href="#" class="btn btn-cta">
+              Start for Free
+            </a>
           </li>
-          
-          <li class="dropdown" id="company-dropdown">
-            <a href="javascript:void(0)" class="dropdown-link">Company</a>
-
-            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
-
-            <ul class="dropdown-options">
-              <li>
-                <a href="#">About</a>
-              </li>
-
-              <li>
-                <a href="#">Team</a>
-              </li>
-
-              <li>
-                <a href="#">Blog</a>
-              </li>
-
-              <li>
-                <a href="#">Careers</a>
-              </li>
-            </ul>
+  
+          <li>
+            <a href="#" class="btn btn-secondary">
+              Learn More
+            </a>
           </li>
-          
-          <li class="dropdown" id="connect-dropdown">
-            <a href="javascript:void(0)" class="dropdown-link">Connect</a>
-
-            <img src="images/icon-arrow-light.svg" alt="" class="dropdown-arrow">
-
-            <ul class="dropdown-options">
-              <li>
-                <a href="#">Contact</a>
-              </li>
-
-              <li>
-                <a href="#">Newsletter</a>
-              </li>
-
-              <li>
-                <a href="#">LinkedIn</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        </ul>      
       </div>
-      
-      <div class="nav-right">
-        <ul class="nav-list nav-buttons">
-          <li class="nav-button">
-            <a href="#" class="nav-link">Login</a>
-          </li>
-          
-          <li class="nav-button">
-            <a href="#" class="btn btn-cta">Sign Up</a>
-          </li>
-        </ul>
-      </div>      
-    </nav>
-
-    <div class="intro-content">
-      <h1 class="intro-title">
-        A modern publishing platform
-      </h1>
-
-      <p class="intro-description">
-        Grow your audience and build your online brand
-      </p>
-
-      <ul class="intro-buttons">
-        <li>
-          <a href="#" class="btn btn-cta">
-            Start for Free
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="btn btn-secondary">
-            Learn More
-          </a>
-        </li>
-      </ul>      
-    </div>
-  </section>
+    </section>
+  </div>
 
   <section class="section-bg-light section-img-right">
     
