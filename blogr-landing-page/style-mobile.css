@@ -149,4 +149,141 @@
 	.intro-title {
 		font-size: 2em;
 	}
+
+	/* MAIN SECTIONS */
+	/* SHARED STYLES */
+	.section-title, .section-subtitle, .section-paragraph {
+		text-align: center;
+	}
+
+	.section-title {
+		width: 100%;
+		font-size: 1.6em;
+	}
+
+	.section-subtitle {
+		font-size: 2em;
+	}
+
+	.section-paragraph {
+		font-size: 1.1em;
+		line-height: 1.5em;
+	}
+
+	.section-content {
+		order: 2;
+		width: 100%;
+		align-self: flex-start;
+	}
+
+	.section-illustration {
+		order: 1;
+		line-height: 0;
+		width: 100%;
+	}
+
+	.section-illustration > img {
+		width: 100%;
+	}
+
+	/* SECTIONS WITH LIGHT BACKGROUND */
+	.section-bg-light {
+		padding: 1rem 10%;
+	}
+
+	.section-bg-light .section-paragraph {
+		color: var(--very-dark-grayish-blue);
+	}
+
+	.section-bg-light .section-illustration {
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.section-bg-light .section-illustration > img {
+		width: 100%;
+	}
+
+	/* SECTION WITH DARK BACKGROUND */
+	/* Wrapper adding gradient backround behind the section's image background */
+	.dark-bg-wrapper {
+		width: 100%;
+		margin: 2rem 0;
+		border-radius: 0 5rem 0 5rem;
+		background-image:	linear-gradient(90deg, var(--gradient-very-dark-gray-blue), 
+											var(--gradient-very-dark-desaturated-blue));
+	}
+
+	.section-bg-dark {
+		color: var(--text-white);
+		background: url("images/bg-pattern-circles.svg") no-repeat;
+		/* The need to set size here would mess with the gradient background, 
+		so it was moved to its own div wrapping the section */
+		background-size: 73%;
+		background-position: -57% 89%;
+		border-radius: 0 5rem 0 5rem;
+	}
+
+	.section-bg-dark .section-title {
+		color: var(--text-white);
+	}
+
+	.section-bg-dark .section-paragraph {
+		color: var(--text-footer);
+	}
+
+	/* Use the image container to determine the size and position in the layout */
+	.section-bg-dark .section-illustration {
+		width: 35%;
+		align-self: center;
+		/* Small Padding to compensate the illustration's vertical whitespace being uneven */
+		padding-top: 3%;
+		/* Margin to beter align the oversized image with the rest of the page content */
+		margin-left: 4%;
+	}
+
+	/* Increase image scale to push it out of the section boundaries like in the design */
+	.section-bg-dark .section-illustration > img {
+		width: 100%;
+		transform: scale(1.5);
+	}
+
+	.section-bg-dark .section-content {
+		align-self: center;
+	}
+
+	/* SECTIONS WITH IMAGE TO THE RIGHT */
+	.section-img-right .section-title {
+		text-align: center;
+		padding-right: unset;
+		margin: 4rem 0 2rem 0;
+		transform: none; 
+	}
+
+	.section-img-right .section-content {
+		width: 100%;
+		align-self: flex-start;
+		padding-top: unset;
+	}
+
+	.section-img-right > .section-illustration > img {
+		width: 120%;
+	}
+
+	/* SECTIONS WITH IMAGE TO THE LEFT */
+	.section-img-left {
+		margin: unset;
+		justify-content: flex-start;
+		column-gap: unset;
+	}
+
+	.section-img-left > .section-content {
+		padding-top: unset;
+		width: 100%;
+	}
+
+	.section-img-left > .section-illustration > img {
+		width: 140%;
+	}
 }
