@@ -112,14 +112,14 @@
 		color: var(--very-dark-grayish-blue);
 	}
 
-	.dropdown.active > .dropdown-options {
+	.dropdown-active > .dropdown-options {
 		visibility: unset;
 		padding: 1rem;
 		margin-top: 1rem;
 		height: auto;
 	}
 
-	.dropdown.active > .dropdown-options > li {
+	.dropdown-active > .dropdown-options > li {
 		margin: .5rem 0;
 	}
 

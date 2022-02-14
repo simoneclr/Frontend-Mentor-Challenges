@@ -7,11 +7,11 @@ window.onload = () => {
 		dropdown.addEventListener("click", e => {
 			e.stopImmediatePropagation()
 
-			dropdown.classList.toggle("active")
+			dropdown.classList.toggle("dropdown-active")
 
 			dropdowns.forEach(d => {
 				if (d.getAttribute("id") !== dropdown.getAttribute("id")) {
-					d.classList.remove("active")
+					d.classList.remove("dropdown-active")
 				}
 			})
 		})
@@ -22,7 +22,7 @@ window.onload = () => {
 
 	body.addEventListener("click", e => {
 		dropdowns.forEach(dropdown => {
-			dropdown.classList.remove("active")
+			dropdown.classList.remove("dropdown-active")
 		})
 	}, {capture: false})
 

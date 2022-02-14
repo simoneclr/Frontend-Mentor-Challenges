@@ -179,7 +179,7 @@ a:hover {
 }
 
 /* Flip arrow when active */
-.dropdown.active > .dropdown-arrow {
+.dropdown-active > .dropdown-arrow {
 	transform: rotate(180deg);
 }
 
@@ -214,7 +214,7 @@ a:hover {
 }
 
 /* Show options when dropdown is active */
-.dropdown.active > .dropdown-options {
+.dropdown-active > .dropdown-options {
 	display: block;
 }
 
