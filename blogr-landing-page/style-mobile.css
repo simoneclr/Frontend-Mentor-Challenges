@@ -134,4 +134,19 @@
 		background-color: unset;
 		background-image: linear-gradient(90deg, var(--gradient-very-light-red), var(--gradient-light-red));
 	}
+
+	/* INTRO SECTION */
+	.intro-bg-wrapper {
+		background-image:	linear-gradient(var(--gradient-very-light-red), var(--gradient-light-red));
+	}
+
+	.intro {
+		background: url("images/bg-pattern-intro-mobile.svg") no-repeat;
+		background-size: 360%;
+		background-position: 35% 35%;
+	}
+
+	.intro-title {
+		font-size: 2em;
+	}
 }
