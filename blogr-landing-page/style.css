@@ -68,6 +68,10 @@ a:hover {
 	color: var(--text-white);
 }
 
+.mobile {
+	display: none;
+}
+
 .btn {
 	font-size: 1.1em;
 	color: var(--text-white);
@@ -122,6 +126,13 @@ a:hover {
 	padding: 2rem 0;
 
 	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.nav-content {
+	display: flex;
+	flex-grow: 1;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -143,10 +154,6 @@ a:hover {
 	list-style: none;
 }
 
-.nav-list > li {
-	display: inline-block;
-}
-
 .nav-link, .dropdown-link, .nav-button > a {
 	font-size: 1.1em;
 }
@@ -157,6 +164,7 @@ a:hover {
 }
 
 .dropdown {
+	display: inline-block;
 	position: relative;
 }
 
@@ -177,6 +185,7 @@ a:hover {
 
 /* Hide dropdown when not active */
 .dropdown-options {
+	z-index: 10;
 	display: none;
 	list-style: none;
 	width: 10rem;

@@ -1,0 +1,144 @@
+@media screen and (max-width: 1000px) {
+	.mobile {
+		display: initial;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	/* NAVBAR */
+	.navbar {
+		justify-content: space-between;
+	}
+
+	/* Hide navigation items unless the menu is opened */
+	.nav-content {
+		display: none;
+		z-index: 5;
+	}
+
+	/* Do not the display the closed icon unless the menu is opened */
+	#icon-close {
+		display: none;
+	}
+
+	.menu-toggle {
+		line-height: 0;
+	}
+
+	/* When the menu is opened, change the icon and display the nav content */
+	.icon-active > #icon-hamburger {
+		display: none;
+	}
+
+	.icon-active > #icon-close {
+		display: unset;
+	}
+
+	/* Position navbar content outside the regula page flow */
+	.navbar {
+		position: relative;
+	}
+
+	.nav-content-active {
+		background-color: white;
+		flex-grow: unset;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-items: flex-start;
+		align-items: center;
+
+		position: absolute;
+		top: 100%;
+	}
+
+	.nav-content a {
+		color: var(--primary-very-dark-blue);
+	}
+
+	.nav-left, .nav-right, .nav-dropdowns {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.nav-left, .nav-right {
+		width: 90%;
+	}
+
+	.nav-left {
+		border-bottom: 2px solid #dddddd;
+	}
+
+	.nav-dropdowns {
+		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.nav-dropdowns, .dropdown, .dropdown-options {
+		width: 100%;
+	}
+
+	.dropdown {
+		display: block;
+		margin: 0 !important;
+	}
+
+	.dropdown-options {
+		background-color: #eeeeee;
+		padding: 0 1rem;
+		margin: 1rem 0;
+		box-shadow: none;
+
+		/* On mobile it is positioned normally, so clear desktop positioning */
+		position: unset;
+		top: unset;
+		left: unset;
+
+		/* On mobile, instead of display: none, use visibility: hidden */
+		display: block;
+		visibility: hidden;
+		height: 0;
+	}
+
+	.dropdown-options > li {
+		margin: 0;
+	}
+
+	.dropdown-options > li > a {
+		color: var(--very-dark-grayish-blue);
+	}
+
+	.dropdown.active > .dropdown-options {
+		visibility: unset;
+		padding: 1rem;
+		margin-top: 1rem;
+		height: auto;
+	}
+
+	.dropdown.active > .dropdown-options > li {
+		margin: .5rem 0;
+	}
+
+	.nav-buttons {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.nav-button {
+		margin: .5rem 0 !important;
+		width: fit-content;
+	}
+
+	.btn-cta {
+		color: var(--text-white) !important;
+		background-color: unset;
+		background-image: linear-gradient(90deg, var(--gradient-very-light-red), var(--gradient-light-red));
+	}
+}
