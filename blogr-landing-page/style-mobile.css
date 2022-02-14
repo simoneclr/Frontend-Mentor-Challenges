@@ -166,8 +166,8 @@
 	}
 
 	.section-paragraph {
-		font-size: 1.1em;
-		line-height: 1.5em;
+		font-size: 1.2em;
+		line-height: 2em;
 	}
 
 	.section-content {
@@ -209,24 +209,24 @@
 	/* Wrapper adding gradient backround behind the section's image background */
 	.dark-bg-wrapper {
 		width: 100%;
-		margin: 2rem 0;
+		margin: 55% 0 2rem 0;
 		border-radius: 0 5rem 0 5rem;
-		background-image:	linear-gradient(90deg, var(--gradient-very-dark-gray-blue), 
+		background-image:	linear-gradient(var(--gradient-very-dark-gray-blue), 
 											var(--gradient-very-dark-desaturated-blue));
 	}
 
 	.section-bg-dark {
 		color: var(--text-white);
-		background: url("images/bg-pattern-circles.svg") no-repeat;
-		/* The need to set size here would mess with the gradient background, 
-		so it was moved to its own div wrapping the section */
-		background-size: 73%;
-		background-position: -57% 89%;
+		padding-bottom: 20%;
+		/* TODO: Find a way to make the background work properly */
+		background: none;
+
 		border-radius: 0 5rem 0 5rem;
 	}
 
 	.section-bg-dark .section-title {
 		color: var(--text-white);
+		font-size: 2em;
 	}
 
 	.section-bg-dark .section-paragraph {
@@ -235,18 +235,20 @@
 
 	/* Use the image container to determine the size and position in the layout */
 	.section-bg-dark .section-illustration {
-		width: 35%;
+		width: 100%;
 		align-self: center;
-		/* Small Padding to compensate the illustration's vertical whitespace being uneven */
-		padding-top: 3%;
-		/* Margin to beter align the oversized image with the rest of the page content */
-		margin-left: 4%;
+		
+		padding-top: unset;
+		margin-left: unset;
+
+		transform: translateY(-50%);
+		margin-bottom: -50%;
 	}
 
 	/* Increase image scale to push it out of the section boundaries like in the design */
 	.section-bg-dark .section-illustration > img {
 		width: 100%;
-		transform: scale(1.5);
+		transform: scale(1.2);
 	}
 
 	.section-bg-dark .section-content {
@@ -285,5 +287,10 @@
 
 	.section-img-left > .section-illustration > img {
 		width: 140%;
+	}
+
+	/* FOR DEV ONLY */
+	footer {
+		display: none;
 	}
 }
