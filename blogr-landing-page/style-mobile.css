@@ -45,6 +45,7 @@
 		background-color: white;
 		flex-grow: unset;
 		width: 100%;
+		border-radius: .5rem;
 
 		display: flex;
 		flex-direction: column;
@@ -128,7 +129,7 @@
 		width: fit-content;
 	}
 
-	.btn-cta {
+	.nav-content .btn-cta {
 		color: var(--text-white) !important;
 		background-color: unset;
 		background-image: linear-gradient(90deg, var(--gradient-very-light-red), var(--gradient-light-red));
