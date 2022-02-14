@@ -219,6 +219,12 @@ a:hover {
 }
 
 /* Buttons */
+.nav-buttons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 /* + selector used to add margin only to second and third item */
 .nav-button + .nav-button {
 	margin-left: 2rem;
