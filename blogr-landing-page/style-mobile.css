@@ -288,9 +288,21 @@
 	.section-img-left > .section-illustration > img {
 		width: 140%;
 	}
+	
+	footer .content {
+		grid-template-columns: max-content;
+		justify-content: center;
+		text-align: center;
+	}
 
-	/* FOR DEV ONLY */
-	footer {
-		display: none;
+	footer .brand, #product-title, #product-list,
+	#company-title, #company-list, 
+	#connect-title, #connect-list {
+		grid-column: unset;
+		grid-row: unset;
+	}
+
+	.attribution {
+		text-align: center;
 	}
 }
