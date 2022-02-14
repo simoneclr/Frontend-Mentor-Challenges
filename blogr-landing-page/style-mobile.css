@@ -1,0 +1,308 @@
+@media screen and (max-width: 1000px) {
+	.mobile {
+		display: initial;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	/* NAVBAR */
+	.navbar {
+		justify-content: space-between;
+	}
+
+	/* Hide navigation items unless the menu is opened */
+	.nav-content {
+		display: none;
+		z-index: 5;
+	}
+
+	/* Do not the display the closed icon unless the menu is opened */
+	#icon-close {
+		display: none;
+	}
+
+	.menu-toggle {
+		line-height: 0;
+	}
+
+	/* When the menu is opened, change the icon and display the nav content */
+	.icon-active > #icon-hamburger {
+		display: none;
+	}
+
+	.icon-active > #icon-close {
+		display: unset;
+	}
+
+	/* Position navbar content outside the regula page flow */
+	.navbar {
+		position: relative;
+	}
+
+	.nav-content-active {
+		background-color: white;
+		flex-grow: unset;
+		width: 100%;
+		border-radius: .5rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-items: flex-start;
+		align-items: center;
+
+		position: absolute;
+		top: 100%;
+	}
+
+	.nav-content a {
+		color: var(--primary-very-dark-blue);
+	}
+
+	.nav-left, .nav-right, .nav-dropdowns, .nav-buttons {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.nav-left, .nav-right {
+		width: 90%;
+	}
+
+	.nav-left {
+		border-bottom: 2px solid #dddddd;
+	}
+
+	.nav-dropdowns {
+		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.nav-dropdowns, .dropdown, .dropdown-options, .nav-buttons {
+		width: 100%;
+	}
+
+	.dropdown {
+		display: block;
+		margin: 0 !important;
+	}
+
+	.dropdown-options {
+		background-color: #eeeeee;
+		padding: 0 1rem;
+		margin: 1rem 0;
+		box-shadow: none;
+
+		/* On mobile it is positioned normally, so clear desktop positioning */
+		position: unset;
+		top: unset;
+		left: unset;
+
+		/* On mobile, instead of display: none, use visibility: hidden */
+		display: block;
+		visibility: hidden;
+		height: 0;
+	}
+
+	.dropdown-options > li {
+		margin: 0;
+	}
+
+	.dropdown-options > li > a {
+		color: var(--very-dark-grayish-blue);
+	}
+
+	.dropdown-active > .dropdown-options {
+		visibility: unset;
+		padding: 1rem;
+		margin-top: 1rem;
+		height: auto;
+	}
+
+	.dropdown-active > .dropdown-options > li {
+		margin: .5rem 0;
+	}
+
+	.nav-button {
+		margin: .5rem 0 !important;
+		width: fit-content;
+	}
+
+	.nav-content .btn-cta {
+		color: var(--text-white) !important;
+		background-color: unset;
+		background-image: linear-gradient(90deg, var(--gradient-very-light-red), var(--gradient-light-red));
+	}
+
+	/* INTRO SECTION */
+	.intro-bg-wrapper {
+		background-image:	linear-gradient(var(--gradient-very-light-red), var(--gradient-light-red));
+	}
+
+	.intro {
+		background: url("images/bg-pattern-intro-mobile.svg") no-repeat;
+		background-size: 360%;
+		background-position: 35% 35%;
+	}
+
+	.intro-title {
+		font-size: 2em;
+	}
+
+	/* MAIN SECTIONS */
+	/* SHARED STYLES */
+	.section-title, .section-subtitle, .section-paragraph {
+		text-align: center;
+	}
+
+	.section-title {
+		width: 100%;
+		font-size: 1.6em;
+	}
+
+	.section-subtitle {
+		font-size: 2em;
+	}
+
+	.section-paragraph {
+		font-size: 1.2em;
+		line-height: 2em;
+	}
+
+	.section-content {
+		order: 2;
+		width: 100%;
+		align-self: flex-start;
+	}
+
+	.section-illustration {
+		order: 1;
+		line-height: 0;
+		width: 100%;
+	}
+
+	.section-illustration > img {
+		width: 100%;
+	}
+
+	/* SECTIONS WITH LIGHT BACKGROUND */
+	.section-bg-light {
+		padding: 1rem 10%;
+	}
+
+	.section-bg-light .section-paragraph {
+		color: var(--very-dark-grayish-blue);
+	}
+
+	.section-bg-light .section-illustration {
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.section-bg-light .section-illustration > img {
+		width: 100%;
+	}
+
+	/* SECTION WITH DARK BACKGROUND */
+	/* Wrapper adding gradient backround behind the section's image background */
+	.dark-bg-wrapper {
+		width: 100%;
+		margin: 55% 0 2rem 0;
+		border-radius: 0 5rem 0 5rem;
+		background-image:	linear-gradient(var(--gradient-very-dark-gray-blue), 
+											var(--gradient-very-dark-desaturated-blue));
+	}
+
+	.section-bg-dark {
+		color: var(--text-white);
+		padding-bottom: 20%;
+		/* TODO: Find a way to make the background work properly */
+		background: none;
+
+		border-radius: 0 5rem 0 5rem;
+	}
+
+	.section-bg-dark .section-title {
+		color: var(--text-white);
+		font-size: 2em;
+	}
+
+	.section-bg-dark .section-paragraph {
+		color: var(--text-footer);
+	}
+
+	/* Use the image container to determine the size and position in the layout */
+	.section-bg-dark .section-illustration {
+		width: 100%;
+		align-self: center;
+		
+		padding-top: unset;
+		margin-left: unset;
+
+		transform: translateY(-50%);
+		margin-bottom: -50%;
+	}
+
+	/* Increase image scale to push it out of the section boundaries like in the design */
+	.section-bg-dark .section-illustration > img {
+		width: 100%;
+		transform: scale(1.2);
+	}
+
+	.section-bg-dark .section-content {
+		align-self: center;
+	}
+
+	/* SECTIONS WITH IMAGE TO THE RIGHT */
+	.section-img-right .section-title {
+		text-align: center;
+		padding-right: unset;
+		margin: 4rem 0 2rem 0;
+		transform: none; 
+	}
+
+	.section-img-right .section-content {
+		width: 100%;
+		align-self: flex-start;
+		padding-top: unset;
+	}
+
+	.section-img-right > .section-illustration > img {
+		width: 120%;
+	}
+
+	/* SECTIONS WITH IMAGE TO THE LEFT */
+	.section-img-left {
+		margin: unset;
+		justify-content: flex-start;
+		column-gap: unset;
+	}
+
+	.section-img-left > .section-content {
+		padding-top: unset;
+		width: 100%;
+	}
+
+	.section-img-left > .section-illustration > img {
+		width: 140%;
+	}
+	
+	footer .content {
+		grid-template-columns: max-content;
+		justify-content: center;
+		text-align: center;
+	}
+
+	footer .brand, #product-title, #product-list,
+	#company-title, #company-list, 
+	#connect-title, #connect-list {
+		grid-column: unset;
+		grid-row: unset;
+	}
+
+	.attribution {
+		text-align: center;
+	}
+}

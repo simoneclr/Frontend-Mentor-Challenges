@@ -68,6 +68,10 @@ a:hover {
 	color: var(--text-white);
 }
 
+.mobile {
+	display: none;
+}
+
 .btn {
 	font-size: 1.1em;
 	color: var(--text-white);
@@ -122,6 +126,13 @@ a:hover {
 	padding: 2rem 0;
 
 	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.nav-content {
+	display: flex;
+	flex-grow: 1;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -143,10 +154,6 @@ a:hover {
 	list-style: none;
 }
 
-.nav-list > li {
-	display: inline-block;
-}
-
 .nav-link, .dropdown-link, .nav-button > a {
 	font-size: 1.1em;
 }
@@ -157,6 +164,7 @@ a:hover {
 }
 
 .dropdown {
+	display: inline-block;
 	position: relative;
 }
 
@@ -171,12 +179,13 @@ a:hover {
 }
 
 /* Flip arrow when active */
-.dropdown.active > .dropdown-arrow {
+.dropdown-active > .dropdown-arrow {
 	transform: rotate(180deg);
 }
 
 /* Hide dropdown when not active */
 .dropdown-options {
+	z-index: 10;
 	display: none;
 	list-style: none;
 	width: 10rem;
@@ -205,11 +214,17 @@ a:hover {
 }
 
 /* Show options when dropdown is active */
-.dropdown.active > .dropdown-options {
+.dropdown-active > .dropdown-options {
 	display: block;
 }
 
 /* Buttons */
+.nav-buttons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 /* + selector used to add margin only to second and third item */
 .nav-button + .nav-button {
 	margin-left: 2rem;
