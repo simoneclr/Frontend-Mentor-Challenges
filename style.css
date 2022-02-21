@@ -1,5 +1,9 @@
 :root {
 	/* Colors */
+	/* Backgrounds */
+	--bg-body: #f7f8fb;
+	--bg-card: #ffffff;
+
 	/* Gradients */
 	--bg-gradient-dark-blue: #000046;
 	--bg-gradient-light-blue: #1CB5E0;
@@ -15,6 +19,7 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--bg-body);
 	padding: 0;
 	margin: 0;
 	min-height: 100vh;
@@ -37,4 +42,31 @@ body {
 	color: var(--txt-regular-white);
 	font-size: 1.2em;
 	margin: 2rem 0;
+}
+
+/* PROJECTS SECTION */
+section {
+	width: 75%;
+	margin: 5rem auto;
+
+	display: grid;
+	grid-template-columns: repeat(3, 30%);
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* PROJECT CARD */
+.project-card {
+	text-align: center;
+	background-color: var(--bg-card);
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.project-thumbnail {
+	line-height: 0;
+}
+
+.project-thumbnail > img {
+	width: 100%;
 }
