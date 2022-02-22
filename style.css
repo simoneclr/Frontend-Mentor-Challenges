@@ -64,7 +64,7 @@ section {
 	display: grid;
 	grid-template-columns: repeat(3, 30%);
 	justify-content: space-between;
-	align-items: center;
+	row-gap: 3rem;
 }
 
 .projects {
