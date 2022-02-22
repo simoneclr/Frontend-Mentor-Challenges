@@ -32,6 +32,9 @@ body {
 	padding: 0;
 	margin: 0;
 	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
 }
 
 /* INTRO SECTION */
@@ -62,6 +65,10 @@ section {
 	grid-template-columns: repeat(3, 30%);
 	justify-content: space-between;
 	align-items: center;
+}
+
+.projects {
+	flex-grow: 1;
 }
 
 /* PROJECT CARD */
@@ -148,4 +155,26 @@ section {
 
 .link:active {
 	color: var(--txt-secondary-black);
+}
+
+/* FOOTER */
+footer {
+	padding: 1rem;
+}
+
+.attribution {
+	text-align: center;
+	margin: 0;
+}
+
+.attribution a {
+	color: var(--txt-regular-black);
+}
+
+.attribution a:hover {
+	color: var(--bg-cta);
+}
+
+.attribution a:active {
+	color: var(--txt-highlight-black);
 }
