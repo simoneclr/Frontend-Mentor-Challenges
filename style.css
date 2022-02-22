@@ -52,19 +52,19 @@ body {
 
 .intro-text	{
 	color: var(--txt-regular-white);
-	font-size: 1.2em;
+	font-size: 1.3em;
 	margin: 2rem 0;
 }
 
 /* PROJECTS SECTION */
 section {
-	width: 75%;
+	width: 90%;
 	margin: 5rem auto;
 
 	display: grid;
-	grid-template-columns: repeat(3, 30%);
-	justify-content: space-between;
-	row-gap: 3rem;
+	grid-template-columns: repeat(auto-fill, minmax(auto, 320px));
+	justify-content: center;
+	gap: 3rem;
 }
 
 .projects {
@@ -103,6 +103,7 @@ section {
 	margin: .5rem 0;
 
 	display: flex;
+	flex-wrap: wrap;
 	gap: .5rem;
 }
 
@@ -120,8 +121,9 @@ section {
 	margin-top: 2rem;
 
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	column-gap: 2rem;
+	gap: 2rem;
 }
 
 .project-links > a {
@@ -177,4 +179,11 @@ footer {
 
 .attribution a:active {
 	color: var(--txt-highlight-black);
+}
+
+/* RESPONSIVE BEHAVIOUR */
+@media screen and (min-width: 1900px) {
+	.projects {
+		grid-template-columns: repeat(4, minmax(auto, 320px));
+	}
 }
