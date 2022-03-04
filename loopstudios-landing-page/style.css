@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+	/* Colors */
+	--white: rgba(255, 255, 255, .9);
+	--black: hsl(0, 0%, 0%);
+	--dark-gray: hsl(0, 0%, 55%);
+	--very-dark-gray: hsl(0, 0%, 41%);
+
+	--hero-bg-overlay: rgba(0, 0, 0, .4);
+
+	/* Font weights */
+	--weight-alata: 400;
+	--weight-josefin: 300;
+
+	/* Paddings */
+	--content-padding-sides: 10%
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Alata", sans-serif;
+	font-size: 15px;
+	font-weight: var(--weight-alata);
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: var(--weight-josefin);
+	text-transform: uppercase;
+}
+
+section {
+	padding: 0 var(--content-padding-sides);
+}
+
+/* Hero section */
+.hero {
+	min-height: 100vh;
+	background: linear-gradient(var(--hero-bg-overlay), var(--hero-bg-overlay)),
+							url("./images/desktop/image-hero.jpg") no-repeat center;
+							
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	width: 100%;
+	padding: 4rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo	{
+	line-height: 0;
+}
+
+.nav-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+}
+
+.nav-links > li {
+	display: block;
+}
+
+.nav-link {
+	position: relative;
+	display: block;
+	color: var(--white);
+	font-size: 1.1em;
+	text-decoration: none;
+	padding: .5rem;
+}
+
+/* Underline effect when hovering links */
+.nav-link::after {
+	display: block;
+	content: "";
+	width: 0;
+	height: .1rem;
+	background-color: var(--white);
+	border-radius: .1rem;
+	
+	position: absolute;
+	bottom: 0;
+	/* The underline starts from the middle of the element */
+	left: 50%;
+	/* Translate it negatively by half its width so taht it appears 
+			horizontally centered with resect to the parent element */
+	transform: translateX(-50%);
+
+	transition: .2s width;
+}
+
+.nav-link:hover::after {
+	width: 2rem;
+}
+
+.hero-content {
+	width: 100%;
+	padding-bottom: 4.5rem;
+	/* Occupy all available space within the hero container */
+	flex-grow: 1;
+
+	/* Used to conveniently center the title */
+	display: flex;
+	align-items: center;
+}
+
+.hero-title {
+	color: var(--white);
+	font-size: 5em;
+	line-height: 1.1em;
+	width: 60%;
+	padding: 2rem;
+	border: .2rem solid var(--white);
+}
+
+/* About section */
+.about-section {
+	padding: 5rem var(--content-padding-sides);
+	margin: 5rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+/* Image container is used to place the image in the layout */
+.about-image {
+	position: relative;
+	line-height: 0;
+	width: 50%;
+	/* 
+		Dinamically compute height to match the oversized, absolutely positioned image 
+		1.4 is the oversize ratio of the image
+		40vh is the width the image container occupies in the layout 
+			(its 50% width of a container with 10% padding on each side, so 0.5 * (100vw - 10vw - 10vw) = 0.4 = 40vw
+		500 / 731 is the original ratio of the image
+	*/
+	height: calc(calc(1.4 * 40vw) * calc(500 / 731));
+}
+
+/* image is oversized, and positioned outside of the flow with position:absolute to reach desired effect */
+.about-image > img {
+	width: 140%;
+	
+	position: absolute;
+	bottom: .1rem;
+	left: 0;
+}
+
+.about-content {
+	width: 45%;
+	z-index: 10;
+	background-color: white;
+	padding: 4.6rem 0 0 4.6rem;
+}
+
+.about-content h2 {
+	line-height: 1.1em;
+	font-size: 3em;
+	margin: 0;
+	margin-bottom: 1.5rem;
+}
+
+.about-content p {
+	line-height: 2em;
+	color: var(--dark-gray);
+	margin: 0;
+}
