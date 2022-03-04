@@ -37,11 +37,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-	padding: 0 var(--content-padding-sides);
+	padding: 5rem var(--content-padding-sides);
+	margin: 5rem 0;
 }
 
 /* Hero section */
 .hero {
+	padding: 0 var(--content-padding-sides);
+	margin: 0;
 	min-height: 100vh;
 	background: linear-gradient(var(--hero-bg-overlay), var(--hero-bg-overlay)),
 							url("./images/desktop/image-hero.jpg") no-repeat center;
@@ -185,4 +188,79 @@ section {
 	line-height: 2em;
 	color: var(--dark-gray);
 	margin: 0;
+}
+
+/* Creations section */
+.creations-section {
+	padding-top: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.creations-section h2 {
+	font-size: 2.5em;
+	margin: 2em 0;
+}
+
+.btn-link {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 1em;
+	font-size: 1.2em;
+	color: var(--black);
+	padding: .5rem 2rem;	
+	background-color: var(--white);
+	border: .1rem solid var(--dark-gray);
+}
+
+.btn-link:hover {
+	color: var(--white);
+	background-color: var(--black);
+	border-color: var(--black);
+}
+
+.creations-list {
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 256px);
+	grid-auto-rows: max-content;
+	justify-content: space-between;
+	gap: 3rem 2rem
+}
+
+.creation-card {
+	display: block;
+	position: relative;
+	line-height: 0;
+	background-color: var(--white);
+}
+
+.creation-card-image {
+	width: 100%;
+}
+
+.creation-card:hover > .creation-card-image{
+	opacity: .4;
+}
+
+.creation-card-name {
+	line-height: initial;
+	font-size: 2em;
+	color: var(--white);
+	margin: 1.5rem;
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.creation-card:hover > .creation-card-name {
+	color: var(--black);
 }
