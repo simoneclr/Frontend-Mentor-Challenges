@@ -112,3 +112,23 @@ section {
 .nav-link:hover::after {
 	width: 2rem;
 }
+
+.hero-content {
+	width: 100%;
+	padding-bottom: 4.5rem;
+	/* Occupy all available space within the hero container */
+	flex-grow: 1;
+
+	/* Used to conveniently center the title */
+	display: flex;
+	align-items: center;
+}
+
+.hero-title {
+	color: var(--white);
+	font-size: 5em;
+	line-height: 1.1em;
+	width: 60%;
+	padding: 2rem;
+	border: .2rem solid var(--white);
+}
