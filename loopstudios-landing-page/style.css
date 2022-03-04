@@ -192,14 +192,35 @@ section {
 
 /* Creations section */
 .creations-section {
+	padding-top: 0;
+
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.creations-section h2, .creations-section .btn-link {
-	width: 50%;
+.creations-section h2 {
+	font-size: 2.5em;
+	margin: 2em 0;
+}
+
+.btn-link {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 1em;
+	font-size: 1.2em;
+	color: var(--black);
+	padding: .5rem 2rem;	
+	background-color: var(--white);
+	border: .1rem solid var(--dark-gray);
+}
+
+.btn-link:hover {
+	color: var(--white);
+	background-color: var(--black);
+	border-color: var(--black);
 }
 
 .creations-list {
