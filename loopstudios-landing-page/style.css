@@ -2,14 +2,19 @@
 
 :root {
 	/* Colors */
-	--white: hsl(0, 0%, 100%);
+	--white: rgba(255, 255, 255, .9);
 	--black: hsl(0, 0%, 0%);
 	--dark-gray: hsl(0, 0%, 55%);
 	--very-dark-gray: hsl(0, 0%, 41%);
 
+	--hero-bg-overlay: rgba(0, 0, 0, .4);
+
 	/* Font weights */
 	--weight-alata: 400;
 	--weight-josefin: 300;
+
+	/* Paddings */
+	--content-padding-sides: 10%
 }
 
 * {
@@ -31,3 +36,79 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
+section {
+	padding: 0 var(--content-padding-sides);
+}
+
+/* Hero section */
+.hero {
+	min-height: 100vh;
+	background: linear-gradient(var(--hero-bg-overlay), var(--hero-bg-overlay)),
+							url("./images/desktop/image-hero.jpg") no-repeat center;
+							
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	width: 100%;
+	padding: 4rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo	{
+	line-height: 0;
+}
+
+.nav-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+}
+
+.nav-links > li {
+	display: block;
+}
+
+.nav-link {
+	position: relative;
+	display: block;
+	color: var(--white);
+	font-size: 1.1em;
+	text-decoration: none;
+	padding: .5rem;
+}
+
+/* Underline effect when hovering links */
+.nav-link::after {
+	display: block;
+	content: "";
+	width: 0;
+	height: .1rem;
+	background-color: white;
+	border-radius: .1rem;
+	
+	position: absolute;
+	bottom: 0;
+	/* The underline starts from the middle of the element */
+	left: 50%;
+	/* Translate it negatively by half its width so taht it appears 
+			horizontally centered with resect to the parent element */
+	transform: translateX(-50%);
+
+	transition: .2s width;
+}
+
+.nav-link:hover::after {
+	width: 2rem;
+}
