@@ -132,3 +132,57 @@ section {
 	padding: 2rem;
 	border: .2rem solid var(--white);
 }
+
+/* About section */
+.about-section {
+	padding: 5rem var(--content-padding-sides);
+	margin: 5rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+/* Image container is used to place the image in the layout */
+.about-image {
+	position: relative;
+	line-height: 0;
+	width: 50%;
+	/* 
+		Dinamically compute height to match the oversized, absolutely positioned image 
+		1.4 is the oversize ratio of the image
+		40vh is the width the image container occupies in the layout 
+			(its 50% width of a container with 10% padding on each side, so 0.5 * (100vw - 10vw - 10vw) = 0.4 = 40vw
+		500 / 731 is the original ratio of the image
+	*/
+	height: calc(calc(1.4 * 40vw) * calc(500 / 731));
+}
+
+/* image is oversized, and positioned outside of the flow with position:absolute to reach desired effect */
+.about-image > img {
+	width: 140%;
+	
+	position: absolute;
+	bottom: .1rem;
+	left: 0;
+}
+
+.about-content {
+	width: 45%;
+	z-index: 10;
+	background-color: white;
+	padding: 4.6rem 0 0 4.6rem;
+}
+
+.about-content h2 {
+	line-height: 1.1em;
+	font-size: 3em;
+	margin: 0;
+	margin-bottom: 1.5rem;
+}
+
+.about-content p {
+	line-height: 2em;
+	color: var(--dark-gray);
+	margin: 0;
+}
