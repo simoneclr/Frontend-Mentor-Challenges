@@ -14,7 +14,17 @@
 	--weight-josefin: 300;
 
 	/* Paddings */
-	--content-padding-sides: 10%
+	--content-padding-sides: 10%;
+
+	/* About image height */
+	/* 
+		Dinamically compute height to match the oversized, absolutely positioned image 
+		1.4 is the oversize ratio of the image
+		40vh is the width the image container occupies in the layout 
+			(its 50% width of a container with 10% padding on each side, so 0.5 * (100vw - 10vw - 10vw) = 0.4 = 40vw
+		500 / 731 is the original ratio of the image
+	*/
+	--about-image-height: calc(calc(1.4 * 40vw) * calc(500 / 731));
 }
 
 * {
@@ -154,14 +164,7 @@ section {
 	position: relative;
 	line-height: 0;
 	width: 50%;
-	/* 
-		Dinamically compute height to match the oversized, absolutely positioned image 
-		1.4 is the oversize ratio of the image
-		40vh is the width the image container occupies in the layout 
-			(its 50% width of a container with 10% padding on each side, so 0.5 * (100vw - 10vw - 10vw) = 0.4 = 40vw
-		500 / 731 is the original ratio of the image
-	*/
-	height: calc(calc(1.4 * 40vw) * calc(500 / 731));
+	height: var(--about-image-height);
 }
 
 /* image is oversized, and positioned outside of the flow with position:absolute to reach desired effect */

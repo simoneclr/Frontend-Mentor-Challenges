@@ -1,0 +1,31 @@
+@media screen and (max-width: 769px) {
+	:root {
+		--content-padding-sides: 5%
+	}
+	.hero {
+		background: url("./images/mobile/image-hero.jpg") no-repeat center;
+		background-size: cover;
+	}
+
+	/* NAVBAR */
+	.navbar {
+		padding: 2rem 0;
+	}
+
+	/* TODO: Add interactive menu */
+	.navbar-links {
+		display: none;
+	}
+
+	.hero-content {
+		justify-content: center;
+	}
+
+	.hero-title {
+		font-size: 3em;
+		width: auto;
+	}
+
+	/* ABOUT SECTION */
+	
+}
