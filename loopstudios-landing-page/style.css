@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+	/* Colors */
+	--white: rgba(255, 255, 255, .9);
+	--black: hsl(0, 0%, 0%);
+	--dark-gray: hsl(0, 0%, 55%);
+	--very-dark-gray: hsl(0, 0%, 41%);
+
+	--hero-bg-overlay: rgba(0, 0, 0, .4);
+
+	/* Font weights */
+	--weight-alata: 400;
+	--weight-josefin: 300;
+
+	/* Paddings */
+	--content-padding-sides: 10%;
+
+	/* About image height */
+	/* 
+		Dinamically compute height to match the oversized, absolutely positioned image 
+		1.4 is the oversize ratio of the image
+		40vh is the width the image container occupies in the layout 
+			(its 50% width of a container with 10% padding on each side, so 0.5 * (100vw - 10vw - 10vw) = 0.4 = 40vw
+		500 / 731 is the original ratio of the image
+	*/
+	--about-image-height: calc(calc(1.4 * 40vw) * calc(500 / 731));
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Alata", sans-serif;
+	font-size: 15px;
+	font-weight: var(--weight-alata);
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: var(--weight-josefin);
+	text-transform: uppercase;
+}
+
+section {
+	padding: 5rem var(--content-padding-sides);
+	margin: 5rem 0;
+}
+
+.mobile {
+	display: none;
+}
+
+/* Hero section */
+.hero {
+	padding: 0 var(--content-padding-sides);
+	margin: 0;
+	min-height: 100vh;
+	background: linear-gradient(var(--hero-bg-overlay), var(--hero-bg-overlay)),
+							url("./images/desktop/image-hero.jpg") no-repeat center;
+							
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	width: 100%;
+	padding: 4rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo	{
+	line-height: 0;
+}
+
+.nav-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.navbar-links {
+	justify-content: flex-end;
+}
+
+.nav-links > li {
+	display: block;
+}
+
+.nav-link {
+	position: relative;
+	display: block;
+	color: var(--white);
+	font-size: 1.1em;
+	text-decoration: none;
+	padding: .5rem;
+}
+
+/* Underline effect when hovering links */
+.nav-link::after {
+	display: block;
+	content: "";
+	width: 0;
+	height: .1rem;
+	background-color: var(--white);
+	border-radius: .1rem;
+	
+	position: absolute;
+	bottom: 0;
+	/* The underline starts from the middle of the element */
+	left: 50%;
+	/* Translate it negatively by half its width so taht it appears 
+			horizontally centered with resect to the parent element */
+	transform: translateX(-50%);
+
+	transition: .2s width;
+}
+
+.nav-link:hover::after {
+	width: 2rem;
+}
+
+.hero-content {
+	width: 100%;
+	padding-bottom: 4.5rem;
+	/* Occupy all available space within the hero container */
+	flex-grow: 1;
+
+	/* Used to conveniently center the title */
+	display: flex;
+	align-items: center;
+}
+
+.hero-title {
+	color: var(--white);
+	font-size: 5em;
+	line-height: 1.1em;
+	width: 60%;
+	padding: 2rem;
+	border: .2rem solid var(--white);
+}
+
+/* About section */
+.about-section {
+	padding: 5rem var(--content-padding-sides);
+	margin: 5rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+/* Image container is used to place the image in the layout */
+.about-image {
+	position: relative;
+	line-height: 0;
+	width: 50%;
+	height: var(--about-image-height);
+}
+
+/* image is oversized, and positioned outside of the flow with position:absolute to reach desired effect */
+.about-image > img {
+	width: 140%;
+	
+	position: absolute;
+	bottom: .1rem;
+	left: 0;
+}
+
+.about-content {
+	width: 45%;
+	z-index: 10;
+	background-color: white;
+	padding: 4.6rem 0 0 4.6rem;
+}
+
+.about-content h2 {
+	line-height: 1.1em;
+	font-size: 3em;
+	margin: 0;
+	margin-bottom: 1.5rem;
+}
+
+.about-content p {
+	line-height: 2em;
+	color: var(--dark-gray);
+	margin: 0;
+}
+
+/* Creations section */
+.creations-section {
+	padding-top: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.creations-section h2 {
+	font-size: 2.5em;
+	margin: 2em 0;
+}
+
+.btn-link {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 1em;
+	font-size: 1.2em;
+	color: var(--black);
+	padding: .5rem 2rem;	
+	background-color: var(--white);
+	border: .1rem solid var(--dark-gray);
+}
+
+.btn-link:hover {
+	color: var(--white);
+	background-color: var(--black);
+	border-color: var(--black);
+}
+
+.creations-list {
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 256px);
+	grid-auto-rows: max-content;
+	justify-content: space-between;
+	gap: 3rem 2rem
+}
+
+.creation-card {
+	display: block;
+	position: relative;
+	line-height: 0;
+	background-color: var(--white);
+}
+
+.creation-card-image {
+	width: 100%;
+}
+
+.creation-card:hover > .creation-card-image{
+	opacity: .4;
+}
+
+.creation-card-name {
+	line-height: initial;
+	font-size: 2em;
+	color: var(--white);
+	margin: 1.5rem;
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.creation-card:hover > .creation-card-name {
+	color: var(--black);
+}
+
+/* FOOTER */
+footer {
+	color: var(--white);
+	background-color: var(--black);
+	padding: 0 var(--content-padding-sides);
+}
+
+.footer-content	{
+	padding: 2rem 0;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-logo {
+	line-height: 0;
+}
+
+.footer-logo > img {
+	height: 1.5em;
+}
+
+.footer-socials {
+	flex-grow: 1;
+
+	justify-content: flex-end;
+	gap: 1.5rem;
+}
+
+.social-link {
+	line-height: 0;
+	padding: .5rem 0;
+}
+
+.social-link > svg {
+	fill: var(--white);
+	height: 1.5em;
+}
+
+.social-link:hover::after {
+	width: 1.2rem;
+}
+
+.footer-links {
+	gap: 2rem;
+}
+
+.footer-link {
+	color: var(--white);
+	padding: .5rem 0;
+}
+
+.footer-copyright {
+	color: var(--dark-gray);
+	text-align: right;
+}
+
+.attribution {
+	padding-bottom: 1rem;
+	color: var(--dark-gray);
+}
+
+.attribution a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.attribution a:hover {
+	text-decoration: underline;
+}
