@@ -21,11 +21,78 @@
 		padding: 2rem 0;
 	}
 
-	/* TODO: Add interactive menu */
+	.navbar-header {
+		width: 100%;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/* Interactive menu */
+	.menu-toggle {
+		line-height: 0;
+		cursor: pointer;
+	}
+
+	/* When the menu is closed, do not display the close icon */
+	#icon-close {
+		display: none;
+	}
+
+	/* When the menu is opened, show the close icon */
+	.menu-open #icon-close {
+		display: initial;
+	}
+
+	/* When the menu is opened, do no display the open (hamburger) icon */
+	.menu-open #icon-hamburger {
+		display: none;
+	}
+
+	/* Styles for the active menu */
+	/* Normally, the links are not visible */
 	.navbar-links {
 		display: none;
 	}
 
+	.navbar-link {
+		font-family: "Josefin Sans", sans-serif;
+		text-transform: uppercase;
+		font-size: 2em;
+		padding: .5rem 0;
+	}
+
+	.menu-open {
+		background-color: var(--black);
+		height: 100vh;
+		padding: 2rem var(--content-padding-sides);
+
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.menu-open .navbar-links {
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+		align-items: flex-start;
+	}
+
+	.menu-open .navbar-link:hover::after {
+		width: 100%;
+	}
+
+	/* Hero content */
 	.hero-content {
 		justify-content: center;
 	}

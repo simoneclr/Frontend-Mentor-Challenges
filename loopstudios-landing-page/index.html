@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <script src="menu-toggle.js"></script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style-mobile.css">
 
@@ -14,9 +16,16 @@
 <body>
 
   <section class="hero">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="./images/logo.svg" alt="Loopstudios logo">
+    <nav class="navbar" id="navbar-toggle">
+      <div class="navbar-header">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="Loopstudios logo">
+        </div>
+  
+        <div class="mobile menu-toggle" id="menu-toggle">
+          <img src="./images/icon-hamburger.svg" alt="" id="icon-hamburger">
+          <img src="./images/icon-close.svg" alt="" id="icon-close">
+        </div>
       </div>
 
       <ul class="nav-links navbar-links">
