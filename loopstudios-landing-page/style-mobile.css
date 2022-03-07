@@ -1,4 +1,4 @@
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 600px) {
 	:root {
 		--content-padding-sides: 5%
 	}
@@ -70,6 +70,37 @@
 	.about-content p {
 		font-size: 1.1em;
 		padding: 0 1rem;
+	}
+
+	/* CREATIONS SECTION */
+	.creations-section {
+		margin: 0;
+
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.creations-section h2 {
+		order: 1;
+		margin: 3rem 0;
+	}
+
+	.btn-link {
+		order: 3;
+		padding: .5rem 3rem;
+		margin: 2rem 0;
+	}
+
+	.creations-list	{
+		order: 2;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
+		gap: 2rem;
 	}
 
 
