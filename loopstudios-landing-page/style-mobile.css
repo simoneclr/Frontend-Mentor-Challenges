@@ -106,6 +106,39 @@
 
 	/* FOOTER */
 	footer {
-		display: none;
+		padding-top: 1rem;
+	}
+
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.footer-logo {
+		order: 1;
+	}
+
+	.footer-socials {
+		order: 3;
+	}
+
+	.footer-links {
+		order: 2;
+		margin: 2rem 0;
+
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.footer-copyright {
+		order: 4;
+	}
+
+	.attribution {
+		text-align: center;
 	}
 }
