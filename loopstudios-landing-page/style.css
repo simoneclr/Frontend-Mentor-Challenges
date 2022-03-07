@@ -51,6 +51,10 @@ section {
 	margin: 5rem 0;
 }
 
+.mobile {
+	display: none;
+}
+
 /* Hero section */
 .hero {
 	padding: 0 var(--content-padding-sides);
