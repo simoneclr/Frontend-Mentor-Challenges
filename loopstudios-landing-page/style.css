@@ -14,7 +14,17 @@
 	--weight-josefin: 300;
 
 	/* Paddings */
-	--content-padding-sides: 10%
+	--content-padding-sides: 10%;
+
+	/* About image height */
+	/* 
+		Dinamically compute height to match the oversized, absolutely positioned image 
+		1.4 is the oversize ratio of the image
+		40vh is the width the image container occupies in the layout 
+			(its 50% width of a container with 10% padding on each side, so 0.5 * (100vw - 10vw - 10vw) = 0.4 = 40vw
+		500 / 731 is the original ratio of the image
+	*/
+	--about-image-height: calc(calc(1.4 * 40vw) * calc(500 / 731));
 }
 
 * {
@@ -39,6 +49,10 @@ h1, h2, h3, h4, h5, h6 {
 section {
 	padding: 5rem var(--content-padding-sides);
 	margin: 5rem 0;
+}
+
+.mobile {
+	display: none;
 }
 
 /* Hero section */
@@ -74,9 +88,12 @@ section {
 	margin: 0;
 
 	display: flex;
-	justify-content: flex-end;
 	align-items: center;
 	gap: 1rem;
+}
+
+.navbar-links {
+	justify-content: flex-end;
 }
 
 .nav-links > li {
@@ -151,14 +168,7 @@ section {
 	position: relative;
 	line-height: 0;
 	width: 50%;
-	/* 
-		Dinamically compute height to match the oversized, absolutely positioned image 
-		1.4 is the oversize ratio of the image
-		40vh is the width the image container occupies in the layout 
-			(its 50% width of a container with 10% padding on each side, so 0.5 * (100vw - 10vw - 10vw) = 0.4 = 40vw
-		500 / 731 is the original ratio of the image
-	*/
-	height: calc(calc(1.4 * 40vw) * calc(500 / 731));
+	height: var(--about-image-height);
 }
 
 /* image is oversized, and positioned outside of the flow with position:absolute to reach desired effect */
@@ -263,4 +273,78 @@ section {
 
 .creation-card:hover > .creation-card-name {
 	color: var(--black);
+}
+
+/* FOOTER */
+footer {
+	color: var(--white);
+	background-color: var(--black);
+	padding: 0 var(--content-padding-sides);
+}
+
+.footer-content	{
+	padding: 2rem 0;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-logo {
+	line-height: 0;
+}
+
+.footer-logo > img {
+	height: 1.5em;
+}
+
+.footer-socials {
+	flex-grow: 1;
+
+	justify-content: flex-end;
+	gap: 1.5rem;
+}
+
+.social-link {
+	line-height: 0;
+	padding: .5rem 0;
+}
+
+.social-link > svg {
+	fill: var(--white);
+	height: 1.5em;
+}
+
+.social-link:hover::after {
+	width: 1.2rem;
+}
+
+.footer-links {
+	gap: 2rem;
+}
+
+.footer-link {
+	color: var(--white);
+	padding: .5rem 0;
+}
+
+.footer-copyright {
+	color: var(--dark-gray);
+	text-align: right;
+}
+
+.attribution {
+	padding-bottom: 1rem;
+	color: var(--dark-gray);
+}
+
+.attribution a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.attribution a:hover {
+	text-decoration: underline;
 }
