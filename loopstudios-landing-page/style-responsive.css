@@ -1,3 +1,29 @@
+@media screen and (min-width: 2000px) {
+	:root {
+		--content-padding-sides: 20%;
+
+		/* About image height */
+		/* 
+			Dinamically compute height to match the oversized, absolutely positioned image 
+			1.4 is the oversize ratio of the image
+			30vh is the width the image container occupies in the layout 
+				(its 50% width of a container with 20% padding on each side, so 0.5 * (100vw - 20vw - 20vw) = 0.3 = 30vw
+			500 / 731 is the original ratio of the image
+		*/
+		--about-image-height: calc(calc(1.4 * 30vw) * calc(500 / 731));
+	}
+
+	body {
+		font-size: 18px;
+	}
+
+	/* CREATIONS SECTION */
+	.creations-list {
+		grid-template-columns: repeat(4, minmax(auto, 350px));
+		gap:	3rem;
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	/* Hero section */
 	.hero-title {
