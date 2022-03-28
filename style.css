@@ -102,6 +102,10 @@ body {
 	border-radius: 1rem;
 	overflow: hidden;
 	box-shadow: 0 1rem 3rem -1.5rem var(--card-shadow);
+
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
 }
 
 .project-thumbnail {
@@ -112,20 +116,31 @@ body {
 	width: 100%;
 }
 
-.project-info {
-	padding: 2rem;
-}
-
 .project-name {
 	color: var(--txt-highlight-black);
 	font-size: 1.5em;
-	margin: 0;
+	line-height: 1.1em;
+	/* Fixed height equals two lines of text so all titles have same height */
+	height: 2.2em;
+	padding: 0 2rem;
+	margin: 2rem 0 0 0;
+}
+
+.bottom-half {
+	flex-grow: 1;
+	padding: 0 2rem 2rem 2rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 2rem;
 }
 
 .project-technologies {
 	list-style: none;
 	padding: 0;
-	margin: .5rem 0;
+	margin: 0;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -143,8 +158,6 @@ body {
 }
 
 .project-links {
-	margin-top: 2rem;
-
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
