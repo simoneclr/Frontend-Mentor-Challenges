@@ -1,5 +1,18 @@
 const PROJECTS = {
 	apps: [
+		{ // Comments Section
+			name: "Comments Section",
+			thumbnail: {
+				src: "assets/comments-section-preview.jpg",
+				alt: "Preview of a Comments Section app",
+			},
+			technologies: ["HTML", "CSS", "JS", "REACT", "REDUX"],
+			links: {
+				demo: "https://simoneclr.github.io/fm-comments-section/",
+				code: "https://github.com/simoneclr/fm-comments-section"
+			}
+		},
+
 		{ // Countries API
 			name: "Where in the World",
 			thumbnail: {
