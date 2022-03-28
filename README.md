@@ -25,5 +25,8 @@ This repository contains my solutions to Frontend Mentor Challenges
 - Where in the World
   - [Live Demo](https://simoneclr.github.io/fm-countries-api)
   - [Code](https://github.com/simoneclr/fm-countries-api)
+- Comments Section
+  - [Live Demo](https://simoneclr.github.io/fm-comments-section/)
+  - [Code](https://github.com/simoneclr/fm-comments-section)
 
 [View All](https://simoneclr.github.io/Frontend-Mentor-Challenges/)
