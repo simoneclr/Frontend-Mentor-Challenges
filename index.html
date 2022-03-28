@@ -6,6 +6,34 @@
 
   <link rel="stylesheet" href="style.css">
   
+	<!-- Import Handlebars.js -->
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+	
+	<script src="index.js"></script>
+
+	<script id="hb-project-card" type="text/x-handlebars-template">
+		<div class="project-card">
+			<div class="project-thumbnail">
+				<img src="{{thumbnail.src}}" alt="{{thumbnail.alt}}">
+			</div>
+
+			<div class="project-info">
+				<h3 class="project-name">{{name}}</h3>
+				
+				<ul class="project-technologies">
+					{{#each technologies}}
+					<li>{{this}}</li>
+					{{/each}}
+				</ul>
+
+				<div class="project-links">
+					<a href="{{links.demo}}" target="_blank" class="cta">Live Demo</a>
+					<a href="{{links.code}}" target="_blank" class="link">Code</a>
+				</div>
+			</div>
+		</div>		
+	</script>
+	
   <title>Frontend Mentor Challenges</title>
 </head>
 <body>
@@ -14,193 +42,7 @@
 		<p class="intro-text">Coded By Simone Calciolari</p>
 	</header>
 
-	<section class="container projects">
-		<!-- QR Code Component -->
-		<div class="project-card">
-			<div class="project-thumbnail">
-				<img src="qr-code-component/design/desktop-preview.jpg" alt="Preview of a QR Code component">
-			</div>
-
-			<div class="project-info">
-				<h3 class="project-name">QR Code Component</h3>
-				
-				<ul class="project-technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-				</ul>
-
-				<div class="project-links">
-					<a href="https://simoneclr.github.io/Frontend-Mentor-Challenges/qr-code-component" 
-						target="_blank" class="cta">Live Demo</a>
-					<a href="https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/qr-code-component" 
-						target="_blank" class="link">Code</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Order Summary Component -->
-		<div class="project-card">
-			<div class="project-thumbnail">
-				<img src="order-summary-component/design/desktop-preview.jpg" 
-					alt="Preview of an order summary component">
-			</div>
-
-			<div class="project-info">
-				<h3 class="project-name">Order Summary</h3>
-				
-				<ul class="project-technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-				</ul>
-
-				<div class="project-links">
-					<a href="https://simoneclr.github.io/Frontend-Mentor-Challenges/order-summary-component"
-						target="_blank" class="cta">Live Demo</a>
-					<a href="https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/order-summary-component"
-						target="_blank" class="link">Code</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Huddle Landing Page -->
-		<div class="project-card">
-			<div class="project-thumbnail">
-				<img src="huddle-landing-page/design/desktop-preview.jpg" alt="Preview of Huddle Landing Page">
-			</div>
-
-			<div class="project-info">
-				<h3 class="project-name">Huddle Landing Page</h3>
-				
-				<ul class="project-technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-				</ul>
-
-				<div class="project-links">
-					<a href="https://simoneclr.github.io/Frontend-Mentor-Challenges/huddle-landing-page"
-						target="_blank" class="cta">Live Demo</a>
-					<a href="https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/huddle-landing-page"
-						target="_blank" class="link">Code</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- FAQ Accordion Card -->
-		<div class="project-card">
-			<div class="project-thumbnail">
-				<img src="faq-accordion-card/design/desktop-preview.jpg" alt="Preview of a FAQ Accordion">
-			</div>
-
-			<div class="project-info">
-				<h3 class="project-name">FAQ Accordion</h3>
-				
-				<ul class="project-technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-				</ul>
-
-				<div class="project-links">
-					<a href="https://simoneclr.github.io/Frontend-Mentor-Challenges/faq-accordion-card"
-						target="_blank" class="cta">Live Demo</a>
-					<a href="https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/faq-accordion-card"
-						target="_blank" class="link">Code</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Blogr Landing Page -->
-		<div class="project-card">
-			<div class="project-thumbnail">
-				<img src="blogr-landing-page/design/desktop-preview.jpg" alt="Preview of Blogr landing page">
-			</div>
-
-			<div class="project-info">
-				<h3 class="project-name">Blogr Landing Page</h3>
-				
-				<ul class="project-technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>JS</li>
-				</ul>
-
-				<div class="project-links">
-					<a href="https://simoneclr.github.io/Frontend-Mentor-Challenges/blogr-landing-page"
-						target="_blank" class="cta">Live Demo</a>
-					<a href="https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/blogr-landing-page"
-						target="_blank" class="link">Code</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Loopstudios Landing Page -->
-		<div class="project-card">
-			<div class="project-thumbnail">
-				<img src="loopstudios-landing-page/design/desktop-preview.jpg" alt="Preview of Loopstudios landing page">
-			</div>
-
-			<div class="project-info">
-				<h3 class="project-name">Loopstudios Landing Page</h3>
-				
-				<ul class="project-technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>JS</li>
-				</ul>
-
-				<div class="project-links">
-					<a href="https://simoneclr.github.io/Frontend-Mentor-Challenges/loopstudios-landing-page"
-						target="_blank" class="cta">Live Demo</a>
-					<a href="https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/loopstudios-landing-page"
-						target="_blank" class="link">Code</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Jobs Listings -->
-		<div class="project-card">
-			<div class="project-thumbnail">
-				<img src="assets/jobs-listings-preview.jpg" alt="Preview of a Jobs listings board">
-			</div>
-
-			<div class="project-info">
-				<h3 class="project-name">Jobs Listings</h3>
-				
-				<ul class="project-technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>JS</li>
-					<li>React</li>
-				</ul>
-
-				<div class="project-links">
-					<a href="https://simoneclr.github.io/fm-jobs-listings/" target="_blank" class="cta">Live Demo</a>
-					<a href="https://github.com/simoneclr/fm-jobs-listings"	target="_blank" class="link">Code</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Countries API -->
-		<div class="project-card">
-			<div class="project-thumbnail">
-				<img src="assets/countries-api-preview.jpg" alt="Preview of the Where in the World app">
-			</div>
-
-			<div class="project-info">
-				<h3 class="project-name">Where in the World</h3>
-				
-				<ul class="project-technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>JS</li>
-					<li>React</li>
-				</ul>
-
-				<div class="project-links">
-					<a href="https://simoneclr.github.io/fm-countries-api" target="_blank" class="cta">Live Demo</a>
-					<a href="https://github.com/simoneclr/fm-countries-api"	target="_blank" class="link">Code</a>
-				</div>
-			</div>
-		</div>
+	<section id="projects" class="container projects">
 	</section>
 
 	<footer>
