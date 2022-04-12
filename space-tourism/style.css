@@ -1,3 +1,13 @@
+/* CUSTOM PROPERTIES */
+:root {
+	/* Colors */
+	/* Writing them like this allows us to easily modify alpha value elsewhere when needed */
+	/* Accessed like this: hsl(var(--some-variable-name)) */
+	--hsl-very-dark-blue: 230 35% 7%;
+	--hsl-pale-light-blue: 231 77% 90%;
+	--hsl-white: 0 0% 100%; 
+}
+
 /* RESETS */
 
 /* Box sizing */
@@ -71,4 +81,30 @@ input, button, textarea, select {
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border: 0;
+}
+
+/* Color utilities */
+
+.bg-dark {
+	background-color: hsl(var(--hsl-very-dark-blue));
+}
+
+.bg-accent {
+	background-color: hsl(var(--hsl-pale-light-blue));
+}
+
+.bg-white {
+	background-color: hsl(var(--hsl-white));
+}
+
+.txt-dark {
+	color: hsl(var(--hsl-very-dark-blue));
+}
+
+.txt-accent {
+	color: hsl(var(--hsl-pale-light-blue));
+}
+
+.txt-white {
+	color: hsl(var(--hsl-white));
 }
