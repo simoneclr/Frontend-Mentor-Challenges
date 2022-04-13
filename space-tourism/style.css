@@ -20,6 +20,10 @@
 	--fs-300: 1rem;
 	--fs-200: 0.875rem; 
 
+	/* Font weights */
+	--fw-regular: 400;
+	--fw-bold: 700;
+
 	/* Font families */
 	--ff-serif: "Bellfair", serif;
 	--ff-sans-condensed: "Barlow Condensed", sans-serif;
@@ -201,4 +205,18 @@ input, button, textarea, select {
 
 .uppercase {
 	text-transform: uppercase;
+}
+
+.numbered-title {
+	font-family: var(--ff-sans-condensed);
+	font-size: var(--fs-500);
+	color: hsl(var(--hsl-white));
+	letter-spacing: 4.75px;
+	text-transform: uppercase;
+}
+
+.numbered-title > span {
+	font-weight: var(--fw-bold);
+	color: hsl(var(--hsl-white) / .25);
+	margin-right: .5em;
 }
