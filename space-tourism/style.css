@@ -211,6 +211,8 @@ input, button, textarea, select {
 	text-transform: uppercase;
 }
 
+/* COMPONENTS */
+
 .numbered-title {
 	font-family: var(--ff-sans-condensed);
 	font-size: var(--fs-500);
@@ -224,3 +226,37 @@ input, button, textarea, select {
 	color: hsl(var(--hsl-white) / .25);
 	margin-right: .5em;
 }
+
+.btn-large {
+	position: relative;
+	height: 8.5625em;
+	width: 8.5625em;
+	margin: 2.75em;
+	text-decoration: none;
+	border-radius: 50%;
+
+	/* Conveniently center content */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-large::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	background-color: hsl(var(--hsl-white) / .25);
+	opacity: 0;
+}
+
+.btn-large:hover::after,
+.btn-large:hover::after {
+	transform: scale(1.64);
+	opacity: 1;
+	transition: opacity 500ms linear, transform 750ms ease-out;
+}
+
+
