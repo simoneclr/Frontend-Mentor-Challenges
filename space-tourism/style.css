@@ -258,26 +258,34 @@ input, button, textarea, select {
 	transition: opacity 500ms linear, transform 750ms ease-out;
 }
 
+.nav-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-list a {
+	text-decoration: none;
+}
+
 .primary-navigation {
 	--gap: 8rem;
 	--underline-gap: 2rem;
 
-	list-style: none;
-	padding: 0;
-	margin: 0;
 	background-color: hsl(var(--hsl-white) / .04);
 
 	justify-content: center;
 	align-items: center;
 }
 
-.primary-navigation a {
-	text-decoration: none;
-}
-
 .primary-navigation a > span {
 	font-weight: var(--fw-bold);
 	margin-right: 1em;
+}
+
+.tabs-navigation {
+	--gap: 2rem;
+	--underline-gap: .5rem;
 }
 
 .underline-link {
@@ -302,8 +310,11 @@ input, button, textarea, select {
 	transition: transform 500ms ease-in-out;
 }
 
-.underline-link.active::after {
+.tabs-navigation [aria-selected="true"] {
+	color: hsl(var(--hsl-white));
+}
+
+.underline-link[aria-selected="true"]::after, .underline-link.active::after {
 	background-color: hsl(var(--hsl-white));
 	transform: scaleX(1);
 }
-
