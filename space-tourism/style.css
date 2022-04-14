@@ -342,3 +342,31 @@ input, button, textarea, select {
 .slider-small [aria-selected="true"] {
 	opacity: 1 !important;
 }
+
+.slider-large {
+	--gap: 2rem;
+
+	flex-direction: column;
+}
+
+.slider-large a {
+	height: 5rem;
+	width: 5rem;
+	border: 2px solid hsl(var(--hsl-white) / .2);
+	border-radius: 50%;
+
+	/* Conveniently center content */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider-large a:hover, .slider-large a:focus {
+	border-color: hsl(var(--hsl-white));
+}
+
+.slider-large [aria-selected="true"] {
+	color: hsl(var(--hsl-very-dark-blue));
+	background-color: hsl(var(--hsl-white));
+	border-color: hsl(var(--hsl-white));
+}
