@@ -262,6 +262,8 @@ input, button, textarea, select {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+
+	align-items: center;
 }
 
 .nav-list a {
@@ -275,7 +277,6 @@ input, button, textarea, select {
 	background-color: hsl(var(--hsl-white) / .04);
 
 	justify-content: center;
-	align-items: center;
 }
 
 .primary-navigation a > span {
@@ -317,4 +318,27 @@ input, button, textarea, select {
 .underline-link[aria-selected="true"]::after, .underline-link.active::after {
 	background-color: hsl(var(--hsl-white));
 	transform: scaleX(1);
+}
+
+.slider-small {
+	--gap: 1.5rem;
+}
+
+.slider-small a {
+	display: block;
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	background-color: hsl(var(--hsl-white));
+	opacity: .2;
+	transition: opacity 500ms;
+	
+}
+
+.slider-small a:hover, .slider-small a:focus {
+	opacity: .5;
+}
+
+.slider-small [aria-selected="true"] {
+	opacity: 1 !important;
 }
