@@ -11,14 +11,14 @@
 
 	/* Typography */
 	/* Font sizes */
-	--fs-900: 9.375rem;
-	--fs-800: 6.25rem;
-	--fs-700: 3.5rem;
-	--fs-600: 2rem;
-	--fs-500: 1.75rem;
-	--fs-400: 1.125rem;
+	--fs-900: 5rem;
+	--fs-800: 3.5rem;
+	--fs-700: 1.5rem;
+	--fs-600: 1.25rem;
+	--fs-500: 1rem;
+	--fs-400: 0.9375rem;
 	--fs-300: 1rem;
-	--fs-200: 0.875rem; 
+	--fs-200: 0.875rem;
 
 	/* Font weights */
 	--fw-regular: 400;
@@ -28,6 +28,30 @@
 	--ff-serif: "Bellfair", serif;
 	--ff-sans-condensed: "Barlow Condensed", sans-serif;
 	--ff-sans-normal: "Barlow", sans-serif;
+}
+
+/* Responsive font sizes - TABLET */
+@media screen and (min-width: 35em) {
+	:root {
+		/* Font sizes */
+		--fs-800: 5rem;
+		--fs-700: 2.5rem;
+		--fs-600: 1.5rem;
+		--fs-400: 1rem;
+	}
+}
+
+/* Responsive font sizes - DESKTOP*/
+@media screen and (min-width: 45em) {
+	:root {
+		/* Font sizes */
+		--fs-900: 9.375rem;
+		--fs-800: 6.25rem;
+		--fs-700: 3.5rem;
+		--fs-600: 2rem;
+		--fs-500: 1.75rem;
+		--fs-400: 1.125rem;
+	}
 }
 
 /* RESETS */
@@ -57,6 +81,9 @@ body {
 	background-color: hsl(var(--hsl-very-dark-blue));
 	line-height: 1.5;
 	min-height: 100vh;
+	
+	display: grid;
+	grid-template-rows: min-content auto;
 }
 
 /* Images */
@@ -100,6 +127,7 @@ input, button, textarea, select {
 }
 
 .container {
+	width: 87.2%;
 	max-width: 1110px;
 	margin: 0 auto;
 }
@@ -229,9 +257,9 @@ input, button, textarea, select {
 
 .btn-large {
 	position: relative;
-	height: 8.5625em;
-	width: 8.5625em;
-	margin: 2.75em;
+	height: 9.375rem;
+	width: 9.375rem;
+	margin: 3rem;
 	text-decoration: none;
 	border-radius: 50%;
 
@@ -239,6 +267,15 @@ input, button, textarea, select {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/* Responsive - DESKTOP */
+@media screen and (min-width: 45em) {
+	.btn-large {
+		height: 17.125rem;
+		width: 17.125rem;
+		margin: 5.48rem;
+	}
 }
 
 .btn-large::after {
@@ -371,3 +408,49 @@ input, button, textarea, select {
 	background-color: hsl(var(--hsl-white));
 	border-color: hsl(var(--hsl-white));
 }
+
+/* Navbar */
+
+/* TODO Add hamburger menu */
+nav {
+	display: none;
+}
+
+.navbar {
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar img {
+	height: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+	body {
+		padding-top: 2.5rem;
+	}
+	
+	/* Navbar */
+	.navbar {
+		padding-left: 3.5rem;
+	}
+}
+
+/* HOMEPAGE */
+.home-content {
+	--flow-space: 1.5rem;
+
+	text-align: center;
+
+	flex-direction: column;
+	align-items: center;
+}
+
+.home-content .subtitle {
+	margin-bottom: 1.5rem;
+}
+
