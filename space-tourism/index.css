@@ -271,9 +271,10 @@ input, button, textarea, select {
 }
 
 .primary-navigation {
-	--gap: 8rem;
-	--underline-gap: 2rem;
+	--gap: 3rem;
+	--underline-gap: 2.3rem;
 
+	padding: 0 8rem;
 	background-color: hsl(var(--hsl-white) / .04);
 
 	justify-content: center;
@@ -281,7 +282,7 @@ input, button, textarea, select {
 
 .primary-navigation a > span {
 	font-weight: var(--fw-bold);
-	margin-right: 1em;
+	margin-right: 1rem;
 }
 
 .tabs-navigation {
