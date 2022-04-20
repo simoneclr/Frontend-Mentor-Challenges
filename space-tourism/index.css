@@ -45,14 +45,14 @@
 }
 
 /* Responsive font sizes - DESKTOP*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
 	:root {
 		/* Font sizes */
 		--fs-800: 6.25rem;
 		--fs-700: 3.5rem;
-		--fs-600: 2rem;
 		--fs-500: 1.75rem;
 		--fs-400: 1.125rem;
+		--fs-300: 1rem;
 	}
 }
 
@@ -281,7 +281,7 @@ input, button, textarea, select {
 }
 
 /* Responsive - DESKTOP */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
 	.btn-large {
 		height: 17.125rem;
 		width: 17.125rem;
@@ -456,9 +456,8 @@ nav {
 	height: auto;
 }
 
+/* Responsive Navbar - TABLET */
 @media screen and (min-width: 576px) {
-
-	/* Navbar */
 	
 	nav {
 		display: initial;
@@ -489,11 +488,30 @@ nav {
 	}
 }
 
+/* Responsive Nabar - DESKTOP */
+@media screen and (min-width: 992px) {
+
+	.navbar {
+		padding-left: 3.5rem;
+		margin-bottom: 0;
+	}
+
+	.primary-navigation {
+		--gap: 3rem;
+
+		padding: 0 10.3125rem 0 7.5rem;
+	}
+
+	.primary-navigation a > span {
+		display: initial;
+	}	
+}
+
 /* HOMEPAGE */
 
 .body-home {
 	background-image: url("assets/home/background-home-mobile.jpg");
-	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -518,6 +536,7 @@ nav {
 	margin-right: auto;
 }
 
+/* Responsive Homepage - TABLET */
 @media screen and (min-width: 576px) {
 
 	.body-home {
@@ -526,6 +545,36 @@ nav {
 
 	.home-text p {
 		max-width: 49ch;
+	}
+}
+
+/* Responsive Homepage - DESKTOP */
+@media screen and (min-width: 992px) {
+	
+	.body-home {
+		padding-top: 2.5rem;
+		background-image: url("assets/home/background-home-desktop.jpg");
+		background-position: right;
+	}
+
+	.home-content {
+		padding-bottom: 8.1875rem;
+
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	.home-text {
+		text-align: left;
+	}
+
+	.home-text p {
+		max-width: 43ch;
+	}
+
+	.home-content .btn-large {
+		margin: 0;
 	}
 }
 
