@@ -411,10 +411,27 @@ input, button, textarea, select {
 
 /* Navbar */
 
-/* TODO Add hamburger menu */
+.menu-toggle {
+	cursor: pointer;
+}
+
+.menu-toggle > img {
+	width: 1.5rem;
+	height: auto;
+}
+
+.menu-toggle[data-state="menu-closed"] > .icon-close {
+	display: none;
+}
+
+.menu-toggle[data-state="menu-open"] > .icon-hamburger {
+	display: none;
+}
+
 nav {
 	display: none;
 }
+
 
 .navbar {
 	padding: 1.5rem;
@@ -424,7 +441,7 @@ nav {
 	align-items: center;
 }
 
-.navbar img {
+.logo > img {
 	height: 2.5rem;
 }
 
@@ -441,16 +458,27 @@ nav {
 }
 
 /* HOMEPAGE */
+
+.body-home {
+	background: url("assets/home/background-home-mobile.jpg") center no-repeat;
+	background-size: cover;
+}
+
 .home-content {
 	--flow-space: 1.5rem;
 
 	text-align: center;
 
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .home-content .subtitle {
 	margin-bottom: 1.5rem;
+}
+
+.home-text {
+	max-width: 39ch;
 }
 
