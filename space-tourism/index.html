@@ -6,6 +6,8 @@
 
   <link rel="stylesheet" href="index.css">
 
+  <script src="index.js"></script>
+
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Space tourism website</title>
@@ -17,12 +19,14 @@
       <img src="assets/shared/logo.svg" alt="Space travel logo">
     </div>
 
-    <div class="menu-toggle" data-state="menu-closed">
+    <button class="navbar-toggle" id="navbar-toggle" data-nav-open="false" 
+            aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only">Menu</span>
       <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger menu icon">
       <img class="icon-close" src="assets/shared/icon-close.svg" alt="Close menu icon">
-    </div>
+    </button>
 
-    <nav>
+    <nav id="primary-navigation">
       <ul class="flex nav-list primary-navigation">
         <li>
           <a href="#" class="underline-link active txt-white fs-300 ff-sans-condensed letter-spacing-2 uppercase">

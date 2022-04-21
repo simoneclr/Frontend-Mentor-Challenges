@@ -323,9 +323,17 @@ input, button, textarea, select {
 	--underline-gap: 2.3rem;
 
 	padding: 0 8rem;
-	background-color: hsl(var(--hsl-white) / .4);
+	background-color: hsl(var(--hsl-very-dark-blue) / .95);
 
 	justify-content: center;
+}
+
+/* Check support for backdrop-filter */
+@supports (backdrop-filter: blur(30px)) {
+	.primary-navigation {
+		background-color: hsl(var(--hsl-white) / .04);
+		backdrop-filter: blur(30px);
+	}
 }
 
 .primary-navigation a > span {
@@ -422,25 +430,87 @@ input, button, textarea, select {
 
 /* Navbar */
 
-.menu-toggle {
+.navbar-toggle {
+	/* Allow button to be clickable even when side navbar is open */
+	z-index: 10;
+
 	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+	padding: 0;
 }
 
-.menu-toggle > img {
+.navbar-toggle > img {
 	width: 1.5rem;
 	height: auto;
 }
 
-.menu-toggle[data-state="menu-closed"] > .icon-close {
+.navbar-toggle[data-nav-open="false"] > .icon-close {
 	display: none;
 }
 
-.menu-toggle[data-state="menu-open"] > .icon-hamburger {
+.navbar-toggle[data-nav-open="true"] > .icon-hamburger {
 	display: none;
 }
 
-nav {
-	display: none;
+/* Responsive Navbar - MOBILE */
+@media screen and (max-width: 576px) {
+	
+	/* Use data-nav-open attribute on button to select sibling navigation menu */
+	.navbar-toggle[data-nav-open="false"] + nav > {
+		visibility: hidden;
+	}
+
+	.navbar-toggle[data-nav-open="true"] + nav {
+		visibility: visible;
+		transform: translateX(0);
+	}
+
+	nav {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 5;
+
+		width: 15.875rem;
+		background-color: hsl(var(--hsl-very-dark-blue) / .95);
+
+		transform: translateX(100%);
+		transform-origin: right;
+		transition: transform 500ms;
+	}
+
+	/* Check support for backdrop-filter */
+	@supports (backdrop-filter: blur(30px)) {
+		nav {
+			background-color: hsl(var(--hsl-white) / .04);
+			backdrop-filter: blur(30px);
+		}
+	}
+
+	.primary-navigation {
+		--gap: 2rem;
+		--underline-gap: 0;
+
+		height: 100%;
+		padding: 7rem 0 0 2rem;
+		background: none;
+		backdrop-filter: none;
+
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.primary-navigation .underline-link > span {
+		margin-right: .5rem;
+	}
+
+	.primary-navigation .underline-link::after {
+		display: none;
+	}
 }
 
 .navbar {
@@ -483,7 +553,7 @@ nav {
 		display: none;
 	}
 
-	.menu-toggle {
+	.navbar-toggle {
 		display: none;
 	}
 }
