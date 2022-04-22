@@ -57,7 +57,7 @@
     </nav>
   </header>
 
-	<main id="main" class="destination-content container flow">
+	<main id="main" class="destination-content container flex">
     <h1 class="numbered-title fs-500 ff-sans-condensed letter-spacing-2 uppercase">
       <span>
         01 
@@ -65,63 +65,65 @@
       Pick your Destination
     </h1>
 
-    <div class="destination-img">
+    <div class="destination-img column">
       <img src="assets/destination/image-moon.png" alt="An image of the Moon">
     </div>
 
-    <ul class="nav-list tabs-navigation flex">
-      <li>
-        <a href="#" aria-selected="true"
-          class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+    <div class="column">
+      <ul class="nav-list tabs-navigation flex">
+        <li>
+          <a href="#" aria-selected="true"
+            class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+            Moon
+          </a>
+        </li>
+
+        <li>
+          <a href="#" aria-selected="false"
+            class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+            Mars
+          </a>
+        </li>
+
+        <li>
+          <a href="#" aria-selected="false"
+            class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+            Europa
+          </a>
+        </li>
+
+        <li>
+          <a href="#" aria-selected="false"
+            class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+            Titan
+          </a>
+        </li>
+      </ul>
+
+      <section id="moon-info" class="destination-info flow">
+        <h2 class="fs-800 ff-serif uppercase">
           Moon
-        </a>
-      </li>
+        </h2>
 
-      <li>
-        <a href="#" aria-selected="false"
-          class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
-          Mars
-        </a>
-      </li>
+        <p class="fs-400 ff-sans txt-accent">
+          See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+          regain perspective and come back refreshed. While you’re there, take in some history 
+          by visiting the Luna 2 and Apollo 11 landing sites.
+        </p>
 
-      <li>
-        <a href="#" aria-selected="false"
-          class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
-          Europa
-        </a>
-      </li>
+        <hr>
 
-      <li>
-        <a href="#" aria-selected="false"
-          class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
-          Titan
-        </a>
-      </li>
-    </ul>
+        <div class="destination-stats ff-serif uppercase">
+          <div class="fs-200 ff-sans-condensed txt-accent letter-spacing-3 uppercase">Avg. distance</div>
+          384,400 km
+        </div>
 
-    <section id="moon-info" class="destination-info flow">
-      <h2 class="fs-800 ff-serif uppercase">
-        Moon
-      </h2>
-
-      <p class="fs-400 ff-sans txt-accent">
-        See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-        regain perspective and come back refreshed. While you’re there, take in some history 
-        by visiting the Luna 2 and Apollo 11 landing sites.
-      </p>
-
-      <hr>
-
-      <div class="destination-stats ff-serif uppercase">
-        <div class="fs-200 ff-sans-condensed txt-accent letter-spacing-3 uppercase">Avg. distance</div>
-        384,400 km
-      </div>
-
-      <div class="destination-stats ff-serif uppercase">
-        <div class="fs-200 ff-sans-condensed txt-accent letter-spacing-3 uppercase">Est. travel time</div>
-        3 days
-      </div>
-    </section>
+        <div class="destination-stats ff-serif uppercase">
+          <div class="fs-200 ff-sans-condensed txt-accent letter-spacing-3 uppercase">Est. travel time</div>
+          3 days
+        </div>
+      </section>
+    </div>
 	</main>  
 </body>
 </html>

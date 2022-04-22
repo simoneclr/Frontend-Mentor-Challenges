@@ -683,8 +683,53 @@ input, button, textarea, select {
 }
 
 /* DESTINATIONS PAGE */
+.body-destination {
+	background-image: url("assets/destination/background-destination-mobile.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+
 .destination-content {
+	--gap: 2rem;
+
 	text-align: center;
+	padding-bottom: 2rem;
+
+	flex-direction: column;
+	align-items: center;
+}
+
+.destination-img {
+	width: 52%;
+}
+
+.destination-content .column {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+.destination-content .tabs-navigation {
+	--gap: 1.5rem;
+}
+
+.destination-info {
+	--flow-space: 2rem;
+}
+
+.destination-info p {
+	max-width: 39ch;
+	margin-top: .5rem;
+}
+
+.destination-info hr {
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: hsl(var(--hsl-pale-light-blue) / .25);
+	border: 0;
 }
 
 .destination-stats {
