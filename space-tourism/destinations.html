@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="index.css">
+
+  <script src="index.js"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Destinations | Space tourism website</title>
+</head>
+<body class="body-destination">
+
+	<a class="skip-to-content" href="#main">Skip to main content</a>
+
+  <header class="navbar flex">
+    <div class="logo">
+      <img src="assets/shared/logo.svg" alt="Space travel logo">
+    </div>
+
+    <button class="navbar-toggle" id="navbar-toggle" data-nav-open="false" 
+            aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+      <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger menu icon">
+      <img class="icon-close" src="assets/shared/icon-close.svg" alt="Close menu icon">
+    </button>
+
+    <nav id="primary-navigation" class="bg-frosted">
+      <ul class="flex nav-list primary-navigation">
+        <li>
+          <a href="index.html" class="underline-link txt-white fs-300 ff-sans-condensed letter-spacing-2 uppercase">
+            <span aria-hidden="true">00</span>Home
+          </a>
+        </li>
+
+        <li>
+          <a href="destinations.html" class="underline-link active txt-white fs-300 ff-sans-condensed letter-spacing-2 uppercase">
+            <span aria-hidden="true">01</span>Destination
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="underline-link txt-white fs-300 ff-sans-condensed letter-spacing-2 uppercase">
+            <span aria-hidden="true">02</span>Crew
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="underline-link txt-white fs-300 ff-sans-condensed letter-spacing-2 uppercase">
+            <span aria-hidden="true">03</span>Technology
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+	<main id="main" class="destination-content container flow">
+    <h1 class="numbered-title fs-500 ff-sans-condensed letter-spacing-2 uppercase">
+      <span>
+        01 
+      </span>
+      Pick your Destination
+    </h1>
+
+    <div class="destination-img">
+      <img src="assets/destination/image-moon.png" alt="An image of the Moon">
+    </div>
+
+    <ul class="nav-list tabs-navigation flex">
+      <li>
+        <a href="#" aria-selected="true"
+          class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+          Moon
+        </a>
+      </li>
+
+      <li>
+        <a href="#" aria-selected="false"
+          class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+          Mars
+        </a>
+      </li>
+
+      <li>
+        <a href="#" aria-selected="false"
+          class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+          Europa
+        </a>
+      </li>
+
+      <li>
+        <a href="#" aria-selected="false"
+          class="underline-link txt-accent ff-sans-condensed fs-300 letter-spacing-2 uppercase">
+          Titan
+        </a>
+      </li>
+    </ul>
+
+    <section id="moon-info" class="destination-info flow">
+      <h2 class="fs-800 ff-serif uppercase">
+        Moon
+      </h2>
+
+      <p class="fs-400 ff-sans txt-accent">
+        See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+        regain perspective and come back refreshed. While you’re there, take in some history 
+        by visiting the Luna 2 and Apollo 11 landing sites.
+      </p>
+
+      <hr>
+
+      <div class="destination-stats ff-serif uppercase">
+        <div class="fs-200 ff-sans-condensed txt-accent letter-spacing-3 uppercase">Avg. distance</div>
+        384,400 km
+      </div>
+
+      <div class="destination-stats ff-serif uppercase">
+        <div class="fs-200 ff-sans-condensed txt-accent letter-spacing-3 uppercase">Est. travel time</div>
+        3 days
+      </div>
+    </section>
+	</main>  
+</body>
+</html>

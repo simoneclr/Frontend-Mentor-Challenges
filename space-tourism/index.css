@@ -571,6 +571,10 @@ input, button, textarea, select {
 /* Responsive Nabar - DESKTOP */
 @media screen and (min-width: 992px) {
 
+	body {
+		padding-top: 2.5rem;
+	}
+
 	.navbar {
 		padding-left: 3.5rem;
 		margin-bottom: 0;
@@ -653,7 +657,6 @@ input, button, textarea, select {
 @media screen and (min-width: 992px) {
 	
 	.body-home {
-		padding-top: 2.5rem;
 		background-image: url("assets/home/background-home-desktop.jpg");
 		background-position: right;
 	}
@@ -679,3 +682,11 @@ input, button, textarea, select {
 	}
 }
 
+/* DESTINATIONS PAGE */
+.destination-content {
+	text-align: center;
+}
+
+.destination-stats {
+	font-size: 1.75rem;
+}
