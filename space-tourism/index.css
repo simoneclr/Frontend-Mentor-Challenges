@@ -161,6 +161,17 @@ input, button, textarea, select {
 	background-color: hsl(var(--hsl-white));
 }
 
+.bg-frosted {
+	background-color: hsl(var(--hsl-very-dark-blue) / .95);
+}
+
+@supports (backdrop-filter: blur(30px)) {
+	.bg-frosted {
+		background-color: hsl(var(--hsl-white) / .04);
+		backdrop-filter: blur(30px);
+	}
+}
+
 .txt-dark {
 	color: hsl(var(--hsl-very-dark-blue));
 }
@@ -323,17 +334,8 @@ input, button, textarea, select {
 	--underline-gap: 2.3rem;
 
 	padding: 0 8rem;
-	background-color: hsl(var(--hsl-very-dark-blue) / .95);
 
 	justify-content: center;
-}
-
-/* Check support for backdrop-filter */
-@supports (backdrop-filter: blur(30px)) {
-	.primary-navigation {
-		background-color: hsl(var(--hsl-white) / .04);
-		backdrop-filter: blur(30px);
-	}
 }
 
 .primary-navigation a > span {
@@ -475,19 +477,10 @@ input, button, textarea, select {
 		z-index: 5;
 
 		width: 15.875rem;
-		background-color: hsl(var(--hsl-very-dark-blue) / .95);
 
 		transform: translateX(100%);
 		transform-origin: right;
 		transition: transform 500ms;
-	}
-
-	/* Check support for backdrop-filter */
-	@supports (backdrop-filter: blur(30px)) {
-		nav {
-			background-color: hsl(var(--hsl-white) / .04);
-			backdrop-filter: blur(30px);
-		}
 	}
 
 	.primary-navigation {
