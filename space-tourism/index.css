@@ -147,6 +147,23 @@ input, button, textarea, select {
 	border: 0;
 }
 
+.skip-to-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	color: hsl(var(--hsl-very-dark-blue));
+	background-color: hsl(var(--hsl-white));
+	padding: .5em 1em;
+
+	transform: translateY(-100%);
+	transition: transform 250ms;
+}
+
+.skip-to-content:focus {
+	transform: translateY(0);
+}
+
 /* Color utilities */
 
 .bg-dark {
