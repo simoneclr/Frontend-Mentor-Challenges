@@ -559,6 +559,27 @@ input, button, textarea, select {
 		margin-bottom: 0;
 	}
 
+	.navbar::before {
+		content: "";
+		display: block;
+		z-index: 5;
+		order: 2;
+
+		flex-grow: 1;
+		height: 2px;
+		background-color: hsl(var(--hsl-white) / .25);
+
+		transform: translateX(3rem);
+	}
+
+	.navbar .logo {
+		order: 1;
+	}
+
+	.navbar nav {
+		order: 3;
+	}
+
 	.primary-navigation {
 		--gap: 3rem;
 
