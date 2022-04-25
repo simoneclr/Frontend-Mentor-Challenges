@@ -787,3 +787,41 @@ input, button, textarea, select {
 		width: 50%;
 	}
 }
+
+/* Responsive Destinations Page - DESKTOP */
+@media screen and (min-width: 992px) {
+	.body-destination {
+		--navbar-bottom-margin: 2rem;
+
+		background-image: url("assets/destination/background-destination-desktop.jpg");
+	}
+
+	.destination-content {
+		--gap: 2rem 0;
+
+		text-align: left;
+
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: stretch;
+	}
+
+	.destination-content h1 {
+		width: 100%;
+		margin: 2.75rem 0;
+	}
+
+	.destination-content .column {
+		width: 40%;
+	}
+
+	.column .tabs-navigation {
+		align-self: flex-start;
+		justify-content: flex-start;
+	}
+
+	.destination-info hr {
+		margin-top: 2rem;
+	}
+}
