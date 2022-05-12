@@ -28,5 +28,8 @@ This repository contains my solutions to Frontend Mentor Challenges
 - Comments Section
   - [Live Demo](https://simoneclr.github.io/fm-comments-section/)
   - [Code](https://github.com/simoneclr/fm-comments-section)
+- Sneakers E-Commerce
+  - [Live Demo](https://simoneclr.github.io/fm-e-commerce/)
+  - [Code](https://github.com/simoneclr/fm-e-commerce)
 
 [View All](https://simoneclr.github.io/Frontend-Mentor-Challenges/)
