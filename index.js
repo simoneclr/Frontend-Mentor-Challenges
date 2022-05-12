@@ -1,5 +1,17 @@
 const PROJECTS = {
 	apps: [
+		{ // E-Commerce
+			name: "Sneakers E-Commerce",
+			thumbnail: {
+				src: "assets/e-commerce-preview.jpg",
+				alt: "Preview of an E-Commerce app",
+			},
+			technologies: ["REACT", "REDUX", "Tailwind"],
+			links: {
+				demo: "https://simoneclr.github.io/fm-e-commerce/",
+				code: "https://github.com/simoneclr/fm-e-commerce"
+			}
+		},
 		{ // Comments Section
 			name: "Comments Section",
 			thumbnail: {
