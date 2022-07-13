@@ -14,7 +14,32 @@
   
   <title>Frontend Mentor | Room homepage</title>
 </head>
-<body class="font-league-spartan">
+<body class="font-league-spartan flex-col items-stretch">
+
+  <!-- Hero Section -->
+  <header class="relative">
+
+    <!-- Gallery container -->
+    <div>
+      <img src="images/mobile-image-hero-1.jpg" alt="Two chairs next to a table"
+        class="w-full">
+    </div>
+
+    <!-- Gallery Buttons -->
+    <div class="absolute bottom-0 right-0 bg-white flex">
+      <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center">
+        <span class="sr-only">Previous image</span>
+
+        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+      </button>
+
+      <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center">
+        <span class="sr-only">Previous image</span>
+
+        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+      </button>
+    </div>
+  </header>
 
   <!--
     Home
