@@ -558,16 +558,11 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+.font-league-spartan {
+  font-family: League Spartan, sans-serif;
 }
 
-.bg-blue-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
-}
-
-.p-8 {
-  padding: 2rem;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
