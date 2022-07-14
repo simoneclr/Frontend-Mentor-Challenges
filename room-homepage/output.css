@@ -887,4 +887,8 @@ video {
   .lg\:hidden {
     display: none;
   }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
 }

@@ -17,36 +17,32 @@
 <body class="font-league-spartan font-medium text-dark-gray min-h-screen flex flex-col items-stretch">
 
   <!-- Hero Section -->
-  <header class="relative">
-
+  <header class="flex flex-col items-stretch">
     <!-- Gallery container -->
-    <div>
+    <div class="relative">
       <img src="images/mobile-image-hero-1.jpg" alt="Two chairs next to a table"
         class="w-full lg:hidden">
 
       <img src="images/desktop-image-hero-1.jpg" alt="Two chairs next to a table"
         class="w-full hidden lg:block">
+
+        <!-- Gallery Buttons -->
+      <div class="absolute bottom-0 right-0 bg-white flex">
+        <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center">
+          <span class="sr-only">Previous image</span>
+
+          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+
+        <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center">
+          <span class="sr-only">Previous image</span>
+
+          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+      </div>
     </div>
 
-    <!-- Gallery Buttons -->
-    <div class="absolute bottom-0 right-0 bg-white flex">
-      <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center">
-        <span class="sr-only">Previous image</span>
-
-        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
-      </button>
-
-      <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center">
-        <span class="sr-only">Previous image</span>
-
-        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="grow flex flex-col items-stretch">
-    <!-- Discover section -->
+    <!-- Hero content -->
     <section class="px-8 sm:px-16 py-12">
       <h1 class="text-black text-4xl font-bold">
         Discover innovative ways to decorate
@@ -67,6 +63,10 @@
         </svg>
       </a>
     </section>
+  </header>
+
+  <!-- Main Content -->
+  <main class="grow flex flex-col items-stretch">
 
     <!-- First Illustration -->
     <section>
