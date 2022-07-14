@@ -19,7 +19,7 @@
   <!-- Hero Section -->
   <header class=" w-full flex flex-col items-stretch lg:flex-row">
     <!-- Gallery container -->
-    <div class="relative lg:w-1/2">
+    <div class="relative lg:w-1/2 xl:w-[60%]">
       <img src="images/mobile-image-hero-1.jpg" alt="Two chairs next to a table"
         class="w-full lg:hidden">
 
@@ -27,14 +27,17 @@
         class="w-full hidden lg:block lg:h-full">
 
         <!-- Gallery Buttons -->
-      <div class="absolute bottom-0 right-0 bg-white flex">
-        <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center">
+      <div class="absolute bottom-0 right-0 bg-white flex
+            xl:-right-[10vw]">
+        <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center
+                  xl:w-[5vw]">
           <span class="sr-only">Previous image</span>
 
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
         </button>
 
-        <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center">
+        <button class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center
+                  xl:w-[5vw]">
           <span class="sr-only">Previous image</span>
 
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
@@ -43,12 +46,15 @@
     </div>
 
     <!-- Hero content -->
-    <section class="flex flex-col px-8 sm:px-16 py-12 lg:pb-0 lg:w-1/2">
-      <h1 class="text-black text-4xl font-bold">
+    <section class="flex flex-col px-8 sm:px-16 py-12 
+              lg:pb-0 lg:w-1/2 
+              xl:w-[40%] xl:px-[5vw] xl:py-24">
+
+      <h1 class="text-black text-4xl font-bold xl:text-5xl">
         Discover innovative ways to decorate
       </h1>
 
-      <p class="leading-5 mt-4 mb-8 lg:grow">
+      <p class="leading-5 mt-4 mb-8 lg:grow xl:grow-0 xl:leading-6 xl:my-6">
         We provide unmatched quality, comfort, and style for property owners across the country. 
         Our experts combine form and function in bringing your vision to life. Create a room in your 
         own style with our collection and make your property a reflection of you and what you love.
@@ -67,15 +73,15 @@
   </header>
 
   <!-- Main Content -->
-  <main class="grow flex flex-col items-stretch lg:flex-row lg:flex-wrap">
+  <main class="grow flex flex-col items-stretch lg:flex-row lg:flex-wrap xl:flex-nowrap">
 
     <!-- First Illustration -->
-    <section class="lg:grow lg:order-2">
+    <section class="lg:grow lg:order-2 xl:order-none xl:w-[30%]">
       <img class="w-full lg:h-full" src="images/image-about-dark.jpg" alt="A room decorated with dark furniture">
     </section>
 
     <!-- About section -->
-    <section class="px-8 sm:px-16 py-12 lg:order-1 lg:grow">
+    <section class="px-8 sm:px-16 py-12 lg:grow lg:order-1 xl:grow-0 xl:order-none xl:w-[40%]">
       <h2 class="text-black uppercase font-semibold text-lg tracking-[.2em]">
         About our furniture
       </h2>
@@ -89,7 +95,7 @@
     </section>
 
     <!-- Second Illustration -->
-    <section class="lg:grow lg:order-3">
+    <section class="lg:grow lg:order-3 xl:order-none xl:w-[30%]">
       <img class="w-full lg:h-full" src="images/image-about-light.jpg" alt="A romm decorated with light furniture">
     </section>
   </main>
