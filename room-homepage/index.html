@@ -22,7 +22,10 @@
     <!-- Gallery container -->
     <div>
       <img src="images/mobile-image-hero-1.jpg" alt="Two chairs next to a table"
-        class="w-full">
+        class="w-full lg:hidden">
+
+      <img src="images/desktop-image-hero-1.jpg" alt="Two chairs next to a table"
+        class="w-full hidden lg:block">
     </div>
 
     <!-- Gallery Buttons -->
@@ -44,7 +47,7 @@
   <!-- Main Content -->
   <main class="grow flex flex-col items-stretch">
     <!-- Discover section -->
-    <section class="px-8 py-12">
+    <section class="px-8 sm:px-16 py-12">
       <h1 class="text-black text-4xl font-bold">
         Discover innovative ways to decorate
       </h1>
@@ -71,7 +74,7 @@
     </section>
 
     <!-- About section -->
-    <section class="px-8 py-12">
+    <section class="px-8 sm:px-16 py-12">
       <h2 class="text-black uppercase font-semibold text-lg tracking-[.2em]">
         About our furniture
       </h2>
@@ -90,7 +93,7 @@
     </section>
   </main>
 
-  <footer class="bg-black text-dark-gray p-8">
+  <footer class="bg-black text-dark-gray p-8 sm:px-16">
     <p>
       Challenge by <a class="cursor-pointer text-white hover:underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     </p>
