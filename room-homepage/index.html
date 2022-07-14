@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="output.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <script src="index.js"></script>
+  
+  <title>Frontend Mentor | Room homepage</title>
+</head>
+<body class="font-league-spartan font-medium text-dark-gray min-h-screen flex flex-col items-stretch">
+
+  <!-- Hero Section -->
+  <header id="hero" class=" w-full flex flex-col items-stretch lg:flex-row" data-hero-slide="1">
+    <!-- Gallery container -->
+    <div class="relative lg:w-1/2 xl:w-[60%]">
+      <img src="images/mobile-image-hero-1.jpg" alt="Two chairs next to a table"
+        class="hero-image-1 w-full lg:hidden">
+
+      <img src="images/mobile-image-hero-2.jpg" alt="Three colorful chairs"
+        class="hero-image-2 w-full lg:hidden">
+
+      <img src="images/mobile-image-hero-3.jpg" alt="A black chair"
+        class="hero-image-3 w-full lg:hidden">
+      
+      <img src="images/desktop-image-hero-1.jpg" alt="Two chairs next to a table"
+        class="hero-image-1 w-full hidden lg:block lg:h-full">
+      
+      <img src="images/desktop-image-hero-2.jpg" alt="Three colorful chairs"
+        class="hero-image-2 w-full hidden lg:block lg:h-full">
+
+      <img src="images/desktop-image-hero-3.jpg" alt="A black chair"
+        class="hero-image-3 w-full hidden lg:block lg:h-full">
+
+        <!-- Gallery Buttons -->
+      <div class="absolute bottom-0 right-0 bg-white flex
+            xl:-right-[10vw]">
+        <button id="btn-gallery-prev" class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center
+                  xl:w-[5vw]">
+          <span class="sr-only">Previous image</span>
+
+          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+
+        <button id="btn-gallery-next" class="cursor-pointer bg-black hover:opacity-70 w-14 aspect-square flex justify-center items-center
+                  xl:w-[5vw]">
+          <span class="sr-only">Previous image</span>
+
+          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Hero content -->
+    <section class="flex flex-col px-8 sm:px-16 py-12 
+              lg:pb-0 lg:w-1/2 
+              xl:w-[40%] xl:px-[5vw] xl:py-24">
+
+      <h1 class="hero-title-1 text-black text-4xl font-bold xl:text-5xl">
+        Discover innovative ways to decorate
+      </h1>
+
+      <h1 class="hero-title-2 text-black text-4xl font-bold xl:text-5xl">
+        We are available all across the globe
+      </h1>
+
+      <h1 class="hero-title-3 text-black text-4xl font-bold xl:text-5xl">
+        Manufactured with the best materials
+      </h1>
+
+      <p class="hero-text-1 leading-5 mt-4 mb-8
+          min-h-[140px] sm:min-h-[80px] lg:min-h-[120px]
+          lg:grow 
+          xl:grow-0 xl:leading-6 xl:my-6">
+        We provide unmatched quality, comfort, and style for property owners across the country. 
+        Our experts combine form and function in bringing your vision to life. Create a room in your 
+        own style with our collection and make your property a reflection of you and what you love.
+      </p>
+
+      <p class="hero-text-2 leading-5 mt-4 mb-8 
+          min-h-[140px] sm:min-h-[80px] lg:min-h-[120px]
+          lg:grow 
+          xl:grow-0 xl:leading-6 xl:my-6">
+        With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+        Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+        store locator. Any questions? Don't hesitate to contact us today.
+      </p>
+
+      <p class="hero-text-3 leading-5 mt-4 mb-8
+          min-h-[140px] sm:min-h-[80px] lg:min-h-[120px]
+          lg:grow 
+          xl:grow-0 xl:leading-6 xl:my-6">
+        Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+        to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+        experience in this industry, we understand what customers want for their home and office.
+      </p>
+
+      <a href="#" class="flex gap-4 items-baseline text-very-dark-gray 
+                  hover:text-dark-gray hover:gap-8 transition-all
+                  lg:py-5 lg:leading-4">
+        <span class="uppercase tracking-[.5em]">Shop Now</span>
+
+        <svg class="fill-current" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+          <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/>
+        </svg>
+      </a>
+    </section>
+  </header>
+
+  <!-- Main Content -->
+  <main class="grow flex flex-col items-stretch lg:flex-row lg:flex-wrap xl:flex-nowrap">
+
+    <!-- First Illustration -->
+    <section class="lg:grow lg:order-2 xl:order-none xl:w-[30%]">
+      <img class="w-full lg:h-full" src="images/image-about-dark.jpg" alt="A room decorated with dark furniture">
+    </section>
+
+    <!-- About section -->
+    <section class="px-8 sm:px-16 py-12 lg:grow lg:order-1 xl:grow-0 xl:order-none xl:w-[40%]">
+      <h2 class="text-black uppercase font-semibold text-lg tracking-[.2em]">
+        About our furniture
+      </h2>
+
+      <p class="leading-5 lg:leading-6 mt-4">
+        Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.
+      </p>
+    </section>
+
+    <!-- Second Illustration -->
+    <section class="lg:grow lg:order-3 xl:order-none xl:w-[30%]">
+      <img class="w-full lg:h-full" src="images/image-about-light.jpg" alt="A romm decorated with light furniture">
+    </section>
+  </main>
+
+  <footer class="bg-black text-dark-gray p-8 sm:px-16">
+    <p>
+      Challenge by <a class="cursor-pointer text-white hover:underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    </p>
+
+    <p>
+      Coded by <a class="text-white hover:underline" href="https://github.com/simoneclr" target="_blank">Simone Calciolari</a>.
+    </p>
+  </footer>
+</body>
+</html>
