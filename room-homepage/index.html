@@ -17,14 +17,14 @@
 <body class="font-league-spartan font-medium text-dark-gray min-h-screen flex flex-col items-stretch">
 
   <!-- Hero Section -->
-  <header class="flex flex-col items-stretch">
+  <header class=" w-full flex flex-col items-stretch lg:flex-row">
     <!-- Gallery container -->
-    <div class="relative">
+    <div class="relative lg:w-1/2">
       <img src="images/mobile-image-hero-1.jpg" alt="Two chairs next to a table"
         class="w-full lg:hidden">
 
       <img src="images/desktop-image-hero-1.jpg" alt="Two chairs next to a table"
-        class="w-full hidden lg:block">
+        class="w-full hidden lg:block lg:h-full">
 
         <!-- Gallery Buttons -->
       <div class="absolute bottom-0 right-0 bg-white flex">
@@ -43,19 +43,20 @@
     </div>
 
     <!-- Hero content -->
-    <section class="px-8 sm:px-16 py-12">
+    <section class="flex flex-col px-8 sm:px-16 py-12 lg:pb-0 lg:w-1/2">
       <h1 class="text-black text-4xl font-bold">
         Discover innovative ways to decorate
       </h1>
 
-      <p class="leading-5 mt-4 mb-8">
+      <p class="leading-5 mt-4 mb-8 lg:grow">
         We provide unmatched quality, comfort, and style for property owners across the country. 
         Our experts combine form and function in bringing your vision to life. Create a room in your 
         own style with our collection and make your property a reflection of you and what you love.
       </p>
 
       <a href="#" class="flex gap-4 items-baseline text-very-dark-gray 
-                  hover:text-dark-gray hover:gap-8 transition-all">
+                  hover:text-dark-gray hover:gap-8 transition-all
+                  lg:py-5 lg:leading-4">
         <span class="uppercase tracking-[.5em]">Shop Now</span>
 
         <svg class="fill-current" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
@@ -66,20 +67,20 @@
   </header>
 
   <!-- Main Content -->
-  <main class="grow flex flex-col items-stretch">
+  <main class="grow flex flex-col items-stretch lg:flex-row lg:flex-wrap">
 
     <!-- First Illustration -->
-    <section>
-      <img class="w-full" src="images/image-about-dark.jpg" alt="A room decorated with dark furniture">
+    <section class="lg:grow lg:order-2">
+      <img class="w-full lg:h-full" src="images/image-about-dark.jpg" alt="A room decorated with dark furniture">
     </section>
 
     <!-- About section -->
-    <section class="px-8 sm:px-16 py-12">
+    <section class="px-8 sm:px-16 py-12 lg:order-1 lg:grow">
       <h2 class="text-black uppercase font-semibold text-lg tracking-[.2em]">
         About our furniture
       </h2>
 
-      <p class="leading-5 mt-4">
+      <p class="leading-5 lg:leading-6 mt-4">
         Our multifunctional collection blends design and function to suit your individual taste.
         Make each room unique, or pick a cohesive theme that best express your interests and what
         inspires you. Find the furniture pieces you need, from traditional to contemporary styles
@@ -88,8 +89,8 @@
     </section>
 
     <!-- Second Illustration -->
-    <section>
-      <img class="w-full" src="images/image-about-light.jpg" alt="A romm decorated with light furniture">
+    <section class="lg:grow lg:order-3">
+      <img class="w-full lg:h-full" src="images/image-about-light.jpg" alt="A romm decorated with light furniture">
     </section>
   </main>
 
