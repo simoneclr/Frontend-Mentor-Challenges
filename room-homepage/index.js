@@ -20,4 +20,18 @@ window.onload = () => {
 			hero.dataset.heroSlide = parseInt(hero.dataset.heroSlide) - 1
 		}
 	})	
+
+	// Select navbar button
+	const navToggle = document.querySelector("#btn-nav-toggle")
+
+	const nav = document.querySelector("nav")
+	nav.dataset.navOpen = false
+
+	navToggle.addEventListener("click", () => {
+		if (nav.dataset.navOpen === "false") {
+			nav.dataset.navOpen = true
+		} else {
+			nav.dataset.navOpen = false
+		}
+	})
 }

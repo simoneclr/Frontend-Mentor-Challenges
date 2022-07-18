@@ -5,7 +5,8 @@
 @layer components {
 
 	.nav-link {
-		@apply text-white;
+		@apply text-black;
+		@apply lg:text-white;
 
 		/* Fancy underline on hover */
 		@apply lg:after:block;
@@ -19,6 +20,23 @@
 
 		@apply lg:hover:after:scale-x-100;
 		
+	}
+
+	/* Nav toggle */
+	nav[data-nav-open="false"] .icon-close {
+		@apply hidden;
+	}
+
+	nav[data-nav-open="true"] .icon-hamburger {
+		@apply hidden;
+	}
+
+	nav[data-nav-open="false"] .nav-links-list {
+		@apply -translate-y-full;
+	}
+
+	nav[data-nav-open="true"] .nav-links-list {
+		@apply translate-y-0;
 	}
 
 	/* Control Hero Images */
