@@ -16,10 +16,42 @@
   
   <title>Frontend Mentor | Room homepage</title>
 </head>
-<body class="font-league-spartan font-medium text-dark-gray min-h-screen flex flex-col items-stretch">
+<body class="font-league-spartan font-medium text-dark-gray min-h-screen flex flex-col items-stretch">  <!-- Hero Section -->
+  <header id="hero" class="relative w-full flex flex-col items-stretch lg:flex-row" data-hero-slide="1">
 
-  <!-- Hero Section -->
-  <header id="hero" class=" w-full flex flex-col items-stretch lg:flex-row" data-hero-slide="1">
+    <!-- Navbar -->
+    <nav class="absolute z-20 top-0 left-0 items-center
+            lg:flex lg:gap-8 lg:p-16">
+      
+      <img class="h-4 mr-4" src="images/logo.svg" alt="Room brand logo">
+
+      <ul class="flex gap-8">
+        <li>
+          <a href="#" class="nav-link">
+            home
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav-link">
+            shop
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav-link">
+            about
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav-link">
+            contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <!-- Gallery container -->
     <div class="relative lg:w-1/2 xl:w-[60%]">
       <img src="images/mobile-image-hero-1.jpg" alt="Two chairs next to a table"

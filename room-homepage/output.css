@@ -592,6 +592,36 @@ video {
   }
 }
 
+.nav-link {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  /* Fancy underline on hover */
+}
+
+@media (min-width: 1024px) {
+  .nav-link::after {
+    display: block;
+    --tw-scale-x: 0;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    width: 100%;
+    height: 2px;
+    border-radius: 9999px;
+    content: var(--tw-content);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .nav-link:hover::after {
+    transition-duration: 500ms;
+    content: var(--tw-content);
+    --tw-scale-x: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
 /* Control Hero Images */
 
 header[data-hero-slide="1"] .hero-image-2, 
@@ -663,12 +693,28 @@ header[data-hero-slide="3"] .hero-text-1,
   position: relative;
 }
 
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
 
 .right-0 {
   right: 0px;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.mr-4 {
+  margin-right: 1rem;
 }
 
 .mt-4 {
@@ -695,12 +741,20 @@ header[data-hero-slide="3"] .hero-text-1,
   aspect-ratio: 1 / 1;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.h-6 {
+  height: 1.5rem;
 }
 
-.min-h-\[10rem\] {
-  min-height: 10rem;
+.h-4 {
+  height: 1rem;
+}
+
+.h-\[14px\] {
+  height: 14px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .min-h-\[140px\] {
@@ -741,6 +795,10 @@ header[data-hero-slide="3"] .hero-text-1,
 
 .justify-center {
   justify-content: center;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-4 {
@@ -889,6 +947,10 @@ header[data-hero-slide="3"] .hero-text-1,
     display: block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
   }
@@ -915,6 +977,14 @@ header[data-hero-slide="3"] .hero-text-1,
 
   .lg\:flex-wrap {
     flex-wrap: wrap;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
+  .lg\:p-16 {
+    padding: 4rem;
   }
 
   .lg\:py-5 {

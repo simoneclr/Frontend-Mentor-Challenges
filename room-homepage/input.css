@@ -3,6 +3,24 @@
 @tailwind utilities;
 
 @layer components {
+
+	.nav-link {
+		@apply text-white;
+
+		/* Fancy underline on hover */
+		@apply lg:after:block;
+		@apply lg:after:scale-x-0;
+		@apply lg:after:bg-white;
+		@apply lg:after:w-full;
+		@apply lg:after:h-[2px];
+		@apply lg:after:rounded-full;
+		@apply lg:after:transition-all;
+		@apply lg:after:hover:duration-500;
+
+		@apply lg:hover:after:scale-x-100;
+		
+	}
+
 	/* Control Hero Images */
 	header[data-hero-slide="1"] .hero-image-2,
 	header[data-hero-slide="1"] .hero-image-3, {
