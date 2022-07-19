@@ -2,6 +2,8 @@
 
 ![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)
 
+[Live Demo](https://simoneclr.github.io/Frontend-Mentor-Challenges/room-homepage)
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.

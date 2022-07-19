@@ -19,6 +19,9 @@ This repository contains my solutions to Frontend Mentor Challenges
 - Loopstudios Landing Page
   - [Live Demo](https://simoneclr.github.io/Frontend-Mentor-Challenges/loopstudios-landing-page)
   - [Code](https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/loopstudios-landing-page)
+- Room Homepage
+  - [Live Demo](https://simoneclr.github.io/Frontend-Mentor-Challenges/room-homepage)
+  - [Code](https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/room-homepage)
 - Jobs Listings Page
   - [Live Demo](https://simoneclr.github.io/fm-jobs-listings/)
   - [Code](https://github.com/simoneclr/fm-jobs-listings)
