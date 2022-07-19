@@ -3,51 +3,102 @@
 @tailwind utilities;
 
 @layer components {
+
+	.nav-link {
+		@apply text-black;
+		@apply lg:text-white;
+
+		/* Fancy underline on hover */
+		@apply lg:after:block;
+		@apply lg:after:scale-x-0;
+		@apply lg:after:bg-white;
+		@apply lg:after:w-full;
+		@apply lg:after:h-[2px];
+		@apply lg:after:rounded-full;
+		@apply lg:after:transition-all;
+		@apply lg:after:hover:duration-500;
+
+		@apply lg:hover:after:scale-x-100;
+		
+	}
+
+	/* Nav toggle */
+	body[data-nav-open="true"] {
+		@apply overflow-hidden;
+		@apply lg:overflow-auto;
+
+		/* Trans-black overlay */
+		@apply before:block;
+		@apply before:fixed;
+		@apply before:inset-0;
+		@apply before:z-20;
+		@apply before:bg-black/75;
+
+		@apply lg:before:hidden;
+	}
+
+	body[data-nav-open="false"] .icon-close {
+		@apply hidden;
+	}
+
+	body[data-nav-open="true"] .icon-hamburger {
+		@apply hidden;
+	}
+
+	body[data-nav-open="false"] .nav-links-list {
+		@apply -translate-y-full;
+		@apply lg:translate-y-0;
+	}
+
+	body[data-nav-open="true"] .nav-links-list {
+		@apply translate-y-0;
+	}
+
 	/* Control Hero Images */
 	header[data-hero-slide="1"] .hero-image-2,
 	header[data-hero-slide="1"] .hero-image-3, {
-		@apply hidden
+		@apply hidden;
 	}
 
 	header[data-hero-slide="2"] .hero-image-1,
 	header[data-hero-slide="2"] .hero-image-3, {
-		@apply hidden
+		@apply hidden;
 	}
 
 	header[data-hero-slide="3"] .hero-image-1,
 	header[data-hero-slide="3"] .hero-image-2, {
-		@apply hidden
+		@apply hidden;
 	}
 
 	/* Control Hero Title */
 	header[data-hero-slide="1"] .hero-title-2,
 	header[data-hero-slide="1"] .hero-title-3, {
-		@apply hidden
+		@apply hidden;
 	}
 
 	header[data-hero-slide="2"] .hero-title-1,
 	header[data-hero-slide="2"] .hero-title-3, {
-		@apply hidden
+		@apply hidden;
 	}
 
 	header[data-hero-slide="3"] .hero-title-1,
 	header[data-hero-slide="3"] .hero-title-2, {
-		@apply hidden
+		@apply hidden;
 	}
 
 	/* Control Hero Text */
 	header[data-hero-slide="1"] .hero-text-2,
 	header[data-hero-slide="1"] .hero-text-3, {
-		@apply hidden
+		@apply hidden;
 	}
 
 	header[data-hero-slide="2"] .hero-text-1,
 	header[data-hero-slide="2"] .hero-text-3, {
-		@apply hidden
+		@apply hidden;
 	}
 
 	header[data-hero-slide="3"] .hero-text-1,
 	header[data-hero-slide="3"] .hero-text-2, {
-		@apply hidden
+		@apply hidden;
 	}
 }
