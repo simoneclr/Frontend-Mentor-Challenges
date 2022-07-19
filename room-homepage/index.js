@@ -24,14 +24,14 @@ window.onload = () => {
 	// Select navbar button
 	const navToggle = document.querySelector("#btn-nav-toggle")
 
-	const nav = document.querySelector("nav")
-	nav.dataset.navOpen = false
+	const body = document.querySelector("body")
+	body.dataset.navOpen = false
 
 	navToggle.addEventListener("click", () => {
-		if (nav.dataset.navOpen === "false") {
-			nav.dataset.navOpen = true
+		if (body.dataset.navOpen === "false") {
+			body.dataset.navOpen = true
 		} else {
-			nav.dataset.navOpen = false
+			body.dataset.navOpen = false
 		}
 	})
 }
