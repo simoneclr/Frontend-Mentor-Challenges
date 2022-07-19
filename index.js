@@ -54,6 +54,19 @@ const PROJECTS = {
 
 	landingPages: [
 		{ // Loopstudios Landing Page
+			name: "Room Homepage",
+			thumbnail: {
+				src: "room-homepage/design/desktop-preview.jpg",
+				alt: "Preview of Room homepage",
+			},
+			technologies: ["HTML", "CSS", "Tailwind", "JS"],
+			links: {
+				demo: "https://simoneclr.github.io/Frontend-Mentor-Challenges/room-homepage",
+				code: "https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/room-homepage"
+			}
+		},
+
+		{ // Loopstudios Landing Page
 			name: "Loopstudios Landing Page",
 			thumbnail: {
 				src: "loopstudios-landing-page/design/desktop-preview.jpg",
