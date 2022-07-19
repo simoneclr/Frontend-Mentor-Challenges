@@ -636,6 +636,15 @@ video {
 
 body[data-nav-open="true"] {
   overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  body[data-nav-open="true"] {
+    overflow: auto;
+  }
+}
+
+body[data-nav-open="true"] {
   /* Trans-black overlay */
 }
 
@@ -651,6 +660,13 @@ body[data-nav-open="true"]::before {
   background-color: rgb(0 0 0 / 0.75);
 }
 
+@media (min-width: 1024px) {
+  body[data-nav-open="true"]::before {
+    content: var(--tw-content);
+    display: none;
+  }
+}
+
 body[data-nav-open="false"] .icon-close {
   display: none;
 }
@@ -662,6 +678,13 @@ body[data-nav-open="true"] .icon-hamburger {
 body[data-nav-open="false"] .nav-links-list {
   --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1024px) {
+  body[data-nav-open="false"] .nav-links-list {
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 }
 
 body[data-nav-open="true"] .nav-links-list {
@@ -765,10 +788,6 @@ header[data-hero-slide="3"] .hero-text-1,
   z-index: 20;
 }
 
-.-z-10 {
-  z-index: -10;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -813,12 +832,12 @@ header[data-hero-slide="3"] .hero-text-1,
   width: 100%;
 }
 
-.w-14 {
-  width: 3.5rem;
-}
-
 .w-\[20px\] {
   width: 20px;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .grow {
@@ -1001,6 +1020,10 @@ header[data-hero-slide="3"] .hero-text-1,
 }
 
 @media (min-width: 1024px) {
+  .lg\:static {
+    position: static;
+  }
+
   .lg\:order-2 {
     order: 2;
   }
@@ -1045,12 +1068,20 @@ header[data-hero-slide="3"] .hero-text-1,
     flex-wrap: wrap;
   }
 
-  .lg\:gap-4 {
-    gap: 1rem;
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg\:bg-transparent {
+    background-color: transparent;
   }
 
   .lg\:p-8 {
     padding: 2rem;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:py-5 {

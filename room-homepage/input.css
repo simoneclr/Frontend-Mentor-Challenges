@@ -25,6 +25,7 @@
 	/* Nav toggle */
 	body[data-nav-open="true"] {
 		@apply overflow-hidden;
+		@apply lg:overflow-auto;
 
 		/* Trans-black overlay */
 		@apply before:block;
@@ -32,6 +33,8 @@
 		@apply before:inset-0;
 		@apply before:z-20;
 		@apply before:bg-black/75;
+
+		@apply lg:before:hidden;
 	}
 
 	body[data-nav-open="false"] .icon-close {
@@ -44,6 +47,7 @@
 
 	body[data-nav-open="false"] .nav-links-list {
 		@apply -translate-y-full;
+		@apply lg:translate-y-0;
 	}
 
 	body[data-nav-open="true"] .nav-links-list {
