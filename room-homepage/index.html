@@ -16,10 +16,60 @@
   
   <title>Frontend Mentor | Room homepage</title>
 </head>
-<body class="font-league-spartan font-medium text-dark-gray min-h-screen flex flex-col items-stretch">
-
+<body data-nav-open="false" 
+  class="font-league-spartan font-medium text-dark-gray min-h-screen flex flex-col items-stretch 2xl:text-lg">  
+  
   <!-- Hero Section -->
-  <header id="hero" class=" w-full flex flex-col items-stretch lg:flex-row" data-hero-slide="1">
+  <header id="hero" class="relative w-full flex flex-col items-stretch lg:flex-row" data-hero-slide="1">
+
+    <!-- Navbar -->
+    <nav class="absolute z-20 top-0 inset-x-0 flex items-center justify-between p-8 gap-4 
+        lg:justify-start lg:p-8 xl:p-16 xl:gap-8">
+
+      <button id="btn-nav-toggle" class="z-10 lg:hidden">
+        <svg class="icon-hamburger" width="20" height="14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="#FFF" fill-rule="evenodd"/>
+        </svg>
+
+        <svg class="icon-close" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z" fill="#000" fill-rule="evenodd"/>
+        </svg>
+      </button>
+      
+      <img class="h-4 xl:mr-4" src="images/logo.svg" alt="Room brand logo">
+
+      <!-- Dummy spacer div -->
+      <div class="w-[20px] lg:hidden"></div>
+
+      <ul class="nav-links-list fixed top-0 inset-x-0 bg-white p-8 flex gap-4 items-center justify-end
+        transition-transform duration-500
+        lg:static lg:p-0 lg:bg-transparent lg:justify-start xl:gap-8">
+        <li class="leading-4">
+          <a href="#" class="nav-link">
+            home
+          </a>
+        </li>
+
+        <li class="leading-4">
+          <a href="#" class="nav-link">
+            shop
+          </a>
+        </li>
+
+        <li class="leading-4">
+          <a href="#" class="nav-link">
+            about
+          </a>
+        </li>
+
+        <li class="leading-4">
+          <a href="#" class="nav-link">
+            contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <!-- Gallery container -->
     <div class="relative lg:w-1/2 xl:w-[60%]">
       <img src="images/mobile-image-hero-1.jpg" alt="Two chairs next to a table"
