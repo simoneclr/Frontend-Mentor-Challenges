@@ -37,7 +37,18 @@ const PROJECTS = {
 				code: "https://github.com/simoneclr/fm-countries-api"
 			}
 		},
-
+		{ // Credit Card Details
+			name: "Credit Card Details",
+			thumbnail: {
+				src: "assets/card-details-preview.jpg",
+				alt: "Preview of a Credit Card Details App",
+			},
+			technologies: ["TypeScript", "REACT"],
+			links: {
+				demo: "https://simoneclr.github.io/fm-card-details/",
+				code: "https://github.com/simoneclr/fm-card-details"
+			}
+		},
 		{ // Jobs Listings
 			name: "Jobs Listings",
 			thumbnail: {
