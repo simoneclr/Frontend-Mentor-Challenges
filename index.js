@@ -24,7 +24,6 @@ const PROJECTS = {
 				code: "https://github.com/simoneclr/fm-comments-section"
 			}
 		},
-
 		{ // Countries API
 			name: "Where in the World",
 			thumbnail: {
@@ -47,6 +46,18 @@ const PROJECTS = {
 			links: {
 				demo: "https://simoneclr.github.io/fm-card-details/",
 				code: "https://github.com/simoneclr/fm-card-details"
+			}
+		},
+		{ // Notifications Page
+			name: "Notifications Page",
+			thumbnail: {
+				src: "assets/notifications-page-preview.jpg",
+				alt: "Preview of a Notifications Page",
+			},
+			technologies: ["TypeScript", "REACT", "Redux"],
+			links: {
+				demo: "https://simoneclr.github.io/fm-notifications-page/",
+				code: "https://github.com/simoneclr/fm-notifications-page"
 			}
 		},
 		{ // Jobs Listings
