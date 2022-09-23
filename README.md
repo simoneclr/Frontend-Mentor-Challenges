@@ -25,6 +25,9 @@ This repository contains my solutions to Frontend Mentor Challenges
 - Jobs Listings Page
   - [Live Demo](https://simoneclr.github.io/fm-jobs-listings/)
   - [Code](https://github.com/simoneclr/fm-jobs-listings)
+- Notifications Page
+  - [Live Demo](https://simoneclr.github.io/fm-notifications-page/)
+  - [Code](https://github.com/simoneclr/fm-notifications-page)
 - Credit Card Details App
   - [Live Demo](https://simoneclr.github.io/fm-card-details/)
   - [Code](https://github.com/simoneclr/fm-card-details)
