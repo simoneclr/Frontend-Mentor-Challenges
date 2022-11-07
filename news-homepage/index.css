@@ -140,14 +140,15 @@ body {
 	margin-top: 1.5rem;
 }
 
-.NewArticle__link {
-	text-decoration: none;
-}
-
 .NewArticle__title {
 	font-size: 1.3em;
 	color: var(--off-white);
 	margin-bottom: .5rem;
+}
+
+.NewArticle__link {
+	text-decoration: none;
+	color: inherit;
 }
 
 .NewArticle__content {
