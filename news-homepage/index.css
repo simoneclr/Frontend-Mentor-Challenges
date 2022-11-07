@@ -29,6 +29,7 @@ body {
 	font-family: var(--ff-inter);
 	font-size: var(--fs-base);
 	font-weight: var(--fw-base);
+	color: var(--dark-grayish-blue);
 
 	background-color: var(--off-white);
 
@@ -80,8 +81,39 @@ body {
 	}
 }
 
-/* Temporary for developement */
-main > section {
-	background-color: var(--soft-orange);
-	padding: 1rem;
+/* HERO SECTION */
+.HeroArticle {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.HeroArticle__image {
+	width: 100%;
+}
+
+.HeroArticle__title {
+	font-size: 3em;
+	line-height: 1;
+	font-weight: var(--fw-bolder);
+	color: var(--very-dark-blue);
+	margin: 0;
+}
+
+.HeroArticle__text {
+	line-height: 1.8;
+	margin: 0;
+}
+
+.HeroArticle__button {
+	display: inline-block;
+	cursor: pointer;
+	font-weight: var(--fw-bold);
+	letter-spacing: .2em;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--off-white);
+	background-color: var(--soft-red);
+	padding: 1rem 2rem;
+	margin-top: 1.5rem;
 }
