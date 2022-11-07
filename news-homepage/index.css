@@ -29,8 +29,59 @@ body {
 	font-family: var(--ff-inter);
 	font-size: var(--fs-base);
 	font-weight: var(--fw-base);
-	
+
+	background-color: var(--off-white);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
+}
+
+.container {
+	max-width: 1440px;
+	padding: 0 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		padding: 0 10rem;
+	}
+}
+
+/* MAIN */
+.main-grid {
+	flex-grow: 1;
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 3rem;
+}
+
+/* Layout for large screens */
+@media screen and (min-width: 1024px) {
+	.main-grid {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2rem;
+	}
+
+	.hero-section {
+		grid-column: 1 / span 2;
+	}
+
+	.new-section {
+		grid-column: 3 / span 1;
+	}
+
+	.other-section {
+		grid-column: 1 / span 3;
+	}
+}
+
+/* Temporary for developement */
+main > section {
+	background-color: var(--soft-orange);
+	padding: 1rem;
 }
