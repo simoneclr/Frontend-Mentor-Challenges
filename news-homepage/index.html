@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+	<!-- Import Inter from googlefonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="index.css">
+	
+	<title>Frontend Mentor | News homepage</title>
+</head>
+<body>
+
+	<!-- NAVBAR -->
+	<!-- <nav>
+		Home
+		New
+		Popular
+		Trending
+		Categories
+	</nav> -->
+
+	<!-- MAIN CONTENT -->
+	<main class="container main-grid">
+		<!-- HERO -->
+		<section class="hero-section">
+			<article class="HeroArticle">
+				<img class="HeroArticle__image" src="assets/images/image-web-3-mobile.jpg" alt="A colorful illustration">
+				
+				<h1 class="HeroArticle__title">
+					The Bright Future of Web 3.0?
+				</h1>
+				
+				<div class="HeroArticle__content">
+					<p class="HeroArticle__text">
+						We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+						But is it really fulfilling its promise?
+					</p>
+					
+					<a href="#" class="HeroArticle__button">
+						Read more
+					</a>
+				</div>        
+			</article>      
+		</section>
+
+		<!-- NEW ARTICLES -->
+		<section class="new-section">      
+			<h2 class="new-title">
+				New
+			</h2>
+
+			<ul class="new-list">
+				<li>
+					<article class="NewArticle">
+						<h3 class="NewArticle__title">
+							<a href="#" class="NewArticle__link">
+								Hydrogen VS Electric Cars
+							</a>
+						</h3>
+
+						<p class="NewArticle__content">
+							Will hydrogen-fueled cars ever catch up to EVs?
+						</p>
+					</article>
+				</li>
+	
+				<li>
+					<article class="NewArticle">
+						<h3 class="NewArticle__title">
+							<a href="#" class="NewArticle__link">
+								The Downsides of AI Artistry
+							</a>
+						</h3>
+
+						<p class="NewArticle__content">
+							What are the possible adverse effects of on-demand AI image generation?
+						</p>
+					</article>
+				</li>
+				
+				<li>
+					<article class="NewArticle">
+						<h3 class="NewArticle__title">
+							<a href="#" class="NewArticle__link">
+								Is VC Funding Drying Up?
+							</a>
+						</h3>
+
+						<p class="NewArticle__content">
+							Private funding by VC firms is down 50% YOY. We take a look at what that means.
+						</p>
+					</article>
+				</li>
+			</ul>      
+		</section>
+
+		<!-- MORE ARTICLES -->
+		<section class="other-section">
+			<ul class="other-list">
+				<li>
+					<article class="OtherArticle">
+						<img src="assets/images/image-retro-pcs.jpg" alt="A vintage PC" 
+							class="OtherArticle__image">
+						
+						<div class="OtherArticle__content">
+							<span class="OtherArticle__index">
+								01
+							</span>
+
+							<h3 class="OtherArticle__title">
+								<a href="#" class="OtherArticle__link">
+									Reviving Retro PCs
+								</a>
+							</h3>
+
+							<p class="OtherArticle__text">
+								What happens when old PCs are given modern upgrades?
+							</p>
+						</div>
+					</article>
+				</li>
+
+				<li>
+					<article class="OtherArticle">
+						<img src="assets/images/image-top-laptops.jpg" alt="A laptop's keyboard" 
+							class="OtherArticle__image">
+						
+						<div class="OtherArticle__content">
+							<span class="OtherArticle__index">
+								02
+							</span>
+
+							<h3 class="OtherArticle__title">
+								<a href="#" class="OtherArticle__link">
+									Top 10 Laptops of 2022
+								</a>
+							</h3>
+
+							<p class="OtherArticle__text">
+								Our best picks for various needs and budgets.
+							</p>
+						</div>
+					</article>
+				</li>
+
+				<li>
+					<article class="OtherArticle">
+						<img src="assets/images/image-gaming-growth.jpg" alt="A hand throwing a controller in the air" 
+							class="OtherArticle__image">
+						
+						<div class="OtherArticle__content">
+							<span class="OtherArticle__index">
+								03
+							</span>
+
+							<h3 class="OtherArticle__title">
+								<a href="#" class="OtherArticle__link">
+									The Growth of Gaming
+								</a>
+							</h3>
+
+							<p class="OtherArticle__text">
+								How the pandemic has sparked fresh opportunities.
+							</p>
+						</div>
+					</article>
+				</li>        
+			</ul>
+		</section>
+	</main>
+	
+	<footer class="Footer container">
+		<div class="Footer__content">
+			<p>
+				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="Footer__link" target="_blank">Frontend Mentor</a>.
+				Coded by <a href="https://github.com/simoneclr" class="Footer__link" target="_blank">Simone Calciolari</a>.
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
