@@ -202,3 +202,28 @@ body {
 .OtherArticle__text {
 	line-height: 1.5;
 }
+
+/* FOOTER */
+.Footer {
+	width: 100%;
+	margin-top: 3rem;
+}
+
+.Footer__content {
+	color: var(--grayish-blue);
+	background-color: var(--very-dark-blue);
+	padding: 1.5rem;
+}
+
+.Footer__content > p + p {
+	margin-top: 1.5rem;
+}
+
+.Footer__link {
+	color: var(--off-white);
+	text-decoration: none;
+}
+
+.Footer__link:hover {
+	color: var(--soft-orange);
+}
