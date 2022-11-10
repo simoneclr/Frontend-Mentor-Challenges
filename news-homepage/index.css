@@ -71,6 +71,91 @@ body {
 	}
 }
 
+/* NAVBAR */
+.Navbar {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.Navbar__logo {
+	height: 2em;
+}
+
+.Navbar__button {
+	z-index: 5;
+	height: 2em;
+	display: grid;
+	place-content: center;
+	background: transparent;
+	border: 0;
+	outline: 0;
+}
+
+.Navbar__icon {
+	max-height: 2em;
+}
+
+/* Block scroll when nav menu is open */
+body[data-nav-open="true"] {
+	overflow: hidden;
+}
+
+/* Change visible icon depending on open/clsoed state */
+body[data-nav-open="false"] .Navbar__icon-close {
+	display: none;
+}
+
+body[data-nav-open="true"] .Navbar__icon-open {
+	display: none;
+}
+
+.Navbar__backdrop {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--very-dark-blue);
+	opacity: .7;
+}
+
+/* Show the backdrop when the nav menu is open */
+body[data-nav-open="true"] .Navbar__backdrop {
+	display: block;
+}
+
+.Navbar__nav {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: var(--off-white);
+	width: 65vw;
+	padding: 8.5rem 1.5rem 1.5rem;
+	transform: translateX(100%);
+}
+
+body[data-nav-open="true"] .Navbar__nav {
+	transform: translateX(0);
+}
+
+/* Add whitespace between nav links */
+.Navbar__nav > li + li {
+	margin-top: 1.5rem;
+}
+
+.Navbar__link {
+	text-decoration: none;
+	color: var(--very-dark-blue);
+	font-size: 1.2em;
+}
+
 /* MAIN */
 .main-grid {
 	flex-grow: 1;

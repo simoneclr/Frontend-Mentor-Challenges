@@ -12,19 +12,56 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="index.css">
+
+	<script src="index.js"></script>
 	
 	<title>Frontend Mentor | News homepage</title>
 </head>
-<body>
+<body data-nav-open="false">
 
 	<!-- NAVBAR -->
-	<!-- <nav>
-		Home
-		New
-		Popular
-		Trending
-		Categories
-	</nav> -->
+	<nav class="container Navbar">
+		<img src="assets/images/logo.svg" alt="W. Logo" class="Navbar__logo">
+
+		<button class="Navbar__button js-navbar-toggle">
+			<img src="assets/images/icon-menu.svg" alt="" class="Navbar__icon Navbar__icon-open">
+			<img src="assets/images/icon-menu-close.svg" alt="" class="Navbar__icon Navbar__icon-close">
+		</button>
+
+		<ul class="Navbar__nav">
+			<li>
+				<a href="#" class="Navbar__link js-nav-link">
+					Home
+				</a>
+			</li>
+
+			<li>
+				<a href="#" class="Navbar__link js-nav-link">
+					New
+				</a>
+			</li>
+
+			<li>
+				<a href="#" class="Navbar__link js-nav-link">
+					Popular
+				</a>
+			</li>
+
+			<li>
+				<a href="#" class="Navbar__link js-nav-link">
+					Trending
+				</a>
+			</li>
+
+			<li>
+				<a href="#" class="Navbar__link js-nav-link">
+					Categories
+				</a>
+			</li>
+		</ul>
+
+		<div class="Navbar__backdrop js-navbar-backdrop"></div>
+	</nav>
 
 	<!-- MAIN CONTENT -->
 	<main class="container main-grid">
