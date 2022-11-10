@@ -156,6 +156,13 @@ body[data-nav-open="true"] .Navbar__nav {
 	font-size: 1.2em;
 }
 
+@media screen and (min-width: 576px) {
+	.Navbar__nav {
+		width: 50vw;
+		padding: 5.5rem 2rem 2rem;
+	}
+}
+
 /* MAIN */
 .main-grid {
 	flex-grow: 1;
