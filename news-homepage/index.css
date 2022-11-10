@@ -163,6 +163,56 @@ body[data-nav-open="true"] .Navbar__nav {
 	}
 }
 
+@media screen and (min-width: 1024px) {
+
+	body {
+		overflow: auto !important;
+	}
+	
+	.Navbar {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	.Navbar__button,
+	.Navbar__backdrop {
+		display: none !important;
+	}
+
+	.Navbar__nav {
+		z-index: initial;
+		position: static;
+		transform: none;
+		width: auto;
+		background: transparent;
+		padding: 0;
+
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.Navbar__nav > li + li {
+		margin-top: 0;
+	}
+
+	.Navbar__link {
+		font-size: 1em;
+		color: var(--dark-grayish-blue);
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.Navbar__nav {
+		gap: 2.5rem;
+	}
+
+	.Navbar__link {
+		font-size: 1.1em;
+	}
+}
+
 /* MAIN */
 .main-grid {
 	flex-grow: 1;
