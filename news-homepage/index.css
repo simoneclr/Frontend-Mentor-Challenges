@@ -71,6 +71,148 @@ body {
 	}
 }
 
+/* NAVBAR */
+.Navbar {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.Navbar__logo {
+	height: 2em;
+}
+
+.Navbar__button {
+	z-index: 5;
+	height: 2em;
+	display: grid;
+	place-content: center;
+	background: transparent;
+	border: 0;
+	outline: 0;
+}
+
+.Navbar__icon {
+	max-height: 2em;
+}
+
+/* Block scroll when nav menu is open */
+body[data-nav-open="true"] {
+	overflow: hidden;
+}
+
+/* Change visible icon depending on open/clsoed state */
+body[data-nav-open="false"] .Navbar__icon-close {
+	display: none;
+}
+
+body[data-nav-open="true"] .Navbar__icon-open {
+	display: none;
+}
+
+.Navbar__backdrop {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--very-dark-blue);
+	opacity: .7;
+}
+
+/* Show the backdrop when the nav menu is open */
+body[data-nav-open="true"] .Navbar__backdrop {
+	display: block;
+}
+
+.Navbar__nav {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: var(--off-white);
+	width: 65vw;
+	padding: 8.5rem 1.5rem 1.5rem;
+	transform: translateX(100%);
+}
+
+body[data-nav-open="true"] .Navbar__nav {
+	transform: translateX(0);
+}
+
+/* Add whitespace between nav links */
+.Navbar__nav > li + li {
+	margin-top: 1.5rem;
+}
+
+.Navbar__link {
+	text-decoration: none;
+	color: var(--very-dark-blue);
+	font-size: 1.2em;
+}
+
+@media screen and (min-width: 576px) {
+	.Navbar__nav {
+		width: 50vw;
+		padding: 5.5rem 2rem 2rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+
+	body {
+		overflow: auto !important;
+	}
+	
+	.Navbar {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	.Navbar__button,
+	.Navbar__backdrop {
+		display: none !important;
+	}
+
+	.Navbar__nav {
+		z-index: initial;
+		position: static;
+		transform: none;
+		width: auto;
+		background: transparent;
+		padding: 0;
+
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.Navbar__nav > li + li {
+		margin-top: 0;
+	}
+
+	.Navbar__link {
+		font-size: 1em;
+		color: var(--dark-grayish-blue);
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.Navbar__nav {
+		gap: 2.5rem;
+	}
+
+	.Navbar__link {
+		font-size: 1.1em;
+	}
+}
+
 /* MAIN */
 .main-grid {
 	flex-grow: 1;
@@ -202,7 +344,6 @@ body {
 @media screen and (min-width: 1400px) {
 	.HeroArticle__title {
 		font-size: 4.1em;
-		line-height: 1.1em;
 	}
 
 	.HeroArticle__text {
