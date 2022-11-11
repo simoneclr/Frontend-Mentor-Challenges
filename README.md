@@ -22,6 +22,9 @@ This repository contains my solutions to Frontend Mentor Challenges
 - Room Homepage
   - [Live Demo](https://simoneclr.github.io/Frontend-Mentor-Challenges/room-homepage)
   - [Code](https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/room-homepage)
+- News Homepage
+  - [Live Demo](https://simoneclr.github.io/Frontend-Mentor-Challenges/news-homepage)
+  - [Code](https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/news-homepage)
 - Jobs Listings Page
   - [Live Demo](https://simoneclr.github.io/fm-jobs-listings/)
   - [Code](https://github.com/simoneclr/fm-jobs-listings)
