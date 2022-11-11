@@ -75,6 +75,18 @@ const PROJECTS = {
 	],
 
 	landingPages: [
+		{ // News Homepage
+			name: "News Homepage",
+			thumbnail: {
+				src: "news-homepage/design/desktop-preview.jpg",
+				alt: "Preview of News homepage",
+			},
+			technologies: ["HTML", "CSS", "JS"],
+			links: {
+				demo: "https://simoneclr.github.io/Frontend-Mentor-Challenges/news-homepage",
+				code: "https://github.com/simoneclr/Frontend-Mentor-Challenges/tree/main/news-homepage"
+			}
+		},
 		{ // Room Homepage
 			name: "Room Homepage",
 			thumbnail: {
