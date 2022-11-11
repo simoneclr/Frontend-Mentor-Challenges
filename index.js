@@ -75,7 +75,7 @@ const PROJECTS = {
 	],
 
 	landingPages: [
-		{ // Loopstudios Landing Page
+		{ // Room Homepage
 			name: "Room Homepage",
 			thumbnail: {
 				src: "room-homepage/design/desktop-preview.jpg",
